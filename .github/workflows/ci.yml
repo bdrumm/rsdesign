@@ -34,8 +34,13 @@ jobs:
         run: sudo .venv/bin/python -m playwright install-deps chromium
       - name: doctor
         run: .venv/bin/python -m dt.cli doctor
-      - name: tests
-        run: .venv/bin/python -m pytest -q -p no:cacheprovider --junitxml=out/junit.xml
+      - name: tests (portable, blocking)
+        run: .venv/bin/python -m pytest -q -p no:cacheprovider -m "not platform_sensitive" --junitxml=out/junit.xml
+      - name: tests (platform-sensitive, calibration signal)
+        # depend on the OCR engine version / font rasterisation; required on the reference Mac, reported here
+        if: always()
+        continue-on-error: true
+        run: .venv/bin/python -m pytest -q -p no:cacheprovider -m platform_sensitive -rf --junitxml=out/junit-platform.xml
       - name: bench (report)
         if: always()
         run: .venv/bin/python -m dt.cli bench --workers 3 --json --run-id ci-${{ matrix.os }} > out/bench-${{ matrix.os }}.json
@@ -49,7 +54,7 @@ jobs:
         with:
           name: results-${{ matrix.os }}
           path: |
-            out/junit.xml
+            out/junit*.xml
             out/bench-*.json
             out/bench/ci-*/report.md
           if-no-files-found: warn

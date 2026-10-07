@@ -82,6 +82,9 @@ Example client config (Claude Desktop / Claude Code / Cursor):
 
 ## Install
 
+Source: https://github.com/bdrumm/rsdesign (CI and parallel cloud sweeps: [docs/GITHUB.md](docs/GITHUB.md)).
+
+
 Requirements: Python ≥ 3.12, Node ≥ 18, and Google Chrome (or Playwright's bundled Chromium).
 macOS and Linux are supported.
 
