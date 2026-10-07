@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body { font: 12px/1.4 -apple-system, BlinkMacSystemFont, "Inter", sans-serif; margin: 0; padding: 12px; color: #222; }
+  h1 { font-size: 13px; margin: 0 0 8px; }
+  textarea { width: 100%; height: 240px; box-sizing: border-box; font: 11px/1.3 Menlo, monospace; }
+  .row { display: flex; gap: 8px; align-items: center; margin-top: 8px; flex-wrap: wrap; }
+  button { padding: 6px 12px; }
+  #status { margin-top: 8px; white-space: pre-wrap; font-family: Menlo, monospace; font-size: 11px; max-height: 160px; overflow: auto; }
+  .err { color: #b3261e; }
+  .ok { color: #1b5e20; }
+</style>
+</head>
+<body>
+<h1>designtranslator build plan</h1>
+<p>Paste the JSON produced by <code>dt.export.to_build_plan</code> (or load the file), then Build.</p>
+<textarea id="plan" placeholder='{"version": "1.0", "root": {...}}'></textarea>
+<div class="row">
+  <input type="file" id="file" accept=".json,application/json">
+  <label><input type="checkbox" id="close"> close when done</label>
+  <button id="build">Build</button>
+</div>
+<div id="status"></div>
+<script>
+  var status = document.getElementById('status');
+  function show(text, cls) { status.textContent = text; status.className = cls || ''; }
+
+  document.getElementById('file').addEventListener('change', function (ev) {
+    var f = ev.target.files && ev.target.files[0];
+    if (!f) return;
+    var reader = new FileReader();
+    reader.onload = function () { document.getElementById('plan').value = String(reader.result); };
+    reader.readAsText(f);
+  });
+
+  document.getElementById('build').addEventListener('click', function () {
+    var plan;
+    try {
+      plan = JSON.parse(document.getElementById('plan').value);
+    } catch (e) {
+      show('Invalid JSON: ' + e.message, 'err');
+      return;
+    }
+    if (!plan || !plan.root || !plan.version) { show('Plan needs "version" and "root".', 'err'); return; }
+    show('Building...');
+    parent.postMessage({ pluginMessage: { type: 'build', plan: plan, options: { closeWhenDone: document.getElementById('close').checked } } }, '*');
+  });
+
+  window.onmessage = function (ev) {
+    var msg = ev.data && ev.data.pluginMessage;
+    if (!msg) return;
+    if (msg.type === 'done') {
+      var s = msg.summary;
+      show('Created ' + s.created + ' nodes (' + s.texts + ' text, ' + s.instances + ' instances, ' + s.fallbacks +
+        ' fallbacks)\nFonts loaded: ' + s.fontsLoaded.join(', ') + '\nFonts missing: ' + s.fontsMissing.join(', ') +
+        (s.warnings.length ? '\nWarnings:\n- ' + s.warnings.join('\n- ') : ''), 'ok');
+    } else if (msg.type === 'error') {
+      show('Error: ' + msg.message, 'err');
+    }
+  };
+</script>
+</body>
+</html>

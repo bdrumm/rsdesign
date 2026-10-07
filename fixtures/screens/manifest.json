@@ -1,0 +1,1256 @@
+{
+ "version": 1,
+ "captured_at": "2026-10-07T13:54:21Z",
+ "dpr": 1,
+ "n_ok": 40,
+ "n_failed": 0,
+ "screens": [
+  {
+   "name": "about_google",
+   "url": "https://about.google/",
+   "file": "about_google.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "about",
+    "nav"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "About Google: Our products, technology and company information - About Google",
+    "doc_h": 3534,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.2122
+  },
+  {
+   "name": "about_google_mobile",
+   "url": "https://about.google/",
+   "file": "about_google_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "about",
+    "nav",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "About Google: Our products, technology and company information - About Google",
+    "doc_h": 4726,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.3448
+  },
+  {
+   "name": "google_store",
+   "url": "https://store.google.com/",
+   "file": "google_store.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "store",
+    "nav"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Google Store for Google Made Devices & Accessories",
+    "doc_h": 9795,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.6024
+  },
+  {
+   "name": "gws_calendar",
+   "url": "https://workspace.google.com/products/calendar/",
+   "file": "gws_calendar.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "calendar",
+    "app-ui"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Shareable Online Calendar and Scheduling - Google Calendar",
+    "doc_h": 7614,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.0662
+  },
+  {
+   "name": "gws_drive",
+   "url": "https://workspace.google.com/products/drive/",
+   "file": "gws_drive.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "drive",
+    "app-ui"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Google Drive: Share Files Online with Secure Cloud Storage | Google Workspace",
+    "doc_h": 10085,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.056
+  },
+  {
+   "name": "gws_gmail",
+   "url": "https://workspace.google.com/products/gmail/",
+   "file": "gws_gmail.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "gmail",
+    "app-ui"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Gmail: Private & Secure Email for Personal or Business | Google Workspace",
+    "doc_h": 8219,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.0717
+  },
+  {
+   "name": "gws_gmail_mobile",
+   "url": "https://workspace.google.com/products/gmail/",
+   "file": "gws_gmail_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "gmail",
+    "app-ui",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Gmail: Private & Secure Email for Personal or Business | Google Workspace",
+    "doc_h": 9000,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.1039
+  },
+  {
+   "name": "gws_keep",
+   "url": "https://workspace.google.com/products/keep/",
+   "file": "gws_keep.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "keep",
+    "app-ui"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Google Keep: Online Notes and Digital Notebook Lists | Google Workspace",
+    "doc_h": 5116,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.1038
+  },
+  {
+   "name": "m3_buttons_overview",
+   "url": "https://m3.material.io/components/buttons/overview",
+   "file": "m3_buttons_overview.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "buttons",
+    "buttons",
+    "nav-rail"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Buttons \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.4081
+  },
+  {
+   "name": "m3_buttons_overview_types_mobile",
+   "url": "https://m3.material.io/components/buttons/overview",
+   "file": "m3_buttons_overview_types_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "buttons",
+    "buttons",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Buttons \u2013 Material Design 3",
+    "doc_h": 6340,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "offset",
+    "target_top": null
+   },
+   "content_frac": 0.0482
+  },
+  {
+   "name": "m3_buttons_specs",
+   "url": "https://m3.material.io/components/buttons/specs",
+   "file": "m3_buttons_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "buttons",
+    "buttons",
+    "anatomy"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Buttons \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": -0.0,
+    "images_pending": 0,
+    "target": "h2:Anatomy"
+   },
+   "content_frac": 0.1224
+  },
+  {
+   "name": "m3_cards_specs",
+   "url": "https://m3.material.io/components/cards/specs",
+   "file": "m3_cards_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "cards",
+    "cards"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Cards \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Elevated card"
+   },
+   "content_frac": 0.1507
+  },
+  {
+   "name": "m3_checkbox_specs",
+   "url": "https://m3.material.io/components/checkbox/specs",
+   "file": "m3_checkbox_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "checkbox",
+    "checkbox"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Checkbox \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": -0.0,
+    "images_pending": 0,
+    "target": "h2:Measurements"
+   },
+   "content_frac": 0.1046
+  },
+  {
+   "name": "m3_chips_specs",
+   "url": "https://m3.material.io/components/chips/specs",
+   "file": "m3_chips_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "chips",
+    "chips"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Chips \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Tokens & specs"
+   },
+   "content_frac": 0.1156
+  },
+  {
+   "name": "m3_dialogs_specs",
+   "url": "https://m3.material.io/components/dialogs/specs",
+   "file": "m3_dialogs_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "dialogs",
+    "dialogs"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Dialogs \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Tokens & specs"
+   },
+   "content_frac": 0.1717
+  },
+  {
+   "name": "m3_fab_specs",
+   "url": "https://m3.material.io/components/floating-action-button/specs",
+   "file": "m3_fab_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "floating-action-button",
+    "fab",
+    "anatomy"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "FAB \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Anatomy"
+   },
+   "content_frac": 0.1401
+  },
+  {
+   "name": "m3_layout_understanding",
+   "url": "https://m3.material.io/foundations/layout/understanding-layout/overview",
+   "file": "m3_layout_understanding.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "foundations",
+    "layout"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Layout \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.6961
+  },
+  {
+   "name": "m3_layout_window_size_classes",
+   "url": "https://m3.material.io/foundations/layout/applying-layout/window-size-classes",
+   "file": "m3_layout_window_size_classes.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "foundations",
+    "layout"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Breakpoints \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.6938
+  },
+  {
+   "name": "m3_lists_overview_mobile",
+   "url": "https://m3.material.io/components/lists/overview",
+   "file": "m3_lists_overview_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "lists",
+    "lists",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Lists \u2013 Material Design 3",
+    "doc_h": 5904,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null,
+    "images_pending": 0
+   },
+   "content_frac": 0.2125
+  },
+  {
+   "name": "m3_lists_specs",
+   "url": "https://m3.material.io/components/lists/specs",
+   "file": "m3_lists_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "lists",
+    "lists",
+    "anatomy"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Lists \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": -0.0,
+    "images_pending": 0,
+    "target": "h2:Anatomy"
+   },
+   "content_frac": 0.1192
+  },
+  {
+   "name": "m3_navigation_bar_overview",
+   "url": "https://m3.material.io/components/navigation-bar/overview",
+   "file": "m3_navigation_bar_overview.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "navigation-bar",
+    "navigation-bar"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Navigation bar \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.5108
+  },
+  {
+   "name": "m3_navigation_bar_specs",
+   "url": "https://m3.material.io/components/navigation-bar/specs",
+   "file": "m3_navigation_bar_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "navigation-bar",
+    "navigation-bar",
+    "anatomy"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Navigation bar \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Anatomy"
+   },
+   "content_frac": 0.191
+  },
+  {
+   "name": "m3_switch_overview",
+   "url": "https://m3.material.io/components/switch/overview",
+   "file": "m3_switch_overview.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "switch",
+    "switch"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Switch \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.4266
+  },
+  {
+   "name": "m3_tabs_specs",
+   "url": "https://m3.material.io/components/tabs/specs",
+   "file": "m3_tabs_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "tabs",
+    "tabs"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Tabs \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": -0.0,
+    "images_pending": 0,
+    "target": "h2:Measurements"
+   },
+   "content_frac": 0.1438
+  },
+  {
+   "name": "m3_text_fields_specs",
+   "url": "https://m3.material.io/components/text-fields/specs",
+   "file": "m3_text_fields_specs.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "text-fields",
+    "text-fields"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Text fields \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 0,
+    "images_pending": 0,
+    "target": "h2:Tokens & specs"
+   },
+   "content_frac": 0.1168
+  },
+  {
+   "name": "m3_top_app_bar_overview",
+   "url": "https://m3.material.io/components/top-app-bar/overview",
+   "file": "m3_top_app_bar_overview.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "m3",
+    "docs",
+    "top-app-bar",
+    "top-app-bar",
+    "app-bars"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Top app bar \u2013 Material Design 3",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.2965
+  },
+  {
+   "name": "material_blog",
+   "url": "https://material.io/blog",
+   "file": "material_blog.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "google",
+    "product",
+    "blog",
+    "cards"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Design Blog - Discover the latest about Material",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": null,
+    "target_top": null
+   },
+   "content_frac": 0.7019
+  },
+  {
+   "name": "mw_button_types",
+   "url": "https://material-web.dev/components/button/",
+   "file": "mw_button_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "button",
+    "buttons"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Buttons",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.268
+  },
+  {
+   "name": "mw_button_types_mobile",
+   "url": "https://material-web.dev/components/button/",
+   "file": "mw_button_types_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "button",
+    "buttons",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Buttons",
+    "doc_h": 915,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.2316
+  },
+  {
+   "name": "mw_chip_types",
+   "url": "https://material-web.dev/components/chip/",
+   "file": "mw_chip_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "chip",
+    "chips"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Chips",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.3047
+  },
+  {
+   "name": "mw_dialog_interactive_demo",
+   "url": "https://material-web.dev/components/dialog/",
+   "file": "mw_dialog_interactive_demo.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "dialog",
+    "dialogs"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Dialogs",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": true,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#interactive-demo"
+   },
+   "content_frac": 0.4722
+  },
+  {
+   "name": "mw_fab_types",
+   "url": "https://material-web.dev/components/fab/",
+   "file": "mw_fab_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "fab",
+    "fab"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Floating action button (FAB)",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.2155
+  },
+  {
+   "name": "mw_icon_button_types",
+   "url": "https://material-web.dev/components/icon-button/",
+   "file": "mw_icon_button_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "icon-button",
+    "icon-buttons"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Icon Buttons",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.2605
+  },
+  {
+   "name": "mw_list_usage",
+   "url": "https://material-web.dev/components/list/",
+   "file": "mw_list_usage.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "list",
+    "lists"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Lists",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#usage"
+   },
+   "content_frac": 0.3794
+  },
+  {
+   "name": "mw_select_usage",
+   "url": "https://material-web.dev/components/select/",
+   "file": "mw_select_usage.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "select",
+    "select",
+    "menus"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Select",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#usage"
+   },
+   "content_frac": 0.4762
+  },
+  {
+   "name": "mw_slider_usage",
+   "url": "https://material-web.dev/components/slider/",
+   "file": "mw_slider_usage.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "slider",
+    "slider"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Sliders",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#usage"
+   },
+   "content_frac": 0.385
+  },
+  {
+   "name": "mw_switch_usage",
+   "url": "https://material-web.dev/components/switch/",
+   "file": "mw_switch_usage.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "switch",
+    "switch"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Switch",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#usage"
+   },
+   "content_frac": 0.4907
+  },
+  {
+   "name": "mw_tabs_types",
+   "url": "https://material-web.dev/components/tabs/",
+   "file": "mw_tabs_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "tabs",
+    "tabs"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Tabs",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.4174
+  },
+  {
+   "name": "mw_text_field_types",
+   "url": "https://material-web.dev/components/text-field/",
+   "file": "mw_text_field_types.png",
+   "width": 1280,
+   "height": 800,
+   "size": [
+    1280,
+    800
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "text-field",
+    "text-fields"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Text field",
+    "doc_h": 800,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.3094
+  },
+  {
+   "name": "mw_text_field_types_mobile",
+   "url": "https://material-web.dev/components/text-field/",
+   "file": "mw_text_field_types_mobile.png",
+   "width": 412,
+   "height": 915,
+   "size": [
+    412,
+    915
+   ],
+   "dpr": 1,
+   "tags": [
+    "material-web",
+    "demo",
+    "text-field",
+    "text-fields",
+    "mobile"
+   ],
+   "ok": true,
+   "error": null,
+   "page": {
+    "title": "Material Web - Text field",
+    "doc_h": 915,
+    "dismissed": 0,
+    "hidden": 0,
+    "clicked": false,
+    "scrolled": "target",
+    "target_top": 72,
+    "target": "#types"
+   },
+   "content_frac": 0.286
+  }
+ ]
+}

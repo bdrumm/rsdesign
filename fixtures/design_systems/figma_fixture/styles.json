@@ -1,0 +1,12 @@
+{
+  "status": 200,
+  "error": false,
+  "meta": {
+    "styles": [
+      {"key": "s1", "file_key": "FIXTUREFILEKEY", "node_id": "S:fillprimary", "style_type": "FILL", "thumbnail_url": "", "name": "Primary", "description": "", "created_at": "2026-09-01T12:00:00Z", "updated_at": "2026-10-01T12:00:00Z", "user": {"id": "1", "handle": "dt", "img_url": ""}, "sort_position": "!"},
+      {"key": "s2", "file_key": "FIXTUREFILEKEY", "node_id": "S:fillonprimary", "style_type": "FILL", "thumbnail_url": "", "name": "On Primary", "description": "", "created_at": "2026-09-01T12:00:00Z", "updated_at": "2026-10-01T12:00:00Z", "user": {"id": "1", "handle": "dt", "img_url": ""}, "sort_position": "\""},
+      {"key": "s3", "file_key": "FIXTUREFILEKEY", "node_id": "S:textlabellarge", "style_type": "TEXT", "thumbnail_url": "", "name": "Label/Large", "description": "", "created_at": "2026-09-01T12:00:00Z", "updated_at": "2026-10-01T12:00:00Z", "user": {"id": "1", "handle": "dt", "img_url": ""}, "sort_position": "#"},
+      {"key": "s4", "file_key": "FIXTUREFILEKEY", "node_id": "S:effectlevel1", "style_type": "EFFECT", "thumbnail_url": "", "name": "Elevation/Level 1", "description": "", "created_at": "2026-09-01T12:00:00Z", "updated_at": "2026-10-01T12:00:00Z", "user": {"id": "1", "handle": "dt", "img_url": ""}, "sort_position": "$"}
+    ]
+  }
+}

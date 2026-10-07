@@ -1,0 +1,1628 @@
+{
+  "version": "1",
+  "width": 412,
+  "height": 730,
+  "dpr": 1.0,
+  "source_image": "synth_1_001.png",
+  "palette": [],
+  "fonts": [
+    "Roboto",
+    "Material Symbols Outlined"
+  ],
+  "design_system": "material3",
+  "meta": {
+    "corpus": "synth",
+    "id": "synth_1_001",
+    "seed": 1,
+    "index": 1
+  },
+  "root": {
+    "id": "root",
+    "type": "frame",
+    "name": "Screen",
+    "box": {
+      "x": 0.0,
+      "y": 0.0,
+      "w": 412.0,
+      "h": 730.0
+    },
+    "fills": [
+      {
+        "kind": "solid",
+        "opacity": 1.0,
+        "color": {
+          "r": 254,
+          "g": 247,
+          "b": 255,
+          "a": 1.0
+        }
+      }
+    ],
+    "strokes": [],
+    "effects": [],
+    "radius": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "opacity": 1.0,
+    "clip": true,
+    "visible": true,
+    "text": null,
+    "text_style": null,
+    "icon_name": null,
+    "image_ref": null,
+    "layout": null,
+    "component": null,
+    "tokens": {
+      "fill": "md.sys.color.surface"
+    },
+    "meta": {},
+    "children": [
+      {
+        "id": "n1",
+        "type": "frame",
+        "name": "Button/text",
+        "box": {
+          "x": 16.0,
+          "y": 8.0,
+          "w": 82.0,
+          "h": 40.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          20.0,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.button:style=text",
+          "name": "Button",
+          "library": "material3",
+          "variant": {
+            "style": "text"
+          },
+          "props": {
+            "label": "Undo"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {},
+        "meta": {},
+        "children": [
+          {
+            "id": "n2",
+            "type": "text",
+            "name": "text:Undo",
+            "box": {
+              "x": 40.0,
+              "y": 18.0,
+              "w": 34.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Undo",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 103,
+                "g": 80,
+                "b": 164,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.primary"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n3",
+        "type": "frame",
+        "name": "Button/outlined",
+        "box": {
+          "x": 106.0,
+          "y": 8.0,
+          "w": 82.0,
+          "h": 40.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          20.0,
+          20.0,
+          20.0,
+          20.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.button:style=outlined",
+          "name": "Button",
+          "library": "material3",
+          "variant": {
+            "style": "outlined"
+          },
+          "props": {
+            "label": "Retry"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n4",
+            "type": "text",
+            "name": "text:Retry",
+            "box": {
+              "x": 130.0,
+              "y": 18.0,
+              "w": 34.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Retry",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 103,
+                "g": 80,
+                "b": 164,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.primary"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n5",
+        "type": "frame",
+        "name": "Chip/suggestion",
+        "box": {
+          "x": 16.0,
+          "y": 64.0,
+          "w": 89.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.chip:selected=false,type=suggestion",
+          "name": "Chip",
+          "library": "material3",
+          "variant": {
+            "type": "suggestion",
+            "selected": "false"
+          },
+          "props": {
+            "label": "From me"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n6",
+            "type": "text",
+            "name": "text:From me",
+            "box": {
+              "x": 32.0,
+              "y": 70.0,
+              "w": 57.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "From me",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "frame",
+        "name": "Chip/suggestion",
+        "box": {
+          "x": 113.0,
+          "y": 64.0,
+          "w": 89.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.chip:selected=false,type=suggestion",
+          "name": "Chip",
+          "library": "material3",
+          "variant": {
+            "type": "suggestion",
+            "selected": "false"
+          },
+          "props": {
+            "label": "Personal"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n8",
+            "type": "text",
+            "name": "text:Personal",
+            "box": {
+              "x": 129.0,
+              "y": 70.0,
+              "w": 57.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Personal",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n9",
+        "type": "frame",
+        "name": "Chip/suggestion",
+        "box": {
+          "x": 210.0,
+          "y": 64.0,
+          "w": 82.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.chip:selected=false,type=suggestion",
+          "name": "Chip",
+          "library": "material3",
+          "variant": {
+            "type": "suggestion",
+            "selected": "false"
+          },
+          "props": {
+            "label": "Finance"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n10",
+            "type": "text",
+            "name": "text:Finance",
+            "box": {
+              "x": 226.0,
+              "y": 70.0,
+              "w": 50.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Finance",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n11",
+        "type": "frame",
+        "name": "Chip/suggestion",
+        "box": {
+          "x": 300.0,
+          "y": 64.0,
+          "w": 89.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.chip:selected=false,type=suggestion",
+          "name": "Chip",
+          "library": "material3",
+          "variant": {
+            "type": "suggestion",
+            "selected": "false"
+          },
+          "props": {
+            "label": "Calendar"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n12",
+            "type": "text",
+            "name": "text:Calendar",
+            "box": {
+              "x": 316.0,
+              "y": 70.0,
+              "w": 57.0,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Calendar",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 500,
+              "line_height": 20.0,
+              "letter_spacing": 0.1,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "center",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.label-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n13",
+        "type": "text",
+        "name": "text:Sent",
+        "box": {
+          "x": 16.0,
+          "y": 120.0,
+          "w": 29.0,
+          "h": 20.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Sent",
+        "text_style": {
+          "family": "Roboto",
+          "size": 14.0,
+          "weight": 500,
+          "line_height": 20.0,
+          "letter_spacing": 0.1,
+          "color": {
+            "r": 73,
+            "g": 69,
+            "b": 79,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.title-small",
+          "color": "md.sys.color.on-surface-variant"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n14",
+        "type": "frame",
+        "name": "List",
+        "box": {
+          "x": 0.0,
+          "y": 148.0,
+          "w": 412.0,
+          "h": 218.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {},
+        "meta": {
+          "part": "List"
+        },
+        "children": [
+          {
+            "id": "n15",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 148.0,
+              "w": 412.0,
+              "h": 72.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Pitch deck v3"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n16",
+                "type": "text",
+                "name": "text:Pitch deck v3",
+                "box": {
+                  "x": 16.0,
+                  "y": 162.0,
+                  "w": 102.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Pitch deck v3",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n17",
+                "type": "text",
+                "name": "text:The files are in the sha",
+                "box": {
+                  "x": 16.0,
+                  "y": 186.0,
+                  "w": 243.0,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "The files are in the shared folder now.",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.25,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-medium",
+                  "color": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n18",
+                "type": "icon",
+                "name": "icon:more_vert",
+                "box": {
+                  "x": 372.0,
+                  "y": 172.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "more_vert",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n19",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 0.0,
+              "y": 220.0,
+              "w": 412.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n20",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 221.0,
+              "w": 412.0,
+              "h": 72.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Screenshots"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n21",
+                "type": "icon",
+                "name": "icon:folder",
+                "box": {
+                  "x": 16.0,
+                  "y": 245.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "folder",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n22",
+                "type": "text",
+                "name": "text:Screenshots",
+                "box": {
+                  "x": 56.0,
+                  "y": 235.0,
+                  "w": 95.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Screenshots",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n23",
+                "type": "text",
+                "name": "text:The files are in the sha",
+                "box": {
+                  "x": 56.0,
+                  "y": 259.0,
+                  "w": 243.0,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "The files are in the shared folder now.",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.25,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-medium",
+                  "color": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n24",
+                "type": "frame",
+                "name": "Switch",
+                "box": {
+                  "x": 344.0,
+                  "y": 241.0,
+                  "w": 52.0,
+                  "h": 32.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 230,
+                      "g": 224,
+                      "b": 233,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [
+                  {
+                    "color": {
+                      "r": 121,
+                      "g": 116,
+                      "b": 126,
+                      "a": 1.0
+                    },
+                    "width": 1.0,
+                    "align": "inside"
+                  }
+                ],
+                "effects": [],
+                "radius": [
+                  16.0,
+                  16.0,
+                  16.0,
+                  16.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": {
+                  "key": "m3.switch:selected=false",
+                  "name": "Switch",
+                  "library": "material3",
+                  "variant": {
+                    "selected": "false"
+                  },
+                  "props": {},
+                  "confidence": 1.0,
+                  "evidence": {
+                    "src": "synth"
+                  }
+                },
+                "tokens": {
+                  "fill": "md.sys.color.surface-container-highest",
+                  "stroke": "md.sys.color.outline"
+                },
+                "meta": {},
+                "children": [
+                  {
+                    "id": "n25",
+                    "type": "ellipse",
+                    "name": "handle",
+                    "box": {
+                      "x": 352.0,
+                      "y": 249.0,
+                      "w": 16.0,
+                      "h": 16.0
+                    },
+                    "fills": [
+                      {
+                        "kind": "solid",
+                        "opacity": 1.0,
+                        "color": {
+                          "r": 121,
+                          "g": 116,
+                          "b": 126,
+                          "a": 1.0
+                        }
+                      }
+                    ],
+                    "strokes": [],
+                    "effects": [],
+                    "radius": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "opacity": 1.0,
+                    "clip": false,
+                    "visible": true,
+                    "text": null,
+                    "text_style": null,
+                    "icon_name": null,
+                    "image_ref": null,
+                    "layout": null,
+                    "component": null,
+                    "tokens": {
+                      "fill": "md.sys.color.outline"
+                    },
+                    "meta": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "n26",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 16.0,
+              "y": 293.0,
+              "w": 396.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n27",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 294.0,
+              "w": 412.0,
+              "h": 72.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Onboarding guide"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n28",
+                "type": "icon",
+                "name": "icon:label",
+                "box": {
+                  "x": 16.0,
+                  "y": 318.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "label",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n29",
+                "type": "text",
+                "name": "text:Onboarding guide",
+                "box": {
+                  "x": 56.0,
+                  "y": 308.0,
+                  "w": 134.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Onboarding guide",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n30",
+                "type": "text",
+                "name": "text:Reminder: the deadline i",
+                "box": {
+                  "x": 56.0,
+                  "y": 332.0,
+                  "w": 234.0,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Reminder: the deadline is end of day",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.25,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-medium",
+                  "color": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

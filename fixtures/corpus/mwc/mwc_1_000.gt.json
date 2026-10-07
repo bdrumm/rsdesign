@@ -1,0 +1,3606 @@
+{
+  "version": "1",
+  "width": 600,
+  "height": 891,
+  "dpr": 1.0,
+  "source_image": "mwc_1_000.png",
+  "palette": [],
+  "fonts": [
+    "Material Symbols Outlined",
+    "Roboto"
+  ],
+  "design_system": "material3",
+  "meta": {
+    "corpus": "mwc",
+    "id": "mwc_1_000",
+    "seed": 1,
+    "index": 0,
+    "html": "mwc_1_000.html",
+    "html_sha1": "560f08b44a402440f153655f90eeb09651bfb00c"
+  },
+  "root": {
+    "id": "root",
+    "type": "frame",
+    "name": "Screen",
+    "box": {
+      "x": 0.0,
+      "y": 0.0,
+      "w": 600.0,
+      "h": 891.0
+    },
+    "fills": [
+      {
+        "kind": "solid",
+        "opacity": 1.0,
+        "color": {
+          "r": 254,
+          "g": 247,
+          "b": 255,
+          "a": 1.0
+        }
+      }
+    ],
+    "strokes": [],
+    "effects": [],
+    "radius": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "opacity": 1.0,
+    "clip": true,
+    "visible": true,
+    "text": null,
+    "text_style": null,
+    "icon_name": null,
+    "image_ref": null,
+    "layout": null,
+    "component": null,
+    "tokens": {},
+    "meta": {},
+    "children": [
+      {
+        "id": "n1",
+        "type": "frame",
+        "name": "TopAppBar/small",
+        "box": {
+          "x": 0.0,
+          "y": 0.0,
+          "w": 600.0,
+          "h": 64.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 243,
+              "g": 237,
+              "b": 247,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.topappbar:size=small",
+          "name": "TopAppBar",
+          "library": "material3",
+          "variant": {
+            "size": "small"
+          },
+          "props": {
+            "label": "menu Trash close refresh settings notifications53"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "div"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "div",
+          "cls": "app-bar small container",
+          "shadow": false
+        },
+        "children": [
+          {
+            "id": "n4",
+            "type": "text",
+            "name": "text:Trash",
+            "box": {
+              "x": 60.0,
+              "y": 17.5,
+              "w": 54.8,
+              "h": 28.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Trash",
+            "text_style": {
+              "family": "Roboto",
+              "size": 22.0,
+              "weight": 400,
+              "line_height": 28.0,
+              "letter_spacing": 0.0,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n2",
+            "type": "frame",
+            "name": "IconButton/standard",
+            "box": {
+              "x": 4.0,
+              "y": 12.0,
+              "w": 40.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.iconbutton:style=standard",
+              "name": "IconButton",
+              "library": "material3",
+              "variant": {
+                "style": "standard"
+              },
+              "props": {
+                "icon": "menu"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-icon-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-icon-button",
+              "cls": "",
+              "shadow": false
+            },
+            "children": [
+              {
+                "id": "n3",
+                "type": "icon",
+                "name": "icon:menu",
+                "box": {
+                  "x": 12.0,
+                  "y": 20.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "menu",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    15.0,
+                    26.0,
+                    18.0,
+                    12.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n5",
+            "type": "frame",
+            "name": "IconButton/standard",
+            "box": {
+              "x": 424.0,
+              "y": 12.0,
+              "w": 40.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.iconbutton:style=standard",
+              "name": "IconButton",
+              "library": "material3",
+              "variant": {
+                "style": "standard"
+              },
+              "props": {
+                "icon": "close"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-icon-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-icon-button",
+              "cls": "",
+              "shadow": false
+            },
+            "children": [
+              {
+                "id": "n6",
+                "type": "icon",
+                "name": "icon:close",
+                "box": {
+                  "x": 432.0,
+                  "y": 20.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "close",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    437.0,
+                    25.0,
+                    14.0,
+                    14.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n7",
+            "type": "frame",
+            "name": "IconButton/standard",
+            "box": {
+              "x": 468.0,
+              "y": 12.0,
+              "w": 40.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.iconbutton:style=standard",
+              "name": "IconButton",
+              "library": "material3",
+              "variant": {
+                "style": "standard"
+              },
+              "props": {
+                "icon": "refresh"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-icon-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-icon-button",
+              "cls": "",
+              "shadow": false
+            },
+            "children": [
+              {
+                "id": "n8",
+                "type": "icon",
+                "name": "icon:refresh",
+                "box": {
+                  "x": 476.0,
+                  "y": 20.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "refresh",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    480.0,
+                    24.0,
+                    16.0,
+                    16.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n9",
+            "type": "frame",
+            "name": "IconButton/standard",
+            "box": {
+              "x": 512.0,
+              "y": 12.0,
+              "w": 40.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.iconbutton:style=standard",
+              "name": "IconButton",
+              "library": "material3",
+              "variant": {
+                "style": "standard"
+              },
+              "props": {
+                "icon": "settings"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-icon-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-icon-button",
+              "cls": "",
+              "shadow": false
+            },
+            "children": [
+              {
+                "id": "n10",
+                "type": "icon",
+                "name": "icon:settings",
+                "box": {
+                  "x": 520.0,
+                  "y": 20.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "settings",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    521.95,
+                    22.0,
+                    20.1,
+                    20.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n11",
+            "type": "frame",
+            "name": "IconButton/standard",
+            "box": {
+              "x": 556.0,
+              "y": 12.0,
+              "w": 40.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.iconbutton:style=standard",
+              "name": "IconButton",
+              "library": "material3",
+              "variant": {
+                "style": "standard"
+              },
+              "props": {
+                "icon": "notifications"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-icon-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-icon-button",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n12",
+                "type": "icon",
+                "name": "icon:notifications",
+                "box": {
+                  "x": 564.0,
+                  "y": 20.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "notifications",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    568.0,
+                    22.0,
+                    16.0,
+                    20.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n13",
+            "type": "frame",
+            "name": "Badge/large",
+            "box": {
+              "x": 578.48,
+              "y": 10.0,
+              "w": 21.52,
+              "h": 16.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 179,
+                  "g": 38,
+                  "b": 30,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.badge:size=large",
+              "name": "Badge",
+              "library": "material3",
+              "variant": {
+                "size": "large"
+              },
+              "props": {
+                "label": "53"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "span"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "span",
+              "cls": "badge",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n14",
+                "type": "text",
+                "name": "text:53",
+                "box": {
+                  "x": 582.48,
+                  "y": 9.5,
+                  "w": 13.52,
+                  "h": 16.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "53",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 11.0,
+                  "weight": 500,
+                  "line_height": 16.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 255,
+                    "g": 255,
+                    "b": 255,
+                    "a": 1.0
+                  },
+                  "align": "center",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "span",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n24",
+        "type": "frame",
+        "name": "Card/filled",
+        "box": {
+          "x": 16.0,
+          "y": 129.0,
+          "w": 278.0,
+          "h": 288.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 230,
+              "g": 224,
+              "b": 233,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.card:style=filled",
+          "name": "Card",
+          "library": "material3",
+          "variant": {
+            "style": "filled"
+          },
+          "props": {
+            "label": "Your storage Attached is the latest draft for your review. SendNext"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "div"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "div",
+          "cls": "card filled",
+          "shadow": false
+        },
+        "children": [
+          {
+            "id": "n25",
+            "type": "text",
+            "name": "text:Your storage",
+            "box": {
+              "x": 32.0,
+              "y": 144.5,
+              "w": 92.78,
+              "h": 24.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Your storage",
+            "text_style": {
+              "family": "Roboto",
+              "size": 16.0,
+              "weight": 500,
+              "line_height": 24.0,
+              "letter_spacing": 0.15,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n26",
+            "type": "text",
+            "name": "text:Attached is the latest d",
+            "box": {
+              "x": 32.0,
+              "y": 177.0,
+              "w": 225.41,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Attached is the latest draft for your",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n27",
+            "type": "text",
+            "name": "text:review.",
+            "box": {
+              "x": 32.0,
+              "y": 197.0,
+              "w": 44.69,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "review.",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n28",
+            "type": "frame",
+            "name": "Button/text",
+            "box": {
+              "x": 128.86,
+              "y": 233.0,
+              "w": 64.0,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.button:style=text",
+              "name": "Button",
+              "library": "material3",
+              "variant": {
+                "style": "text"
+              },
+              "props": {
+                "label": "Send"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-text-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-text-button",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n29",
+                "type": "text",
+                "name": "text:Send",
+                "box": {
+                  "x": 145.02,
+                  "y": 243.0,
+                  "w": 31.67,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Send",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 103,
+                    "g": 80,
+                    "b": 164,
+                    "a": 1.0
+                  },
+                  "align": "center",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n30",
+            "type": "frame",
+            "name": "Button/tonal",
+            "box": {
+              "x": 200.86,
+              "y": 233.0,
+              "w": 77.14,
+              "h": 40.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 232,
+                  "g": 222,
+                  "b": 248,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              20.0,
+              20.0,
+              20.0,
+              20.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.button:style=tonal",
+              "name": "Button",
+              "library": "material3",
+              "variant": {
+                "style": "tonal"
+              },
+              "props": {
+                "label": "Next"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-filled-tonal-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-filled-tonal-button",
+              "cls": "",
+              "shadow": false,
+              "elevation": true,
+              "z": 1,
+              "lifted_from": [
+                {
+                  "id": "n31",
+                  "tag": "div",
+                  "cls": "background"
+                }
+              ]
+            },
+            "children": [
+              {
+                "id": "n32",
+                "type": "text",
+                "name": "text:Next",
+                "box": {
+                  "x": 224.86,
+                  "y": 243.0,
+                  "w": 29.14,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Next",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 25,
+                    "b": 43,
+                    "a": 1.0
+                  },
+                  "align": "center",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n33",
+        "type": "frame",
+        "name": "Card/filled",
+        "box": {
+          "x": 306.0,
+          "y": 129.0,
+          "w": 278.0,
+          "h": 288.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 230,
+              "g": 224,
+              "b": 233,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.card:style=filled",
+          "name": "Card",
+          "library": "material3",
+          "variant": {
+            "style": "filled"
+          },
+          "props": {
+            "label": "Weekly digest Hi team, here are the notes from today's meeting. DismissOK"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "div"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "div",
+          "cls": "card filled",
+          "shadow": false
+        },
+        "children": [
+          {
+            "id": "n34",
+            "type": "rect",
+            "name": "div",
+            "box": {
+              "x": 322.0,
+              "y": 145.0,
+              "w": 246.0,
+              "h": 120.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 234,
+                  "g": 221,
+                  "b": 255,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "tag": "div",
+              "cls": "media",
+              "shadow": false
+            },
+            "children": []
+          },
+          {
+            "id": "n35",
+            "type": "text",
+            "name": "text:Weekly digest",
+            "box": {
+              "x": 322.0,
+              "y": 272.5,
+              "w": 101.47,
+              "h": 24.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Weekly digest",
+            "text_style": {
+              "family": "Roboto",
+              "size": 16.0,
+              "weight": 500,
+              "line_height": 24.0,
+              "letter_spacing": 0.15,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n36",
+            "type": "text",
+            "name": "text:Hi team, here are the no",
+            "box": {
+              "x": 322.0,
+              "y": 305.0,
+              "w": 208.11,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Hi team, here are the notes from",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n37",
+            "type": "text",
+            "name": "text:today's meeting.",
+            "box": {
+              "x": 322.0,
+              "y": 325.0,
+              "w": 105.56,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "today's meeting.",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n38",
+            "type": "frame",
+            "name": "Button/text",
+            "box": {
+              "x": 419.41,
+              "y": 361.0,
+              "w": 74.09,
+              "h": 40.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.button:style=text",
+              "name": "Button",
+              "library": "material3",
+              "variant": {
+                "style": "text"
+              },
+              "props": {
+                "label": "Dismiss"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-text-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-text-button",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n39",
+                "type": "text",
+                "name": "text:Dismiss",
+                "box": {
+                  "x": 431.41,
+                  "y": 371.0,
+                  "w": 50.09,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Dismiss",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 103,
+                    "g": 80,
+                    "b": 164,
+                    "a": 1.0
+                  },
+                  "align": "center",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n40",
+            "type": "frame",
+            "name": "Button/tonal",
+            "box": {
+              "x": 501.5,
+              "y": 361.0,
+              "w": 66.5,
+              "h": 40.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 232,
+                  "g": 222,
+                  "b": 248,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              20.0,
+              20.0,
+              20.0,
+              20.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.button:style=tonal",
+              "name": "Button",
+              "library": "material3",
+              "variant": {
+                "style": "tonal"
+              },
+              "props": {
+                "label": "OK"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-filled-tonal-button"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-filled-tonal-button",
+              "cls": "",
+              "shadow": false,
+              "elevation": true,
+              "z": 1,
+              "lifted_from": [
+                {
+                  "id": "n41",
+                  "tag": "div",
+                  "cls": "background"
+                }
+              ]
+            },
+            "children": [
+              {
+                "id": "n42",
+                "type": "text",
+                "name": "text:OK",
+                "box": {
+                  "x": 525.5,
+                  "y": 371.0,
+                  "w": 18.5,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "OK",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 25,
+                    "b": 43,
+                    "a": 1.0
+                  },
+                  "align": "center",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n43",
+        "type": "frame",
+        "name": "Card/elevated",
+        "box": {
+          "x": 16.0,
+          "y": 429.0,
+          "w": 278.0,
+          "h": 232.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 247,
+              "g": 242,
+              "b": 250,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.3
+            },
+            "dx": 0.0,
+            "dy": 1.0,
+            "blur": 2.0,
+            "spread": 0.0,
+            "inner": false
+          },
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15
+            },
+            "dx": 0.0,
+            "dy": 1.0,
+            "blur": 3.0,
+            "spread": 1.0,
+            "inner": false
+          }
+        ],
+        "radius": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.card:style=elevated",
+          "name": "Card",
+          "library": "material3",
+          "variant": {
+            "style": "elevated"
+          },
+          "props": {
+            "label": "Flight confirmation Attached is the latest draft for your review."
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "div"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "div",
+          "cls": "card elevated",
+          "shadow": false
+        },
+        "children": [
+          {
+            "id": "n44",
+            "type": "text",
+            "name": "text:Flight confirmation",
+            "box": {
+              "x": 32.0,
+              "y": 444.5,
+              "w": 138.77,
+              "h": 24.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Flight confirmation",
+            "text_style": {
+              "family": "Roboto",
+              "size": 16.0,
+              "weight": 500,
+              "line_height": 24.0,
+              "letter_spacing": 0.15,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n45",
+            "type": "text",
+            "name": "text:Attached is the latest d",
+            "box": {
+              "x": 32.0,
+              "y": 477.0,
+              "w": 225.41,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Attached is the latest draft for your",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n46",
+            "type": "text",
+            "name": "text:review.",
+            "box": {
+              "x": 32.0,
+              "y": 497.0,
+              "w": 44.69,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "review.",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n47",
+        "type": "frame",
+        "name": "Card/elevated",
+        "box": {
+          "x": 306.0,
+          "y": 429.0,
+          "w": 278.0,
+          "h": 232.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 247,
+              "g": 242,
+              "b": 250,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.3
+            },
+            "dx": 0.0,
+            "dy": 1.0,
+            "blur": 2.0,
+            "spread": 0.0,
+            "inner": false
+          },
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15
+            },
+            "dx": 0.0,
+            "dy": 1.0,
+            "blur": 3.0,
+            "spread": 1.0,
+            "inner": false
+          }
+        ],
+        "radius": [
+          12.0,
+          12.0,
+          12.0,
+          12.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.card:style=elevated",
+          "name": "Card",
+          "library": "material3",
+          "variant": {
+            "style": "elevated"
+          },
+          "props": {
+            "label": "Trip itinerary Please confirm your availability by Monday."
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "div"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "div",
+          "cls": "card elevated",
+          "shadow": false
+        },
+        "children": [
+          {
+            "id": "n48",
+            "type": "rect",
+            "name": "div",
+            "box": {
+              "x": 322.0,
+              "y": 445.0,
+              "w": 246.0,
+              "h": 120.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 234,
+                  "g": 221,
+                  "b": 255,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              8.0,
+              8.0,
+              8.0,
+              8.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "tag": "div",
+              "cls": "media",
+              "shadow": false
+            },
+            "children": []
+          },
+          {
+            "id": "n49",
+            "type": "text",
+            "name": "text:Trip itinerary",
+            "box": {
+              "x": 322.0,
+              "y": 572.5,
+              "w": 92.59,
+              "h": 24.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Trip itinerary",
+            "text_style": {
+              "family": "Roboto",
+              "size": 16.0,
+              "weight": 500,
+              "line_height": 24.0,
+              "letter_spacing": 0.15,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n50",
+            "type": "text",
+            "name": "text:Please confirm your avai",
+            "box": {
+              "x": 322.0,
+              "y": 605.0,
+              "w": 219.8,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Please confirm your availability by",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          },
+          {
+            "id": "n51",
+            "type": "text",
+            "name": "text:Monday.",
+            "box": {
+              "x": 322.0,
+              "y": 625.0,
+              "w": 54.69,
+              "h": 20.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Monday.",
+            "text_style": {
+              "family": "Roboto",
+              "size": 14.0,
+              "weight": 400,
+              "line_height": 20.0,
+              "letter_spacing": 0.25,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "src": "dom-text",
+              "tag": "div"
+            },
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n15",
+        "type": "frame",
+        "name": "Tabs/secondary",
+        "box": {
+          "x": 0.0,
+          "y": 68.0,
+          "w": 600.0,
+          "h": 49.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.tabs:type=secondary",
+          "name": "Tabs",
+          "library": "material3",
+          "variant": {
+            "type": "secondary"
+          },
+          "props": {
+            "label": "Upcoming Past"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "dom",
+            "tag": "md-tabs"
+          }
+        },
+        "tokens": {},
+        "meta": {
+          "tag": "md-tabs",
+          "cls": "",
+          "shadow": false,
+          "z": 1
+        },
+        "children": [
+          {
+            "id": "n20",
+            "type": "frame",
+            "name": "Tab",
+            "box": {
+              "x": 300.0,
+              "y": 68.0,
+              "w": 300.0,
+              "h": 48.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 254,
+                  "g": 247,
+                  "b": 255,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "tag": "md-secondary-tab",
+              "cls": "",
+              "shadow": false,
+              "elevation": true,
+              "z": 1,
+              "part": "Tab",
+              "lifted_from": [
+                {
+                  "id": "n21",
+                  "tag": "div",
+                  "cls": "button",
+                  "pseudo": "before"
+                }
+              ]
+            },
+            "children": [
+              {
+                "id": "n22",
+                "type": "text",
+                "name": "text:Past",
+                "box": {
+                  "x": 435.86,
+                  "y": 82.0,
+                  "w": 28.28,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Past",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 1
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n23",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 0.0,
+              "y": 116.0,
+              "w": 600.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "tag": "md-divider",
+              "cls": "",
+              "shadow": true,
+              "z": 1
+            },
+            "children": []
+          },
+          {
+            "id": "n16",
+            "type": "frame",
+            "name": "Tab",
+            "box": {
+              "x": 0.0,
+              "y": 68.0,
+              "w": 300.0,
+              "h": 48.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 254,
+                  "g": 247,
+                  "b": 255,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {},
+            "meta": {
+              "tag": "md-secondary-tab",
+              "cls": "",
+              "shadow": false,
+              "elevation": true,
+              "z": 2,
+              "part": "Tab",
+              "lifted_from": [
+                {
+                  "id": "n17",
+                  "tag": "div",
+                  "cls": "button",
+                  "pseudo": "before"
+                }
+              ]
+            },
+            "children": [
+              {
+                "id": "n18",
+                "type": "text",
+                "name": "text:Upcoming",
+                "box": {
+                  "x": 118.11,
+                  "y": 82.0,
+                  "w": 63.78,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Upcoming",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 500,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "slot",
+                  "z": 2
+                },
+                "children": []
+              },
+              {
+                "id": "n19",
+                "type": "rect",
+                "name": "div",
+                "box": {
+                  "x": 0.0,
+                  "y": 114.0,
+                  "w": 300.0,
+                  "h": 2.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 103,
+                      "g": 80,
+                      "b": 164,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "div",
+                  "cls": "indicator",
+                  "shadow": true,
+                  "z": 2
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n52",
+        "type": "frame",
+        "name": "List",
+        "box": {
+          "x": 0.0,
+          "y": 673.0,
+          "w": 600.0,
+          "h": 218.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {},
+        "meta": {
+          "tag": "md-list",
+          "cls": "",
+          "shadow": false,
+          "z": 1,
+          "part": "List"
+        },
+        "children": [
+          {
+            "id": "n53",
+            "type": "frame",
+            "name": "ListItem/2",
+            "box": {
+              "x": 0.0,
+              "y": 681.0,
+              "w": 600.0,
+              "h": 72.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Travel plan",
+                "icon": "slideshow",
+                "supporting_text": "Modified 9:30 AM",
+                "headline": "Travel plan"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-list-item"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-list-item",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n54",
+                "type": "icon",
+                "name": "icon:slideshow",
+                "box": {
+                  "x": 16.0,
+                  "y": 705.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "slideshow",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    19.0,
+                    708.0,
+                    18.0,
+                    18.0
+                  ]
+                },
+                "children": []
+              },
+              {
+                "id": "n55",
+                "type": "text",
+                "name": "text:Travel plan",
+                "box": {
+                  "x": 56.0,
+                  "y": 694.5,
+                  "w": 77.06,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Travel plan",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n56",
+                "type": "text",
+                "name": "text:Modified 9:30 AM",
+                "box": {
+                  "x": 56.0,
+                  "y": 719.0,
+                  "w": 109.89,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Modified 9:30 AM",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n57",
+                "type": "icon",
+                "name": "icon:more_vert",
+                "box": {
+                  "x": 560.0,
+                  "y": 705.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "more_vert",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    570.0,
+                    709.0,
+                    4.0,
+                    16.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n58",
+            "type": "frame",
+            "name": "ListItem/2",
+            "box": {
+              "x": 0.0,
+              "y": 753.0,
+              "w": 600.0,
+              "h": 72.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Roadmap 2025",
+                "icon": "table_chart",
+                "supporting_text": "Modified Oct 3",
+                "headline": "Roadmap 2025"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-list-item"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-list-item",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n59",
+                "type": "icon",
+                "name": "icon:table_chart",
+                "box": {
+                  "x": 16.0,
+                  "y": 777.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "table_chart",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    19.0,
+                    780.0,
+                    18.0,
+                    18.0
+                  ]
+                },
+                "children": []
+              },
+              {
+                "id": "n60",
+                "type": "text",
+                "name": "text:Roadmap 2025",
+                "box": {
+                  "x": 56.0,
+                  "y": 766.5,
+                  "w": 108.38,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Roadmap 2025",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n61",
+                "type": "text",
+                "name": "text:Modified Oct 3",
+                "box": {
+                  "x": 56.0,
+                  "y": 791.0,
+                  "w": 90.95,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Modified Oct 3",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n62",
+                "type": "icon",
+                "name": "icon:more_vert",
+                "box": {
+                  "x": 560.0,
+                  "y": 777.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "more_vert",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    570.0,
+                    781.0,
+                    4.0,
+                    16.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n63",
+            "type": "line",
+            "name": "Divider",
+            "box": {
+              "x": 0.0,
+              "y": 825.0,
+              "w": 600.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-divider"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-divider",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": []
+          },
+          {
+            "id": "n64",
+            "type": "frame",
+            "name": "ListItem/2",
+            "box": {
+              "x": 0.0,
+              "y": 826.0,
+              "w": 600.0,
+              "h": 65.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=2",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "2"
+              },
+              "props": {
+                "label": "Reading list",
+                "icon": "description",
+                "supporting_text": "Modified 12:30 PM",
+                "headline": "Reading list"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "dom",
+                "tag": "md-list-item"
+              }
+            },
+            "tokens": {},
+            "meta": {
+              "tag": "md-list-item",
+              "cls": "",
+              "shadow": false,
+              "z": 1
+            },
+            "children": [
+              {
+                "id": "n65",
+                "type": "icon",
+                "name": "icon:description",
+                "box": {
+                  "x": 16.0,
+                  "y": 850.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "description",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    20.0,
+                    852.0,
+                    16.0,
+                    20.0
+                  ]
+                },
+                "children": []
+              },
+              {
+                "id": "n66",
+                "type": "text",
+                "name": "text:Reading list",
+                "box": {
+                  "x": 56.0,
+                  "y": 839.5,
+                  "w": 83.03,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Reading list",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n67",
+                "type": "text",
+                "name": "text:Modified 12:30 PM",
+                "box": {
+                  "x": 56.0,
+                  "y": 864.0,
+                  "w": 117.45,
+                  "h": 20.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Modified 12:30 PM",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 14.0,
+                  "weight": 400,
+                  "line_height": 20.0,
+                  "letter_spacing": 0.0,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "src": "dom-text",
+                  "tag": "div",
+                  "z": 1
+                },
+                "children": []
+              },
+              {
+                "id": "n68",
+                "type": "icon",
+                "name": "icon:more_vert",
+                "box": {
+                  "x": 560.0,
+                  "y": 850.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "more_vert",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {},
+                "meta": {
+                  "tag": "md-icon",
+                  "cls": "",
+                  "shadow": false,
+                  "z": 1,
+                  "icon_size": 24,
+                  "ink_box": [
+                    570.0,
+                    854.0,
+                    4.0,
+                    16.0
+                  ]
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

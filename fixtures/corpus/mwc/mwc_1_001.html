@@ -1,0 +1,111 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../fonts/roboto.local.css">
+<link rel="stylesheet" href="../../fonts/material-symbols.local.css">
+<script>
+(() => { const orig = Element.prototype.animate; Element.prototype.animate = function(k, o) { const a = orig.call(this, k, o); try { a.finish(); } catch (e) {} return a; }; })();
+</script>
+<script src="../../mwc/mwc.bundle.js"></script>
+<style>
+:root {
+  --md-sys-color-primary: #6750a4;
+  --md-sys-color-on-primary: #ffffff;
+  --md-sys-color-primary-container: #eaddff;
+  --md-sys-color-on-primary-container: #21005d;
+  --md-sys-color-secondary: #625b71;
+  --md-sys-color-on-secondary: #ffffff;
+  --md-sys-color-secondary-container: #e8def8;
+  --md-sys-color-on-secondary-container: #1d192b;
+  --md-sys-color-tertiary: #7d5260;
+  --md-sys-color-on-tertiary: #ffffff;
+  --md-sys-color-tertiary-container: #ffd8e4;
+  --md-sys-color-on-tertiary-container: #31111d;
+  --md-sys-color-error: #b3261e;
+  --md-sys-color-on-error: #ffffff;
+  --md-sys-color-error-container: #f9dedc;
+  --md-sys-color-on-error-container: #410e0b;
+  --md-sys-color-background: #fef7ff;
+  --md-sys-color-on-background: #1d1b20;
+  --md-sys-color-surface: #fef7ff;
+  --md-sys-color-on-surface: #1d1b20;
+  --md-sys-color-surface-variant: #e7e0ec;
+  --md-sys-color-on-surface-variant: #49454f;
+  --md-sys-color-surface-dim: #ded8e1;
+  --md-sys-color-surface-bright: #fef7ff;
+  --md-sys-color-surface-container-lowest: #ffffff;
+  --md-sys-color-surface-container-low: #f7f2fa;
+  --md-sys-color-surface-container: #f3edf7;
+  --md-sys-color-surface-container-high: #ece6f0;
+  --md-sys-color-surface-container-highest: #e6e0e9;
+  --md-sys-color-surface-tint: #6750a4;
+  --md-sys-color-inverse-surface: #322f35;
+  --md-sys-color-inverse-on-surface: #f5eff7;
+  --md-sys-color-inverse-primary: #d0bcff;
+  --md-sys-color-outline: #79747e;
+  --md-sys-color-outline-variant: #cac4d0;
+  --md-sys-color-shadow: #000000;
+  --md-sys-color-scrim: #000000;
+}
+* { transition: none !important; animation: none !important; }
+html, body { margin:0; padding:0; width:412px; height:730px; overflow:hidden; }
+body { font-family: Roboto, sans-serif; background: var(--md-sys-color-surface); color: var(--md-sys-color-on-surface); position:relative; }
+.shell { display:flex; height:100%; }
+.main { flex:1; min-width:0; display:flex; flex-direction:column; gap:4px; }
+.main > * { flex: none; }
+.bottom { position:absolute; left:0; right:0; bottom:0; }
+md-list { --md-list-container-color: transparent; }
+md-list-item { --md-list-item-label-text-color: var(--md-sys-color-on-surface); }
+
+.app-bar { display:flex; align-items:center; height:64px; padding:0 4px; background:var(--md-sys-color-surface); color:var(--md-sys-color-on-surface); gap:4px; box-sizing:border-box; }
+.app-bar.center { justify-content:space-between; }
+.app-bar.center .title { flex:1; text-align:center; }
+.app-bar .title { font-size:22px; line-height:28px; font-weight:400; letter-spacing:0; padding:0 12px; white-space:nowrap; overflow:hidden; }
+.app-bar.small .title { flex:1; }
+.app-bar .spacer { flex:1; }
+.app-bar.container { background:var(--md-sys-color-surface-container); }
+.nav-bar { display:flex; height:80px; background:var(--md-sys-color-surface-container); box-sizing:border-box; padding:12px 8px 16px; gap:8px; }
+.nav-bar .dest { flex:1; display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--md-sys-color-on-surface-variant); }
+.nav-bar .dest .pill { width:64px; height:32px; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.nav-bar .dest.active .pill { background:var(--md-sys-color-secondary-container); }
+.nav-bar .dest.active { color:var(--md-sys-color-on-surface); }
+.nav-bar .dest .lbl { font-size:12px; line-height:16px; font-weight:500; letter-spacing:0.5px; }
+.nav-bar .dest.active .lbl { font-weight:700; }
+.nav-rail { width:80px; display:flex; flex-direction:column; align-items:center; background:var(--md-sys-color-surface); padding:12px 0; gap:12px; box-sizing:border-box; flex:none; }
+.nav-rail .dest { display:flex; flex-direction:column; align-items:center; gap:4px; color:var(--md-sys-color-on-surface-variant); }
+.nav-rail .dest .pill { width:56px; height:32px; border-radius:16px; display:flex; align-items:center; justify-content:center; }
+.nav-rail .dest.active .pill { background:var(--md-sys-color-secondary-container); }
+.nav-rail .dest .lbl { font-size:12px; line-height:16px; font-weight:500; letter-spacing:0.5px; }
+.nav-rail .dest.active { color:var(--md-sys-color-on-surface); }
+.card { border-radius:12px; padding:16px; box-sizing:border-box; display:flex; flex-direction:column; gap:8px; color:var(--md-sys-color-on-surface); }
+.card.elevated { background:var(--md-sys-color-surface-container-low); box-shadow:0px 1px 2px 0px rgba(0,0,0,0.3), 0px 1px 3px 1px rgba(0,0,0,0.15); }
+.card.filled { background:var(--md-sys-color-surface-container-highest); }
+.card.outlined { background:var(--md-sys-color-surface); border:1px solid var(--md-sys-color-outline-variant); }
+.card .headline { font-size:16px; line-height:24px; font-weight:500; letter-spacing:0.15px; }
+.card .supporting { font-size:14px; line-height:20px; letter-spacing:0.25px; color:var(--md-sys-color-on-surface-variant); }
+.card .actions { display:flex; gap:8px; justify-content:flex-end; margin-top:8px; }
+.card .media { height:120px; border-radius:8px; background:var(--md-sys-color-primary-container); }
+.snackbar { position:absolute; left:16px; right:16px; min-height:48px; border-radius:4px; background:var(--md-sys-color-inverse-surface); color:var(--md-sys-color-inverse-on-surface); display:flex; align-items:center; padding:0 8px 0 16px; box-sizing:border-box; gap:8px; box-shadow:0px 1px 3px 0px rgba(0,0,0,0.3), 0px 4px 8px 3px rgba(0,0,0,0.15); }
+.snackbar .msg { flex:1; font-size:14px; line-height:20px; letter-spacing:0.25px; }
+.snackbar .act { color:var(--md-sys-color-inverse-primary); font-size:14px; line-height:20px; font-weight:500; letter-spacing:0.1px; padding:10px 12px; }
+.badge-wrap { position:relative; display:inline-flex; }
+.badge { position:absolute; top:-2px; right:-4px; min-width:16px; height:16px; padding:0 4px; box-sizing:border-box; border-radius:8px; background:var(--md-sys-color-error); color:var(--md-sys-color-on-error); font-size:11px; line-height:16px; font-weight:500; letter-spacing:0.5px; text-align:center; }
+.badge.small { width:6px; min-width:6px; height:6px; padding:0; border-radius:3px; top:0; right:0; }
+.section-title { font-size:14px; line-height:20px; font-weight:500; letter-spacing:0.1px; color:var(--md-sys-color-on-surface-variant); padding:16px 16px 8px; }
+.headline-text { font-size:24px; line-height:32px; font-weight:400; color:var(--md-sys-color-on-surface); padding:16px 16px 4px; }
+.body-text { font-size:14px; line-height:20px; letter-spacing:0.25px; color:var(--md-sys-color-on-surface-variant); padding:0 16px 8px; }
+.row { display:flex; align-items:center; gap:8px; padding:8px 16px; flex-wrap:wrap; }
+.row.end { justify-content:flex-end; }
+.grid { display:grid; gap:12px; padding:8px 16px; }
+.form { display:flex; flex-direction:column; gap:16px; padding:12px 16px; }
+.progress-row { display:flex; align-items:center; gap:16px; padding:8px 16px; }
+.fab-holder { position:absolute; right:16px; }
+.menu-anchor { position:relative; display:inline-block; }
+.avatar { width:40px; height:40px; border-radius:20px; background:var(--md-sys-color-primary-container); color:var(--md-sys-color-on-primary-container); display:flex; align-items:center; justify-content:center; font-size:16px; font-weight:500; }
+
+</style>
+</head><body><div class="main"><div class="app-bar small" data-component="TopAppBar" data-variant-size="small"><md-icon-button><md-icon>arrow_back</md-icon></md-icon-button><div class="title">Shared with me</div><md-icon-button><md-icon>send</md-icon></md-icon-button><span class="badge-wrap"><md-icon-button><md-icon>notifications</md-icon></md-icon-button><span class="badge" data-component="Badge" data-variant-size="large">55</span></span></div><div class="progress-row"><md-linear-progress value="0.5" buffer="0.7" style="flex:1"></md-linear-progress></div><md-list><md-list-item><md-icon slot="start">event</md-icon><div slot="headline">Flight to SFO</div><div slot="supporting-text">9:30 AM</div></md-list-item><md-list-item><md-icon slot="start">event</md-icon><div slot="headline">Lunch with Jordan</div><div slot="supporting-text">3:45 PM</div></md-list-item><md-list-item><md-icon slot="start">event</md-icon><div slot="headline">Standup</div><div slot="supporting-text">2:00 PM</div></md-list-item><md-list-item><md-icon slot="start">event</md-icon><div slot="headline">1:1 with Priya</div><div slot="supporting-text">12:30 PM</div></md-list-item><md-list-item><md-icon slot="start">event</md-icon><div slot="headline">Yoga class</div><div slot="supporting-text">2:00 PM</div></md-list-item></md-list><div class="form"><md-filled-text-field label="Website"></md-filled-text-field><md-filled-text-field label="Location" value="Room 4B"><md-icon slot="leading-icon">mail</md-icon></md-filled-text-field></div><div class="row end"><md-text-button>Cancel</md-text-button><md-filled-button>Done</md-filled-button></div><div class="progress-row"><md-linear-progress value="0.65" style="flex:1"></md-linear-progress></div><md-list><md-list-item><md-icon slot="start">table_chart</md-icon><div slot="headline">Brand assets</div><div slot="supporting-text">Modified 11:00 AM</div><md-icon slot="end">more_vert</md-icon></md-list-item><md-divider></md-divider><md-list-item><md-icon slot="start">slideshow</md-icon><div slot="headline">Expense report</div><div slot="supporting-text">Modified Yesterday</div><md-icon slot="end">more_vert</md-icon></md-list-item><md-list-item><md-icon slot="start">slideshow</md-icon><div slot="headline">Pitch deck v3</div><div slot="supporting-text">Modified 10:15 AM</div><md-icon slot="end">more_vert</md-icon></md-list-item><md-list-item><md-icon slot="start">description</md-icon><div slot="headline">Travel plan</div><div slot="supporting-text">Modified 12:30 PM</div><md-icon slot="end">more_vert</md-icon></md-list-item></md-list></div><div class="bottom"><div class="nav-bar" data-component="NavigationBar" data-destinations="3"><div class="dest"><div class="pill"><span class="badge-wrap"><md-icon>photo_library</md-icon><span class="badge" data-component="Badge" data-variant-size="large">19</span></span></div><div class="lbl">Photos</div></div><div class="dest"><div class="pill"><span class="badge-wrap"><md-icon>calendar_month</md-icon><span class="badge small" data-component="Badge" data-variant-size="small"></span></span></div><div class="lbl">Calendar</div></div><div class="dest active"><div class="pill"><span class="badge-wrap"><md-icon>home</md-icon><span class="badge small" data-component="Badge" data-variant-size="small"></span></span></div><div class="lbl">Home</div></div></div></div><div class="fab-holder" style="bottom:96px"><md-fab variant="tertiary" label="New event"><md-icon slot="icon">add</md-icon></md-fab></div>
+<script>
+document.querySelectorAll('md-tabs[data-active]').forEach(t => t.updateComplete.then(() => { t.activeTabIndex = parseInt(t.dataset.active); }));
+// md-select resolves `selected` options asynchronously (racy); pin the value after upgrade
+document.querySelectorAll('md-outlined-select, md-filled-select').forEach(s => s.updateComplete.then(() => { const o = s.querySelector('md-select-option[selected]'); if (o) { s.value = o.getAttribute('value'); } }));
+</script>
+</body></html>

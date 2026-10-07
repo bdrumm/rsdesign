@@ -1,0 +1,36 @@
+[project]
+name = "rsdesign"
+version = "0.1.0"
+license = "Apache-2.0"
+description = "Screenshot -> IR -> design-system mapping -> Figma, with adversarial refinement and self-tests"
+requires-python = ">=3.12"
+dependencies = [
+  "numpy", "opencv-python-headless", "pillow", "scikit-image", "scipy",
+  # macOS Vision OCR; pyobjc has no wheels (and does not build) anywhere else
+  "pyobjc-framework-Vision; sys_platform == 'darwin'", "pyobjc-framework-Quartz; sys_platform == 'darwin'",
+  "playwright", "requests", "pytest",
+]
+
+[project.optional-dependencies]
+# OCR backend for Linux / Windows (macOS uses Vision). It pulls opencv-python next to the headless
+# build; on a headless Linux box run `uv pip install --reinstall opencv-python-headless` afterwards
+# (scripts/setup.sh does this) so cv2 does not need libGL.
+ocr = ["rapidocr-onnxruntime>=1.4"]
+linux = ["rapidocr-onnxruntime>=1.4"]
+# MCP server (python -m dt.mcp_server / rsdesign-mcp): exposes the harness to any MCP client
+mcp = ["mcp>=2.3"]
+
+[project.scripts]
+dt = "dt.cli:main"
+rsdesign-mcp = "dt.mcp_server:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["dt*"]

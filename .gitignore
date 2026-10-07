@@ -1,0 +1,21 @@
+.venv/
+node_modules/
+__pycache__/
+*.pyc
+out/
+.pytest_cache/
+*.egg-info/
+# captured screenshots of public sites are regenerated locally, never committed
+fixtures/screens/*.png
+# generated corpora (fixtures/corpus) ARE committed: they are the ground-truth benchmark (3.6 MB)
+
+# local agent worktrees / session state
+.claude/
+# Google Sans Text: served by Google Fonts but not in its public catalogue (license unconfirmed) - local only
+fixtures/fonts/gsans_text*.css
+fixtures/fonts/17c24ea64b.woff2
+fixtures/fonts/20fec318c8.woff2
+fixtures/fonts/3a1a02035e.woff2
+fixtures/fonts/5ea3abf3f1.woff2
+fixtures/fonts/e0f363a7aa.woff2
+fixtures/fonts/f0d0c72876.woff2

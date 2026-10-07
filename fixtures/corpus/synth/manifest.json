@@ -1,0 +1,324 @@
+{
+  "cases": [
+    {
+      "components": {
+        "m3.divider": 4,
+        "m3.listitem:lines=1": 3,
+        "m3.listitem:lines=2": 3,
+        "m3.switch:selected=true": 1,
+        "m3.textfield:style=outlined": 1,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 891,
+      "id": "synth_1_000",
+      "nodes": 46,
+      "types": {
+        "ellipse": 1,
+        "frame": 13,
+        "icon": 11,
+        "line": 4,
+        "text": 17
+      },
+      "width": 600
+    },
+    {
+      "components": {
+        "m3.button:style=outlined": 1,
+        "m3.button:style=text": 1,
+        "m3.chip:selected=false,type=suggestion": 4,
+        "m3.divider": 2,
+        "m3.listitem:lines=2": 3,
+        "m3.switch:selected=false": 1
+      },
+      "height": 730,
+      "id": "synth_1_001",
+      "nodes": 31,
+      "types": {
+        "ellipse": 1,
+        "frame": 12,
+        "icon": 3,
+        "line": 2,
+        "text": 13
+      },
+      "width": 412
+    },
+    {
+      "components": {
+        "m3.button:style=text": 3,
+        "m3.button:style=tonal": 2,
+        "m3.card:style=elevated": 3,
+        "m3.card:style=filled": 1,
+        "m3.card:style=outlined": 2,
+        "m3.chip:selected=false,type=assist": 4,
+        "m3.divider": 4,
+        "m3.fab:extended=false,size=regular": 1,
+        "m3.listitem:lines=1": 5,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 841,
+      "id": "synth_1_002",
+      "nodes": 66,
+      "types": {
+        "frame": 24,
+        "icon": 9,
+        "line": 4,
+        "text": 29
+      },
+      "width": 1200
+    },
+    {
+      "components": {
+        "m3.divider": 4,
+        "m3.fab:extended=false,size=large": 1,
+        "m3.listitem:lines=2": 5,
+        "m3.switch:selected=false": 1,
+        "m3.switch:selected=true": 1,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 648,
+      "id": "synth_1_003",
+      "nodes": 38,
+      "types": {
+        "ellipse": 2,
+        "frame": 11,
+        "icon": 7,
+        "line": 4,
+        "text": 14
+      },
+      "width": 600
+    },
+    {
+      "components": {
+        "m3.chip:selected=false,type=assist": 4,
+        "m3.fab:extended=false,size=regular": 1,
+        "m3.textfield:style=filled": 2,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 821,
+      "id": "synth_1_004",
+      "nodes": 27,
+      "types": {
+        "frame": 9,
+        "icon": 3,
+        "line": 2,
+        "text": 13
+      },
+      "width": 1200
+    },
+    {
+      "components": {
+        "m3.button:style=elevated": 1,
+        "m3.button:style=text": 1,
+        "m3.chip:selected=false,type=suggestion": 3,
+        "m3.divider": 6,
+        "m3.listitem:lines=1": 8,
+        "m3.navigationbar": 1,
+        "m3.switch:selected=false": 2,
+        "m3.switch:selected=true": 1,
+        "m3.textfield:style=outlined": 1
+      },
+      "height": 956,
+      "id": "synth_1_005",
+      "nodes": 62,
+      "types": {
+        "ellipse": 3,
+        "frame": 23,
+        "icon": 12,
+        "line": 6,
+        "text": 18
+      },
+      "width": 412
+    },
+    {
+      "components": {
+        "m3.card:style=elevated": 1,
+        "m3.card:style=filled": 1,
+        "m3.card:style=outlined": 2,
+        "m3.divider": 5,
+        "m3.fab:extended=false,size=regular": 1,
+        "m3.listitem:lines=1": 3,
+        "m3.listitem:lines=2": 4,
+        "m3.switch:selected=false": 1,
+        "m3.switch:selected=true": 1,
+        "m3.topappbar:size=center": 1
+      },
+      "height": 902,
+      "id": "synth_1_006",
+      "nodes": 63,
+      "types": {
+        "ellipse": 2,
+        "frame": 18,
+        "icon": 14,
+        "line": 5,
+        "text": 24
+      },
+      "width": 600
+    },
+    {
+      "components": {
+        "m3.divider": 3,
+        "m3.listitem:lines=2": 4,
+        "m3.switch:selected=false": 2,
+        "m3.textfield:style=outlined": 2,
+        "m3.topappbar:size=center": 1
+      },
+      "height": 615,
+      "id": "synth_1_007",
+      "nodes": 37,
+      "types": {
+        "ellipse": 2,
+        "frame": 13,
+        "icon": 6,
+        "line": 3,
+        "text": 13
+      },
+      "width": 840
+    },
+    {
+      "components": {
+        "m3.button:style=filled": 1,
+        "m3.button:style=text": 1,
+        "m3.card:style=outlined": 1,
+        "m3.divider": 3,
+        "m3.listitem:lines=1": 4,
+        "m3.navigationbar": 1,
+        "m3.switch:selected=false": 1,
+        "m3.switch:selected=true": 1,
+        "m3.textfield:style=outlined": 2,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 795,
+      "id": "synth_1_008",
+      "nodes": 53,
+      "types": {
+        "ellipse": 2,
+        "frame": 18,
+        "icon": 12,
+        "line": 3,
+        "text": 18
+      },
+      "width": 412
+    },
+    {
+      "components": {
+        "m3.divider": 7,
+        "m3.fab:extended=false,size=large": 1,
+        "m3.listitem:lines=1": 9,
+        "m3.switch:selected=false": 3,
+        "m3.textfield:style=outlined": 1,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 971,
+      "id": "synth_1_009",
+      "nodes": 61,
+      "types": {
+        "ellipse": 3,
+        "frame": 19,
+        "icon": 13,
+        "line": 7,
+        "text": 19
+      },
+      "width": 1200
+    },
+    {
+      "components": {
+        "m3.button:style=elevated": 1,
+        "m3.button:style=text": 2,
+        "m3.button:style=tonal": 2,
+        "m3.divider": 6,
+        "m3.fab:extended=false,size=regular": 1,
+        "m3.listitem:lines=1": 4,
+        "m3.listitem:lines=2": 4,
+        "m3.textfield:style=filled": 1,
+        "m3.topappbar:size=center": 1
+      },
+      "height": 991,
+      "id": "synth_1_010",
+      "nodes": 61,
+      "types": {
+        "frame": 19,
+        "icon": 10,
+        "line": 7,
+        "text": 25
+      },
+      "width": 600
+    },
+    {
+      "components": {
+        "m3.button:style=filled": 2,
+        "m3.button:style=text": 1,
+        "m3.card:style=filled": 1,
+        "m3.card:style=outlined": 2,
+        "m3.divider": 3,
+        "m3.fab:extended=false,size=regular": 1,
+        "m3.listitem:lines=2": 4,
+        "m3.switch:selected=false": 1,
+        "m3.switch:selected=true": 2,
+        "m3.textfield:style=filled": 2,
+        "m3.topappbar:size=small": 1
+      },
+      "height": 883,
+      "id": "synth_1_011",
+      "nodes": 60,
+      "types": {
+        "ellipse": 3,
+        "frame": 19,
+        "icon": 8,
+        "line": 5,
+        "text": 25
+      },
+      "width": 1200
+    }
+  ],
+  "component_histogram": {
+    "m3.button:style=elevated": 2,
+    "m3.button:style=filled": 3,
+    "m3.button:style=outlined": 1,
+    "m3.button:style=text": 9,
+    "m3.button:style=tonal": 4,
+    "m3.card:style=elevated": 4,
+    "m3.card:style=filled": 3,
+    "m3.card:style=outlined": 7,
+    "m3.chip:selected=false,type=assist": 8,
+    "m3.chip:selected=false,type=suggestion": 7,
+    "m3.divider": 47,
+    "m3.fab:extended=false,size=large": 2,
+    "m3.fab:extended=false,size=regular": 5,
+    "m3.listitem:lines=1": 36,
+    "m3.listitem:lines=2": 27,
+    "m3.navigationbar": 2,
+    "m3.switch:selected=false": 12,
+    "m3.switch:selected=true": 7,
+    "m3.textfield:style=filled": 5,
+    "m3.textfield:style=outlined": 7,
+    "m3.topappbar:size=center": 3,
+    "m3.topappbar:size=small": 7
+  },
+  "height_range": [
+    600,
+    1000
+  ],
+  "ids": [
+    "synth_1_000",
+    "synth_1_001",
+    "synth_1_002",
+    "synth_1_003",
+    "synth_1_004",
+    "synth_1_005",
+    "synth_1_006",
+    "synth_1_007",
+    "synth_1_008",
+    "synth_1_009",
+    "synth_1_010",
+    "synth_1_011"
+  ],
+  "kind": "synth",
+  "n": 12,
+  "seed": 1,
+  "widths": [
+    412,
+    600,
+    840,
+    1200
+  ]
+}

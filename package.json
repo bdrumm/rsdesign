@@ -1,0 +1,22 @@
+{
+  "name": "rsdesign",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Node side of designtranslator: Material Web bundle (fixtures/mwc), Playwright, headless Figma plugin tests",
+  "scripts": {
+    "build:mwc": "esbuild fixtures/mwc/entry.js --bundle --minify --format=iife --outfile=fixtures/mwc/mwc.bundle.js",
+    "setup": "bash scripts/setup.sh",
+    "doctor": "python -m dt.cli doctor"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "dependencies": {
+    "@material/web": "^2.5.0",
+    "playwright": "^1.63.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.2"
+  }
+}

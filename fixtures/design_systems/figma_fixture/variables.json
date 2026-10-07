@@ -1,0 +1,42 @@
+{
+  "status": 200,
+  "error": false,
+  "meta": {
+    "variableCollections": {
+      "VariableCollectionId:10:0": {
+        "id": "VariableCollectionId:10:0",
+        "name": "Theme",
+        "key": "coll1",
+        "modes": [{"modeId": "10:0", "name": "Light"}, {"modeId": "10:9", "name": "Dark"}],
+        "defaultModeId": "10:0",
+        "remote": false,
+        "hiddenFromPublishing": false,
+        "variableIds": ["VariableID:10:1", "VariableID:10:2", "VariableID:10:3", "VariableID:10:4"]
+      }
+    },
+    "variables": {
+      "VariableID:10:1": {
+        "id": "VariableID:10:1", "name": "colors/primary", "key": "v1", "variableCollectionId": "VariableCollectionId:10:0",
+        "resolvedType": "COLOR", "description": "", "hiddenFromPublishing": false, "remote": false,
+        "valuesByMode": {"10:0": {"r": 0.40392157, "g": 0.3137255, "b": 0.6431373, "a": 1}, "10:9": {"r": 0.8156863, "g": 0.7372549, "b": 1, "a": 1}},
+        "scopes": ["ALL_SCOPES"], "codeSyntax": {}
+      },
+      "VariableID:10:2": {
+        "id": "VariableID:10:2", "name": "colors/brand", "key": "v2", "variableCollectionId": "VariableCollectionId:10:0",
+        "resolvedType": "COLOR", "description": "alias of primary", "hiddenFromPublishing": false, "remote": false,
+        "valuesByMode": {"10:0": {"type": "VARIABLE_ALIAS", "id": "VariableID:10:1"}, "10:9": {"type": "VARIABLE_ALIAS", "id": "VariableID:10:1"}},
+        "scopes": ["ALL_SCOPES"], "codeSyntax": {}
+      },
+      "VariableID:10:3": {
+        "id": "VariableID:10:3", "name": "spacing/md", "key": "v3", "variableCollectionId": "VariableCollectionId:10:0",
+        "resolvedType": "FLOAT", "description": "", "hiddenFromPublishing": false, "remote": false,
+        "valuesByMode": {"10:0": 16, "10:9": 16}, "scopes": ["GAP"], "codeSyntax": {}
+      },
+      "VariableID:10:4": {
+        "id": "VariableID:10:4", "name": "radius/full", "key": "v4", "variableCollectionId": "VariableCollectionId:10:0",
+        "resolvedType": "FLOAT", "description": "", "hiddenFromPublishing": false, "remote": false,
+        "valuesByMode": {"10:0": 9999, "10:9": 9999}, "scopes": ["CORNER_RADIUS"], "codeSyntax": {}
+      }
+    }
+  }
+}

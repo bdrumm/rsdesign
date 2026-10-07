@@ -1,0 +1,3117 @@
+{
+  "version": "1",
+  "width": 1200,
+  "height": 971,
+  "dpr": 1.0,
+  "source_image": "synth_1_009.png",
+  "palette": [],
+  "fonts": [
+    "Roboto",
+    "Material Symbols Outlined"
+  ],
+  "design_system": "material3",
+  "meta": {
+    "corpus": "synth",
+    "id": "synth_1_009",
+    "seed": 1,
+    "index": 9
+  },
+  "root": {
+    "id": "root",
+    "type": "frame",
+    "name": "Screen",
+    "box": {
+      "x": 0.0,
+      "y": 0.0,
+      "w": 1200.0,
+      "h": 971.0
+    },
+    "fills": [
+      {
+        "kind": "solid",
+        "opacity": 1.0,
+        "color": {
+          "r": 254,
+          "g": 247,
+          "b": 255,
+          "a": 1.0
+        }
+      }
+    ],
+    "strokes": [],
+    "effects": [],
+    "radius": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "opacity": 1.0,
+    "clip": true,
+    "visible": true,
+    "text": null,
+    "text_style": null,
+    "icon_name": null,
+    "image_ref": null,
+    "layout": null,
+    "component": null,
+    "tokens": {
+      "fill": "md.sys.color.surface"
+    },
+    "meta": {},
+    "children": [
+      {
+        "id": "n1",
+        "type": "frame",
+        "name": "TopAppBar",
+        "box": {
+          "x": 0.0,
+          "y": 0.0,
+          "w": 1200.0,
+          "h": 64.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 243,
+              "g": 237,
+              "b": 247,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.topappbar:size=small",
+          "name": "TopAppBar",
+          "library": "material3",
+          "variant": {
+            "size": "small"
+          },
+          "props": {
+            "label": "This week"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "fill": "md.sys.color.surface-container"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n2",
+            "type": "icon",
+            "name": "icon:menu",
+            "box": {
+              "x": 12.0,
+              "y": 20.0,
+              "w": 24.0,
+              "h": 24.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 73,
+                  "g": 69,
+                  "b": 79,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": "menu",
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "fill": "md.sys.color.on-surface-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n3",
+            "type": "text",
+            "name": "text:This week",
+            "box": {
+              "x": 60.0,
+              "y": 18.0,
+              "w": 99.0,
+              "h": 28.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "This week",
+            "text_style": {
+              "family": "Roboto",
+              "size": 22.0,
+              "weight": 400,
+              "line_height": 28.0,
+              "letter_spacing": 0.0,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.title-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n4",
+            "type": "icon",
+            "name": "icon:arrow_back",
+            "box": {
+              "x": 1164.0,
+              "y": 20.0,
+              "w": 24.0,
+              "h": 24.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 73,
+                  "g": 69,
+                  "b": 79,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": "arrow_back",
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "fill": "md.sys.color.on-surface-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n5",
+            "type": "icon",
+            "name": "icon:search",
+            "box": {
+              "x": 1116.0,
+              "y": 20.0,
+              "w": 24.0,
+              "h": 24.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 73,
+                  "g": 69,
+                  "b": 79,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": "search",
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "fill": "md.sys.color.on-surface-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n6",
+            "type": "icon",
+            "name": "icon:more_vert",
+            "box": {
+              "x": 1068.0,
+              "y": 20.0,
+              "w": 24.0,
+              "h": 24.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 73,
+                  "g": 69,
+                  "b": 79,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": "more_vert",
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "fill": "md.sys.color.on-surface-variant"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n7",
+        "type": "text",
+        "name": "text:Upcoming events",
+        "box": {
+          "x": 16.0,
+          "y": 80.0,
+          "w": 186.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Upcoming events",
+        "text_style": {
+          "family": "Roboto",
+          "size": 24.0,
+          "weight": 400,
+          "line_height": 32.0,
+          "letter_spacing": 0.0,
+          "color": {
+            "r": 29,
+            "g": 27,
+            "b": 32,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.headline-small",
+          "color": "md.sys.color.on-surface"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n8",
+        "type": "text",
+        "name": "text:Hi team, here are the no",
+        "box": {
+          "x": 16.0,
+          "y": 120.0,
+          "w": 318.0,
+          "h": 20.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Hi team, here are the notes from today's meeting.",
+        "text_style": {
+          "family": "Roboto",
+          "size": 14.0,
+          "weight": 400,
+          "line_height": 20.0,
+          "letter_spacing": 0.25,
+          "color": {
+            "r": 73,
+            "g": 69,
+            "b": 79,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.body-medium",
+          "color": "md.sys.color.on-surface-variant"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n9",
+        "type": "frame",
+        "name": "TextField/outlined",
+        "box": {
+          "x": 16.0,
+          "y": 164.0,
+          "w": 1168.0,
+          "h": 56.0
+        },
+        "fills": [],
+        "strokes": [
+          {
+            "color": {
+              "r": 121,
+              "g": 116,
+              "b": 126,
+              "a": 1.0
+            },
+            "width": 1.0,
+            "align": "inside"
+          }
+        ],
+        "effects": [],
+        "radius": [
+          4.0,
+          4.0,
+          4.0,
+          4.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.textfield:style=outlined",
+          "name": "TextField",
+          "library": "material3",
+          "variant": {
+            "style": "outlined"
+          },
+          "props": {
+            "label": "Title",
+            "value": "Roadmap"
+          },
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "stroke": "md.sys.color.outline"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n10",
+            "type": "text",
+            "name": "text:Roadmap",
+            "box": {
+              "x": 32.0,
+              "y": 180.0,
+              "w": 72.0,
+              "h": 24.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Roadmap",
+            "text_style": {
+              "family": "Roboto",
+              "size": 16.0,
+              "weight": 400,
+              "line_height": 24.0,
+              "letter_spacing": 0.5,
+              "color": {
+                "r": 29,
+                "g": 27,
+                "b": 32,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.body-large",
+              "color": "md.sys.color.on-surface"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n11",
+        "type": "frame",
+        "name": "label-bg",
+        "box": {
+          "x": 30.0,
+          "y": 154.0,
+          "w": 30.0,
+          "h": 20.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 254,
+              "g": 247,
+              "b": 255,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "fill": "md.sys.color.surface"
+        },
+        "meta": {},
+        "children": [
+          {
+            "id": "n12",
+            "type": "text",
+            "name": "text:Title",
+            "box": {
+              "x": 32.0,
+              "y": 156.0,
+              "w": 26.0,
+              "h": 16.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": "Title",
+            "text_style": {
+              "family": "Roboto",
+              "size": 12.0,
+              "weight": 400,
+              "line_height": 16.0,
+              "letter_spacing": 0.4,
+              "color": {
+                "r": 73,
+                "g": 69,
+                "b": 79,
+                "a": 1.0
+              },
+              "align": "left",
+              "valign": "top",
+              "italic": false,
+              "decoration": "none",
+              "transform": "none"
+            },
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "text": "md.sys.typescale.body-small",
+              "color": "md.sys.color.on-surface-variant"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      },
+      {
+        "id": "n13",
+        "type": "frame",
+        "name": "List",
+        "box": {
+          "x": 0.0,
+          "y": 232.0,
+          "w": 1200.0,
+          "h": 284.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {},
+        "meta": {
+          "part": "List"
+        },
+        "children": [
+          {
+            "id": "n14",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 232.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Dark theme"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n15",
+                "type": "icon",
+                "name": "icon:attach_file",
+                "box": {
+                  "x": 16.0,
+                  "y": 248.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "attach_file",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n16",
+                "type": "text",
+                "name": "text:Dark theme",
+                "box": {
+                  "x": 56.0,
+                  "y": 248.0,
+                  "w": 87.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Dark theme",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n17",
+                "type": "frame",
+                "name": "Switch",
+                "box": {
+                  "x": 1132.0,
+                  "y": 244.0,
+                  "w": 52.0,
+                  "h": 32.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 230,
+                      "g": 224,
+                      "b": 233,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [
+                  {
+                    "color": {
+                      "r": 121,
+                      "g": 116,
+                      "b": 126,
+                      "a": 1.0
+                    },
+                    "width": 1.0,
+                    "align": "inside"
+                  }
+                ],
+                "effects": [],
+                "radius": [
+                  16.0,
+                  16.0,
+                  16.0,
+                  16.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": {
+                  "key": "m3.switch:selected=false",
+                  "name": "Switch",
+                  "library": "material3",
+                  "variant": {
+                    "selected": "false"
+                  },
+                  "props": {},
+                  "confidence": 1.0,
+                  "evidence": {
+                    "src": "synth"
+                  }
+                },
+                "tokens": {
+                  "fill": "md.sys.color.surface-container-highest",
+                  "stroke": "md.sys.color.outline"
+                },
+                "meta": {},
+                "children": [
+                  {
+                    "id": "n18",
+                    "type": "ellipse",
+                    "name": "handle",
+                    "box": {
+                      "x": 1140.0,
+                      "y": 252.0,
+                      "w": 16.0,
+                      "h": 16.0
+                    },
+                    "fills": [
+                      {
+                        "kind": "solid",
+                        "opacity": 1.0,
+                        "color": {
+                          "r": 121,
+                          "g": 116,
+                          "b": 126,
+                          "a": 1.0
+                        }
+                      }
+                    ],
+                    "strokes": [],
+                    "effects": [],
+                    "radius": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "opacity": 1.0,
+                    "clip": false,
+                    "visible": true,
+                    "text": null,
+                    "text_style": null,
+                    "icon_name": null,
+                    "image_ref": null,
+                    "layout": null,
+                    "component": null,
+                    "tokens": {
+                      "fill": "md.sys.color.outline"
+                    },
+                    "meta": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "n19",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 16.0,
+              "y": 288.0,
+              "w": 1184.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n20",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 289.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Dark theme"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n21",
+                "type": "icon",
+                "name": "icon:label",
+                "box": {
+                  "x": 16.0,
+                  "y": 305.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "label",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n22",
+                "type": "text",
+                "name": "text:Dark theme",
+                "box": {
+                  "x": 56.0,
+                  "y": 305.0,
+                  "w": 87.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Dark theme",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n23",
+                "type": "text",
+                "name": "text:3:45 PM",
+                "box": {
+                  "x": 1139.0,
+                  "y": 305.0,
+                  "w": 45.0,
+                  "h": 16.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "3:45 PM",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 11.0,
+                  "weight": 500,
+                  "line_height": 16.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "right",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.label-small",
+                  "color": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n24",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 16.0,
+              "y": 345.0,
+              "w": 1184.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n25",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 346.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Desktop alerts"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n26",
+                "type": "text",
+                "name": "text:Desktop alerts",
+                "box": {
+                  "x": 16.0,
+                  "y": 362.0,
+                  "w": 110.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Desktop alerts",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n27",
+                "type": "text",
+                "name": "text:Yesterday",
+                "box": {
+                  "x": 1130.0,
+                  "y": 362.0,
+                  "w": 54.0,
+                  "h": 16.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Yesterday",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 11.0,
+                  "weight": 500,
+                  "line_height": 16.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 73,
+                    "g": 69,
+                    "b": 79,
+                    "a": 1.0
+                  },
+                  "align": "right",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.label-small",
+                  "color": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n28",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 0.0,
+              "y": 402.0,
+              "w": 1200.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n29",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 403.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Avery Patel"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n30",
+                "type": "icon",
+                "name": "icon:drafts",
+                "box": {
+                  "x": 16.0,
+                  "y": 419.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "drafts",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n31",
+                "type": "text",
+                "name": "text:Avery Patel",
+                "box": {
+                  "x": 56.0,
+                  "y": 419.0,
+                  "w": 86.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Avery Patel",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n32",
+                "type": "icon",
+                "name": "icon:more_vert",
+                "box": {
+                  "x": 1160.0,
+                  "y": 419.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "more_vert",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n33",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 16.0,
+              "y": 459.0,
+              "w": 1184.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n34",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 460.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Smart compose"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n35",
+                "type": "icon",
+                "name": "icon:folder",
+                "box": {
+                  "x": 16.0,
+                  "y": 476.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "folder",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n36",
+                "type": "text",
+                "name": "text:Smart compose",
+                "box": {
+                  "x": 56.0,
+                  "y": 476.0,
+                  "w": 121.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Smart compose",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n37",
+        "type": "text",
+        "name": "text:Recent activity",
+        "box": {
+          "x": 16.0,
+          "y": 532.0,
+          "w": 156.0,
+          "h": 32.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Recent activity",
+        "text_style": {
+          "family": "Roboto",
+          "size": 24.0,
+          "weight": 400,
+          "line_height": 32.0,
+          "letter_spacing": 0.0,
+          "color": {
+            "r": 29,
+            "g": 27,
+            "b": 32,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.headline-small",
+          "color": "md.sys.color.on-surface"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n38",
+        "type": "text",
+        "name": "text:Attached is the latest d",
+        "box": {
+          "x": 16.0,
+          "y": 572.0,
+          "w": 274.0,
+          "h": 20.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Attached is the latest draft for your review.",
+        "text_style": {
+          "family": "Roboto",
+          "size": 14.0,
+          "weight": 400,
+          "line_height": 20.0,
+          "letter_spacing": 0.25,
+          "color": {
+            "r": 73,
+            "g": 69,
+            "b": 79,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.body-medium",
+          "color": "md.sys.color.on-surface-variant"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n39",
+        "type": "text",
+        "name": "text:Settings",
+        "box": {
+          "x": 16.0,
+          "y": 620.0,
+          "w": 53.0,
+          "h": 20.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": "Settings",
+        "text_style": {
+          "family": "Roboto",
+          "size": 14.0,
+          "weight": 500,
+          "line_height": 20.0,
+          "letter_spacing": 0.1,
+          "color": {
+            "r": 73,
+            "g": 69,
+            "b": 79,
+            "a": 1.0
+          },
+          "align": "left",
+          "valign": "top",
+          "italic": false,
+          "decoration": "none",
+          "transform": "none"
+        },
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {
+          "text": "md.sys.typescale.title-small",
+          "color": "md.sys.color.on-surface-variant"
+        },
+        "meta": {},
+        "children": []
+      },
+      {
+        "id": "n40",
+        "type": "frame",
+        "name": "List",
+        "box": {
+          "x": 0.0,
+          "y": 648.0,
+          "w": 1200.0,
+          "h": 227.0
+        },
+        "fills": [],
+        "strokes": [],
+        "effects": [],
+        "radius": [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": null,
+        "tokens": {},
+        "meta": {
+          "part": "List"
+        },
+        "children": [
+          {
+            "id": "n41",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 648.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Budget.xlsx"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n42",
+                "type": "icon",
+                "name": "icon:image",
+                "box": {
+                  "x": 16.0,
+                  "y": 664.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "image",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n43",
+                "type": "text",
+                "name": "text:Budget.xlsx",
+                "box": {
+                  "x": 56.0,
+                  "y": 664.0,
+                  "w": 89.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Budget.xlsx",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n44",
+                "type": "frame",
+                "name": "Switch",
+                "box": {
+                  "x": 1132.0,
+                  "y": 660.0,
+                  "w": 52.0,
+                  "h": 32.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 230,
+                      "g": 224,
+                      "b": 233,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [
+                  {
+                    "color": {
+                      "r": 121,
+                      "g": 116,
+                      "b": 126,
+                      "a": 1.0
+                    },
+                    "width": 1.0,
+                    "align": "inside"
+                  }
+                ],
+                "effects": [],
+                "radius": [
+                  16.0,
+                  16.0,
+                  16.0,
+                  16.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": {
+                  "key": "m3.switch:selected=false",
+                  "name": "Switch",
+                  "library": "material3",
+                  "variant": {
+                    "selected": "false"
+                  },
+                  "props": {},
+                  "confidence": 1.0,
+                  "evidence": {
+                    "src": "synth"
+                  }
+                },
+                "tokens": {
+                  "fill": "md.sys.color.surface-container-highest",
+                  "stroke": "md.sys.color.outline"
+                },
+                "meta": {},
+                "children": [
+                  {
+                    "id": "n45",
+                    "type": "ellipse",
+                    "name": "handle",
+                    "box": {
+                      "x": 1140.0,
+                      "y": 668.0,
+                      "w": 16.0,
+                      "h": 16.0
+                    },
+                    "fills": [
+                      {
+                        "kind": "solid",
+                        "opacity": 1.0,
+                        "color": {
+                          "r": 121,
+                          "g": 116,
+                          "b": 126,
+                          "a": 1.0
+                        }
+                      }
+                    ],
+                    "strokes": [],
+                    "effects": [],
+                    "radius": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "opacity": 1.0,
+                    "clip": false,
+                    "visible": true,
+                    "text": null,
+                    "text_style": null,
+                    "icon_name": null,
+                    "image_ref": null,
+                    "layout": null,
+                    "component": null,
+                    "tokens": {
+                      "fill": "md.sys.color.outline"
+                    },
+                    "meta": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "n46",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 16.0,
+              "y": 704.0,
+              "w": 1184.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n47",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 705.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Desktop alerts"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n48",
+                "type": "text",
+                "name": "text:Desktop alerts",
+                "box": {
+                  "x": 16.0,
+                  "y": 721.0,
+                  "w": 110.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Desktop alerts",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n49",
+                "type": "icon",
+                "name": "icon:star",
+                "box": {
+                  "x": 1160.0,
+                  "y": 721.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "star",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n50",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 0.0,
+              "y": 761.0,
+              "w": 1200.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n51",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 762.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Screenshots"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n52",
+                "type": "text",
+                "name": "text:Screenshots",
+                "box": {
+                  "x": 16.0,
+                  "y": 778.0,
+                  "w": 95.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Screenshots",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "n53",
+            "type": "line",
+            "name": "divider",
+            "box": {
+              "x": 0.0,
+              "y": 818.0,
+              "w": 1200.0,
+              "h": 1.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 202,
+                  "g": 196,
+                  "b": 208,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.divider",
+              "name": "Divider",
+              "library": "material3",
+              "variant": {},
+              "props": {},
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {
+              "fill": "md.sys.color.outline-variant"
+            },
+            "meta": {},
+            "children": []
+          },
+          {
+            "id": "n54",
+            "type": "frame",
+            "name": "ListItem",
+            "box": {
+              "x": 0.0,
+              "y": 819.0,
+              "w": 1200.0,
+              "h": 56.0
+            },
+            "fills": [],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": null,
+            "image_ref": null,
+            "layout": null,
+            "component": {
+              "key": "m3.listitem:lines=1",
+              "name": "ListItem",
+              "library": "material3",
+              "variant": {
+                "lines": "1"
+              },
+              "props": {
+                "label": "Auto-advance"
+              },
+              "confidence": 1.0,
+              "evidence": {
+                "src": "synth"
+              }
+            },
+            "tokens": {},
+            "meta": {},
+            "children": [
+              {
+                "id": "n55",
+                "type": "icon",
+                "name": "icon:note",
+                "box": {
+                  "x": 16.0,
+                  "y": 835.0,
+                  "w": 24.0,
+                  "h": 24.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 73,
+                      "g": 69,
+                      "b": 79,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": "note",
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "fill": "md.sys.color.on-surface-variant"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n56",
+                "type": "text",
+                "name": "text:Auto-advance",
+                "box": {
+                  "x": 56.0,
+                  "y": 835.0,
+                  "w": 104.0,
+                  "h": 24.0
+                },
+                "fills": [],
+                "strokes": [],
+                "effects": [],
+                "radius": [
+                  0.0,
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": "Auto-advance",
+                "text_style": {
+                  "family": "Roboto",
+                  "size": 16.0,
+                  "weight": 400,
+                  "line_height": 24.0,
+                  "letter_spacing": 0.5,
+                  "color": {
+                    "r": 29,
+                    "g": 27,
+                    "b": 32,
+                    "a": 1.0
+                  },
+                  "align": "left",
+                  "valign": "top",
+                  "italic": false,
+                  "decoration": "none",
+                  "transform": "none"
+                },
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": null,
+                "tokens": {
+                  "text": "md.sys.typescale.body-large",
+                  "color": "md.sys.color.on-surface"
+                },
+                "meta": {},
+                "children": []
+              },
+              {
+                "id": "n57",
+                "type": "frame",
+                "name": "Switch",
+                "box": {
+                  "x": 1132.0,
+                  "y": 831.0,
+                  "w": 52.0,
+                  "h": 32.0
+                },
+                "fills": [
+                  {
+                    "kind": "solid",
+                    "opacity": 1.0,
+                    "color": {
+                      "r": 230,
+                      "g": 224,
+                      "b": 233,
+                      "a": 1.0
+                    }
+                  }
+                ],
+                "strokes": [
+                  {
+                    "color": {
+                      "r": 121,
+                      "g": 116,
+                      "b": 126,
+                      "a": 1.0
+                    },
+                    "width": 1.0,
+                    "align": "inside"
+                  }
+                ],
+                "effects": [],
+                "radius": [
+                  16.0,
+                  16.0,
+                  16.0,
+                  16.0
+                ],
+                "opacity": 1.0,
+                "clip": false,
+                "visible": true,
+                "text": null,
+                "text_style": null,
+                "icon_name": null,
+                "image_ref": null,
+                "layout": null,
+                "component": {
+                  "key": "m3.switch:selected=false",
+                  "name": "Switch",
+                  "library": "material3",
+                  "variant": {
+                    "selected": "false"
+                  },
+                  "props": {},
+                  "confidence": 1.0,
+                  "evidence": {
+                    "src": "synth"
+                  }
+                },
+                "tokens": {
+                  "fill": "md.sys.color.surface-container-highest",
+                  "stroke": "md.sys.color.outline"
+                },
+                "meta": {},
+                "children": [
+                  {
+                    "id": "n58",
+                    "type": "ellipse",
+                    "name": "handle",
+                    "box": {
+                      "x": 1140.0,
+                      "y": 839.0,
+                      "w": 16.0,
+                      "h": 16.0
+                    },
+                    "fills": [
+                      {
+                        "kind": "solid",
+                        "opacity": 1.0,
+                        "color": {
+                          "r": 121,
+                          "g": 116,
+                          "b": 126,
+                          "a": 1.0
+                        }
+                      }
+                    ],
+                    "strokes": [],
+                    "effects": [],
+                    "radius": [
+                      0.0,
+                      0.0,
+                      0.0,
+                      0.0
+                    ],
+                    "opacity": 1.0,
+                    "clip": false,
+                    "visible": true,
+                    "text": null,
+                    "text_style": null,
+                    "icon_name": null,
+                    "image_ref": null,
+                    "layout": null,
+                    "component": null,
+                    "tokens": {
+                      "fill": "md.sys.color.outline"
+                    },
+                    "meta": {},
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "n59",
+        "type": "frame",
+        "name": "FAB",
+        "box": {
+          "x": 1088.0,
+          "y": 859.0,
+          "w": 96.0,
+          "h": 96.0
+        },
+        "fills": [
+          {
+            "kind": "solid",
+            "opacity": 1.0,
+            "color": {
+              "r": 255,
+              "g": 216,
+              "b": 228,
+              "a": 1.0
+            }
+          }
+        ],
+        "strokes": [],
+        "effects": [
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.3
+            },
+            "dx": 0.0,
+            "dy": 1.0,
+            "blur": 3.0,
+            "spread": 0.0,
+            "inner": false
+          },
+          {
+            "color": {
+              "r": 0,
+              "g": 0,
+              "b": 0,
+              "a": 0.15
+            },
+            "dx": 0.0,
+            "dy": 4.0,
+            "blur": 8.0,
+            "spread": 3.0,
+            "inner": false
+          }
+        ],
+        "radius": [
+          28.0,
+          28.0,
+          28.0,
+          28.0
+        ],
+        "opacity": 1.0,
+        "clip": false,
+        "visible": true,
+        "text": null,
+        "text_style": null,
+        "icon_name": null,
+        "image_ref": null,
+        "layout": null,
+        "component": {
+          "key": "m3.fab:extended=false,size=large",
+          "name": "FAB",
+          "library": "material3",
+          "variant": {
+            "size": "large",
+            "extended": "false"
+          },
+          "props": {},
+          "confidence": 1.0,
+          "evidence": {
+            "src": "synth"
+          }
+        },
+        "tokens": {
+          "fill": "md.sys.color.tertiary-container",
+          "elevation": "md.sys.elevation.level3"
+        },
+        "meta": {
+          "fab_color": "tertiary"
+        },
+        "children": [
+          {
+            "id": "n60",
+            "type": "icon",
+            "name": "icon:add",
+            "box": {
+              "x": 1118.0,
+              "y": 889.0,
+              "w": 36.0,
+              "h": 36.0
+            },
+            "fills": [
+              {
+                "kind": "solid",
+                "opacity": 1.0,
+                "color": {
+                  "r": 49,
+                  "g": 17,
+                  "b": 29,
+                  "a": 1.0
+                }
+              }
+            ],
+            "strokes": [],
+            "effects": [],
+            "radius": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "opacity": 1.0,
+            "clip": false,
+            "visible": true,
+            "text": null,
+            "text_style": null,
+            "icon_name": "add",
+            "image_ref": null,
+            "layout": null,
+            "component": null,
+            "tokens": {
+              "fill": "md.sys.color.on-tertiary-container"
+            },
+            "meta": {},
+            "children": []
+          }
+        ]
+      }
+    ]
+  }
+}

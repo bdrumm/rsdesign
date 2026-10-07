@@ -1,0 +1,31 @@
+# Frequently used Material Symbols in Google apps and Material 3 docs (one per line). Used as a weak prior.
+menu search more_vert more_horiz close arrow_back arrow_forward arrow_upward arrow_downward arrow_drop_down arrow_drop_up expand_more expand_less chevron_left chevron_right
+check done check_circle cancel error warning info help help_outline settings tune filter_list filter_alt sort swap_vert
+add add_circle remove edit delete delete_outline archive unarchive restore_from_trash save download upload share link content_copy cut paste print
+home inbox mail drafts send schedule_send outbox label label_important flag report snooze mark_email_read mark_email_unread forward reply reply_all
+star star_border star_half favorite favorite_border bookmark bookmark_border thumb_up thumb_down
+notifications notifications_none notifications_active notifications_off chat chat_bubble chat_bubble_outline forum comment sms
+person person_outline person_add group groups account_circle manage_accounts supervisor_account badge
+calendar_today calendar_month event event_available event_busy today date_range schedule access_time timer alarm history update
+folder folder_open create_new_folder description article insert_drive_file attach_file attachment cloud cloud_upload cloud_download cloud_done
+image photo photo_camera photo_library collections videocam movie play_arrow pause stop skip_next skip_previous volume_up volume_off mic mic_off
+visibility visibility_off lock lock_open key security verified_user shield
+location_on location_off place map navigation near_me directions explore
+phone call email alternate_email language public translate
+shopping_cart shopping_bag payment credit_card receipt local_offer sell storefront
+dashboard view_list view_module grid_view table_chart insert_chart bar_chart pie_chart analytics trending_up trending_down
+refresh sync autorenew cached loop replay
+open_in_new launch exit_to_app logout login
+drag_handle drag_indicator reorder format_list_bulleted format_list_numbered checklist task task_alt
+lightbulb lightbulb_outline palette brush color_lens format_paint
+wifi bluetooth battery_full signal_cellular_alt airplanemode_active
+dark_mode light_mode brightness_6 contrast
+keyboard_arrow_down keyboard_arrow_up keyboard_arrow_left keyboard_arrow_right keyboard_backspace
+apps widgets extension build construction handyman
+account_balance work business school science sports_esports
+pets eco park spa restaurant local_cafe coffee
+fullscreen fullscreen_exit zoom_in zoom_out open_with
+undo redo format_bold format_italic format_underlined text_fields title
+add_photo_alternate add_a_photo add_box add_comment add_task post_add note_add
+remove_circle remove_circle_outline block do_not_disturb_on
+radio_button_checked radio_button_unchecked check_box check_box_outline_blank indeterminate_check_box toggle_on toggle_off
