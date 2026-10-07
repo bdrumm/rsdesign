@@ -514,6 +514,15 @@ def build_parser() -> argparse.ArgumentParser:
 
     p = add("params", cmd_params, "list registered tunable parameters (value, default, range, doc)")
     p.add_argument("--prefix", default="")
+    # Subsystems register their own subcommands (keeps this file merge-free when several are built in parallel):
+    # each module exposes register(add, sub) where add() is the helper above.
+    for mod in ("dt.scenarios.cli", "dt.feedback.cli"):
+        try:
+            import importlib
+            importlib.import_module(mod).register(add, sub)
+        except ModuleNotFoundError as e:
+            if e.name not in (mod, mod.rsplit(".", 1)[0]):
+                raise
     return ap
 
 

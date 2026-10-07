@@ -1,0 +1,55 @@
+# Tests + benchmark on every push / PR, on hosted Linux (RapidOCR, Chromium) and macOS (Vision, Chrome).
+# Pixel baselines are platform-specific: knowledge/baseline.json is the macOS reference measured on Apple
+# Silicon; CI reports bench numbers as artifacts and gates only where a matching baseline exists.
+name: ci
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: astral-sh/setup-uv@v6
+      - name: setup (venv, deps, node, browser, reference page)
+        run: PYTHON=python3.12 bash scripts/setup.sh
+      - name: browser system libraries (Linux)
+        if: runner.os == 'Linux'
+        run: sudo .venv/bin/python -m playwright install-deps chromium
+      - name: doctor
+        run: .venv/bin/python -m dt.cli doctor
+      - name: tests
+        run: .venv/bin/python -m pytest -q -p no:cacheprovider --junitxml=out/junit.xml
+      - name: bench (report)
+        if: always()
+        run: .venv/bin/python -m dt.cli bench --workers 3 --json --run-id ci-${{ matrix.os }} > out/bench-${{ matrix.os }}.json
+      - name: bench gate (platform baseline)
+        if: always()
+        run: |
+          b="knowledge/baseline.ci-${{ matrix.os }}.json"
+          if [ -f "$b" ]; then .venv/bin/python -m dt.cli bench --workers 3 --gate "$b" --quiet; else echo "no $b yet: report only"; fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: results-${{ matrix.os }}
+          path: |
+            out/junit.xml
+            out/bench-*.json
+            out/bench/ci-*/report.md
+          if-no-files-found: warn

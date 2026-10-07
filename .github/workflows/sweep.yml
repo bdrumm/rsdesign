@@ -1,0 +1,94 @@
+# Parallel parameter search on hosted runners: N shards each run an independent seeded search and upload
+# their best candidate. Nothing is accepted here: the lead downloads the results (gh run download) and
+# re-verifies the best candidates on the reference machine with the regression gate before writing
+# dt/params.json and a ledger entry.
+name: sweep
+on:
+  workflow_dispatch:
+    inputs:
+      shards:
+        description: number of parallel shards (seeds)
+        default: "8"
+      iters:
+        description: search iterations per shard
+        default: "20"
+      include:
+        description: parameter key prefixes to search (space separated, empty = all)
+        default: ""
+      os:
+        description: runner image (macos-latest matches the Vision/Chrome reference better; ubuntu-latest has more capacity)
+        default: ubuntu-latest
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      seeds: ${{ steps.s.outputs.seeds }}
+    steps:
+      - id: s
+        run: echo "seeds=$(python3 -c "import json; print(json.dumps(list(range(1, int('${{ inputs.shards }}') + 1))))")" >> "$GITHUB_OUTPUT"
+  search:
+    needs: plan
+    strategy:
+      fail-fast: false
+      matrix:
+        seed: ${{ fromJSON(needs.plan.outputs.seeds) }}
+    runs-on: ${{ inputs.os }}
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - uses: astral-sh/setup-uv@v6
+      - run: PYTHON=python3.12 bash scripts/setup.sh
+      - if: runner.os == 'Linux'
+        run: sudo .venv/bin/python -m playwright install-deps chromium
+      - name: search
+        run: |
+          inc="${{ inputs.include }}"
+          .venv/bin/python -m dt.cli tune --json --iters ${{ inputs.iters }} --seed ${{ matrix.seed }} --workers 3 \
+            ${inc:+--include $inc} --params out/params.seed${{ matrix.seed }}.json --history out/tune.seed${{ matrix.seed }}.jsonl \
+            > out/tune.seed${{ matrix.seed }}.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: sweep-seed-${{ matrix.seed }}
+          path: out/*.seed${{ matrix.seed }}.*
+  collect:
+    needs: search
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          path: shards
+      - name: rank shards
+        run: |
+          python3 - <<'PY'
+          import glob, json
+          rows = []
+          for p in glob.glob("shards/*/tune.seed*.json"):
+              try:
+                  r = json.load(open(p))
+              except Exception:
+                  continue
+              b = r.get("best") or {}
+              rows.append((b.get("holdout") or b.get("score") or 0, p, b.get("params")))
+          rows.sort(key=lambda t: -float(t[0] or 0))
+          with open("summary.md", "w") as f:
+              f.write("| rank | holdout | shard |\n|---|---|---|\n")
+              for i, (s, p, _) in enumerate(rows, 1):
+                  f.write(f"| {i} | {s} | {p.split('/')[1]} |\n")
+          json.dump([{"holdout": s, "shard": p, "params": prm} for s, p, prm in rows], open("ranked.json", "w"), indent=2)
+          print(open("summary.md").read())
+          PY
+          cat summary.md >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sweep-ranked
+          path: |
+            ranked.json
+            summary.md
