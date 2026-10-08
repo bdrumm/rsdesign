@@ -105,6 +105,9 @@ class Hypothesis:
     # mutually exclusive variants of this edit (e.g. "refit the box" vs "keep the box"): the optimizer
     # scores this hypothesis and each alternative from the SAME base state and accepts only the best
     alternatives: list["Hypothesis"] = field(default_factory=list, repr=False, compare=False)
+    # learned move prior (dt.refine.priors): ordering uses expected_gain x prior; deprioritised moves go last
+    prior: float = field(default=1.0, compare=False)
+    deprioritised: bool = field(default=False, compare=False)
 
     def apply(self, doc: Document) -> Document:
         new = copy.deepcopy(doc)
@@ -1117,8 +1120,9 @@ def critique(doc: Document, target_rgb: np.ndarray, rendered_rgb: np.ndarray, re
 
     Nodes are ranked by their own mean ΔE (``report.per_node``); the worst
     ``refine.critic.max_nodes`` get shift / resize / recolor / text / radius / shadow / extra
-    hypotheses, and uncovered residual regions get ``missing`` ones. The list is sorted by
-    ``expected_gain`` (descending). Never raises on empty or single-node documents.
+    hypotheses, and uncovered residual regions get ``missing`` ones. The list is ordered by
+    ``expected_gain x prior`` (descending; ``dt.refine.priors``, learned from past refine runs), with
+    deprioritised moves (near-zero gain per try) last. Never raises on empty or single-node documents.
     """
     if target_rgb.size == 0 or rendered_rgb.size == 0:
         return []
@@ -1160,4 +1164,5 @@ def critique(doc: Document, target_rgb: np.ndarray, rendered_rgb: np.ndarray, re
     except Exception:
         pass
     hyps.sort(key=lambda h: -h.expected_gain)
-    return hyps
+    from dt.refine.priors import order
+    return order(hyps, doc)

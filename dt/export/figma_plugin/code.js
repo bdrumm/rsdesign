@@ -5,6 +5,9 @@
  * fake_figma.js (see run_fake.js). Protocol with ui.html:
  *   ui -> main : { type: 'build', plan: <plan>, options: { closeWhenDone: bool } }
  *   main -> ui : { type: 'done', summary: {...} } | { type: 'error', message: string }
+ *   ui -> main : { type: 'export-corrections' }   serialise the selected rsdesign frame(s) as edited by the user
+ *   main -> ui : { type: 'corrections', data: <rsdesign.figma-corrections/1>, summary: {...} } | { type: 'error', ... }
+ * The corrections file goes to `dt feedback from-figma <run_dir> export.json` (docs/FEEDBACK.md).
  */
 'use strict';
 
@@ -16,7 +19,18 @@ var HARD_FALLBACK_FONTS = [
 
 figma.showUI(__html__, { width: 440, height: 560 });
 
+var EXPORT_SCHEMA = 'rsdesign.figma-corrections/1';
+
 figma.ui.onmessage = function (msg) {
+  if (msg && msg.type === 'export-corrections') {
+    return exportCorrections().then(function (res) {
+      figma.ui.postMessage({ type: 'corrections', data: res.data, summary: res.summary });
+      return res;
+    }).catch(function (err) {
+      figma.ui.postMessage({ type: 'error', message: String(err && err.message ? err.message : err) });
+      throw err;
+    });
+  }
   if (!msg || msg.type !== 'build') return undefined;
   return buildPlan(msg.plan, msg.options || {}).then(function (summary) {
     figma.ui.postMessage({ type: 'done', summary: summary });
@@ -44,6 +58,7 @@ async function buildPlan(plan, options) {
   if (root && options.offsetX !== undefined) root.x = Number(options.offsetX) || 0;
   if (root && options.offsetY !== undefined) root.y = Number(options.offsetY) || 0;
   if (root) {
+    stampPlan(root, plan);
     figma.currentPage.selection = [root];
     if (figma.viewport && figma.viewport.scrollAndZoomIntoView) figma.viewport.scrollAndZoomIntoView([root]);
   }
@@ -405,4 +420,106 @@ async function bindVariables(node, spec, state) {
       state.warnings.push(spec.name + ': binding ' + field + ' -> ' + name + ' failed: ' + e.message);
     }
   }
+}
+
+// ------------------------------------------------------------------ export corrections (user-informed tuning)
+/** Remember on the built root which plan node ids exist, so an export can tell removed from never-built nodes. */
+function stampPlan(root, plan) {
+  if (typeof root.setPluginData !== 'function') return;
+  var ids = [];
+  (function walk(spec) {
+    if (!spec) return;
+    if (spec.id !== undefined && ids.indexOf(String(spec.id)) < 0) ids.push(String(spec.id));
+    if (spec.fallback) walk(spec.fallback);
+    (spec.children || []).forEach(walk);
+  })(plan.root);
+  root.setPluginData('dt.planIds', JSON.stringify(ids));
+  root.setPluginData('dt.plan', JSON.stringify({
+    width: plan.width, height: plan.height, generator: plan.generator || null, version: plan.version,
+    designSystem: plan.meta ? plan.meta.designSystem || null : null
+  }));
+}
+
+function planRootOf(node) {
+  var n = node;
+  while (n && n.type !== 'PAGE' && n.type !== 'DOCUMENT') {
+    if (typeof n.getPluginData === 'function' && n.getPluginData('dt.planIds')) return n;
+    n = n.parent;
+  }
+  return null;
+}
+
+function plainPaints(p) {
+  if (!Array.isArray(p)) return undefined;  // figma.mixed (e.g. a text with mixed fills)
+  return p.map(function (x) {
+    var o = {};
+    Object.keys(x).forEach(function (k) { if (k !== 'boundVariables') o[k] = x[k]; });
+    return o;
+  });
+}
+
+var EXPORT_FIELDS = ['x', 'y', 'width', 'height', 'visible', 'opacity', 'strokeWeight', 'strokeAlign', 'cornerRadius',
+  'topLeftRadius', 'topRightRadius', 'bottomRightRadius', 'bottomLeftRadius', 'strokeTopWeight', 'strokeRightWeight',
+  'strokeBottomWeight', 'strokeLeftWeight', 'clipsContent', 'layoutMode', 'itemSpacing', 'paddingTop', 'paddingRight',
+  'paddingBottom', 'paddingLeft', 'primaryAxisAlignItems', 'counterAxisAlignItems', 'primaryAxisSizingMode',
+  'counterAxisSizingMode', 'layoutWrap', 'layoutSizingHorizontal', 'layoutSizingVertical', 'layoutPositioning',
+  'characters', 'fontName', 'fontSize', 'lineHeight', 'letterSpacing', 'textAlignHorizontal', 'textAlignVertical',
+  'textAutoResize', 'textDecoration', 'textCase'];
+
+async function exportNode(node) {
+  var out = { figmaId: node.id, type: node.type, name: node.name, pluginData: {} };
+  EXPORT_FIELDS.forEach(function (k) {
+    if (!(k in node)) return;
+    var v = node[k];
+    if (typeof v === 'symbol' || v === figma.mixed) return;  // mixed values have no single answer
+    if (v !== undefined && typeof v !== 'function') out[k] = (v && typeof v === 'object') ? JSON.parse(JSON.stringify(v)) : v;
+  });
+  ['fills', 'strokes', 'effects'].forEach(function (k) {
+    if (k in node) { var p = plainPaints(node[k]); if (p !== undefined) out[k] = p; }
+  });
+  if (typeof node.getPluginData === 'function') {
+    ['dt.id', 'dt.iconFill'].forEach(function (k) { var v = node.getPluginData(k); if (v) out.pluginData[k] = v; });
+  }
+  if (node.type === 'INSTANCE') {
+    var main = null;
+    try {
+      main = typeof node.getMainComponentAsync === 'function' ? await node.getMainComponentAsync() : node.mainComponent;
+    } catch (e) { main = null; }
+    if (main) {
+      var set = main.parent && main.parent.type === 'COMPONENT_SET' ? main.parent : null;
+      out.mainComponent = { name: main.name, key: main.key || null, setName: set ? set.name : null };
+    }
+    var props = node.componentProperties || {};
+    var variants = {};
+    Object.keys(props).forEach(function (k) { if (props[k] && props[k].type === 'VARIANT') variants[k.split('#')[0]] = String(props[k].value); });
+    out.variantProperties = variants;
+    return out;  // an instance is atomic: its sublayers belong to the library component
+  }
+  if (node.children) {
+    out.children = [];
+    for (var i = 0; i < node.children.length; i++) out.children.push(await exportNode(node.children[i]));
+  }
+  return out;
+}
+
+/** Serialise the rsdesign frame(s) containing the current selection, as edited by the user. */
+async function exportCorrections() {
+  var sel = figma.currentPage.selection || [];
+  var roots = [];
+  sel.forEach(function (n) { var r = planRootOf(n); if (r && roots.indexOf(r) < 0) roots.push(r); });
+  if (!roots.length) throw new Error('Select a frame built by the rsdesign plugin, then Export corrections.');
+  var frames = [];
+  var nodes = 0;
+  for (var i = 0; i < roots.length; i++) {
+    var r = roots[i];
+    var tree = await exportNode(r);
+    (function count(t) { nodes += 1; (t.children || []).forEach(count); })(tree);
+    var meta = {};
+    try { meta = JSON.parse(r.getPluginData('dt.plan') || '{}'); } catch (e) { meta = {}; }
+    frames.push({ planIds: JSON.parse(r.getPluginData('dt.planIds') || '[]'), plan: meta, tree: tree });
+  }
+  return {
+    data: { schema: EXPORT_SCHEMA, exported: new Date().toISOString(), editorType: figma.editorType || null, frames: frames },
+    summary: { frames: frames.length, nodes: nodes }
+  };
 }

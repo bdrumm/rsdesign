@@ -1,0 +1,4961 @@
+{
+ "confusion": {
+  "color.fill": {
+   "_none": 0.3,
+   "color.fill": 0.55,
+   "effect.opacity": 0.05,
+   "effect.shadow": 0.05,
+   "structure.missing": 0.05
+  },
+  "color.stroke": {
+   "color.stroke": 1.0
+  },
+  "color.tint_global": {
+   "color.tint_global": 1.0
+  },
+  "effect.opacity": {
+   "effect.opacity": 1.0
+  },
+  "effect.shadow": {
+   "_none": 0.14285714285714285,
+   "color.fill": 0.07142857142857142,
+   "effect.shadow": 0.5714285714285714,
+   "geometry.size": 0.14285714285714285,
+   "icon.glyph": 0.07142857142857142
+  },
+  "geometry.radius": {
+   "_none": 0.1,
+   "geometry.radius": 0.9
+  },
+  "geometry.shift": {
+   "geometry.shift": 0.7647058823529411,
+   "geometry.size": 0.058823529411764705,
+   "icon.glyph": 0.11764705882352941,
+   "text.position": 0.058823529411764705
+  },
+  "geometry.size": {
+   "geometry.size": 1.0
+  },
+  "icon.glyph": {
+   "_none": 0.07692307692307693,
+   "icon.glyph": 0.9230769230769231
+  },
+  "icon.missing": {
+   "_none": 0.25,
+   "icon.glyph": 0.05,
+   "icon.missing": 0.65,
+   "structure.missing": 0.05
+  },
+  "layout.spacing": {
+   "_none": 0.0625,
+   "layout.spacing": 0.9375
+  },
+  "structure.extra": {
+   "_none": 0.22580645161290322,
+   "effect.shadow": 0.16129032258064516,
+   "geometry.radius": 0.03225806451612903,
+   "geometry.size": 0.03225806451612903,
+   "icon.glyph": 0.03225806451612903,
+   "structure.extra": 0.5161290322580645
+  },
+  "structure.merge": {
+   "geometry.shift": 0.058823529411764705,
+   "structure.merge": 0.8235294117647058,
+   "text.content": 0.058823529411764705,
+   "text.style": 0.058823529411764705
+  },
+  "structure.missing": {
+   "_none": 0.19230769230769232,
+   "geometry.size": 0.07692307692307693,
+   "icon.missing": 0.07692307692307693,
+   "structure.merge": 0.038461538461538464,
+   "structure.missing": 0.6153846153846154
+  },
+  "structure.split": {
+   "layout.spacing": 0.0625,
+   "structure.split": 0.9375
+  },
+  "text.content": {
+   "_none": 0.0625,
+   "text.content": 0.8125,
+   "text.style": 0.125
+  },
+  "text.position": {
+   "_none": 0.058823529411764705,
+   "text.content": 0.11764705882352941,
+   "text.position": 0.8235294117647058
+  },
+  "text.style": {
+   "text.content": 0.06666666666666667,
+   "text.style": 0.9333333333333333
+  }
+ },
+ "counts": {
+  "color.fill": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 3,
+    "tries": 4
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 11,
+    "gain_sum": 3.245110307598915,
+    "n": 14,
+    "proposed": 11,
+    "tries": 13
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 7,
+    "tries": 9
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 1,
+    "tries": 1
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 3,
+    "tries": 6
+   }
+  },
+  "color.stroke": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 2
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 6,
+    "gain_sum": 0.6008351867072619,
+    "n": 13,
+    "proposed": 11,
+    "tries": 12
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 6,
+    "tries": 7
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 3
+   }
+  },
+  "color.tint_global": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 4,
+    "tries": 5
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 6,
+    "gain_sum": 3.9850560630838636,
+    "n": 10,
+    "proposed": 10,
+    "tries": 20
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 7,
+    "tries": 12
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 7,
+    "tries": 12
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 1,
+    "tries": 2
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 10,
+    "proposed": 9,
+    "tries": 16
+   }
+  },
+  "effect.opacity": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 1
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 1
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 5,
+    "tries": 6
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 2,
+    "tries": 3
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 4,
+    "tries": 8
+   }
+  },
+  "effect.shadow": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 2,
+    "tries": 2
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 2,
+    "tries": 3
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 4,
+    "tries": 5
+   },
+   "shadow": {
+    "fixed": 3,
+    "gain_sum": 1.650659158779029,
+    "n": 14,
+    "proposed": 3,
+    "tries": 3
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 2,
+    "tries": 4
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 3,
+    "tries": 4
+   }
+  },
+  "geometry.radius": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 6,
+    "gain_sum": 0.9326150086907161,
+    "n": 13,
+    "proposed": 8,
+    "tries": 9
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 2
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 7,
+    "tries": 9
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 1,
+    "tries": 1
+   }
+  },
+  "geometry.shift": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 2
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 3,
+    "tries": 3
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 3,
+    "tries": 5
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 3
+   },
+   "shift": {
+    "fixed": 12,
+    "gain_sum": 1.8455359846824297,
+    "n": 13,
+    "proposed": 12,
+    "tries": 22
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 4,
+    "tries": 6
+   }
+  },
+  "geometry.size": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 5,
+    "tries": 5
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 3,
+    "tries": 4
+   },
+   "resize": {
+    "fixed": 1,
+    "gain_sum": 0.029294821420515142,
+    "n": 13,
+    "proposed": 11,
+    "tries": 15
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 1,
+    "tries": 1
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 1,
+    "tries": 2
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 4
+   }
+  },
+  "icon.glyph": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 1
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 2,
+    "tries": 3
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 2,
+    "gain_sum": 0.0515226880354613,
+    "n": 16,
+    "proposed": 10,
+    "tries": 12
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   }
+  },
+  "icon.missing": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 2,
+    "gain_sum": 0.03175134520996703,
+    "n": 14,
+    "proposed": 8,
+    "tries": 8
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 1,
+    "tries": 1
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 2,
+    "tries": 4
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   }
+  },
+  "layout.spacing": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 4,
+    "tries": 5
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 1,
+    "tries": 2
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 3,
+    "tries": 3
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 1,
+    "tries": 1
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 9,
+    "tries": 12
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 1,
+    "tries": 1
+   },
+   "shift": {
+    "fixed": 8,
+    "gain_sum": 1.0214048526904356,
+    "n": 14,
+    "proposed": 14,
+    "tries": 28
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 14,
+    "proposed": 9,
+    "tries": 13
+   }
+  },
+  "structure.extra": {
+   "extra": {
+    "fixed": 14,
+    "gain_sum": 2.399720313319785,
+    "n": 15,
+    "proposed": 14,
+    "tries": 14
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 1,
+    "gain_sum": 0.016083628979169977,
+    "n": 15,
+    "proposed": 1,
+    "tries": 1
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 1,
+    "tries": 1
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 1,
+    "gain_sum": 0.038019433973677394,
+    "n": 15,
+    "proposed": 1,
+    "tries": 1
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 2,
+    "tries": 3
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 2,
+    "tries": 2
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   }
+  },
+  "structure.merge": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 5,
+    "tries": 5
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 2,
+    "tries": 3
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 6,
+    "tries": 6
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 1,
+    "tries": 1
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 1,
+    "tries": 2
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 3,
+    "tries": 6
+   }
+  },
+  "structure.missing": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 2,
+    "gain_sum": 1.028951911242018,
+    "n": 16,
+    "proposed": 8,
+    "tries": 11
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 2,
+    "tries": 2
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 1
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 2,
+    "tries": 4
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 2
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 1,
+    "tries": 1
+   }
+  },
+  "structure.split": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 3,
+    "tries": 3
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 4,
+    "tries": 5
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 4,
+    "tries": 5
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 12,
+    "gain_sum": 0.6306503451642836,
+    "n": 13,
+    "proposed": 13,
+    "tries": 17
+   },
+   "text": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 13,
+    "proposed": 11,
+    "tries": 18
+   }
+  },
+  "text.content": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 4,
+    "tries": 4
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 2,
+    "tries": 2
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 5,
+    "tries": 6
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 18,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 1,
+    "gain_sum": 0.09828576742681279,
+    "n": 18,
+    "proposed": 14,
+    "tries": 18
+   },
+   "text": {
+    "fixed": 13,
+    "gain_sum": 4.737718532109126,
+    "n": 18,
+    "proposed": 17,
+    "tries": 30
+   }
+  },
+  "text.position": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 4,
+    "tries": 4
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 4,
+    "tries": 6
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 15,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 12,
+    "gain_sum": 2.445972524759295,
+    "n": 15,
+    "proposed": 14,
+    "tries": 21
+   },
+   "text": {
+    "fixed": 2,
+    "gain_sum": 0.031000329661006368,
+    "n": 15,
+    "proposed": 8,
+    "tries": 13
+   }
+  },
+  "text.style": {
+   "extra": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "missing": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "opacity": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "radius": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 3,
+    "tries": 3
+   },
+   "raster": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "recolor": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "resize": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 6,
+    "tries": 7
+   },
+   "shadow": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 0,
+    "tries": 0
+   },
+   "shift": {
+    "fixed": 0,
+    "gain_sum": 0.0,
+    "n": 16,
+    "proposed": 15,
+    "tries": 22
+   },
+   "text": {
+    "fixed": 11,
+    "gain_sum": 1.308422168818469,
+    "n": 16,
+    "proposed": 15,
+    "tries": 30
+   }
+  }
+ },
+ "counts_mag": {
+  "color.fill": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 5,
+     "gain_sum": 1.8623854272854934,
+     "n": 5,
+     "proposed": 5,
+     "tries": 6
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 3,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 3
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 2,
+     "gain_sum": 1.2743979549006292,
+     "n": 5,
+     "proposed": 2,
+     "tries": 3
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 4
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 4,
+     "gain_sum": 0.10832692541279224,
+     "n": 4,
+     "proposed": 4,
+     "tries": 4
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    }
+   }
+  },
+  "color.stroke": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 1,
+     "gain_sum": 0.0300333808282471,
+     "n": 4,
+     "proposed": 4,
+     "tries": 4
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 3,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 3,
+     "gain_sum": 0.5365640912690415,
+     "n": 5,
+     "proposed": 4,
+     "tries": 4
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 2,
+     "gain_sum": 0.034237714609973234,
+     "n": 4,
+     "proposed": 3,
+     "tries": 4
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    }
+   }
+  },
+  "color.tint_global": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 1,
+     "gain_sum": 0.978270376734816,
+     "n": 3,
+     "proposed": 3,
+     "tries": 6
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 2,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 3,
+     "tries": 5
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 2,
+     "tries": 3
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 2,
+     "gain_sum": 1.4507734836608945,
+     "n": 4,
+     "proposed": 4,
+     "tries": 8
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 3,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 4,
+     "tries": 7
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 3,
+     "gain_sum": 1.5560122026881529,
+     "n": 3,
+     "proposed": 3,
+     "tries": 6
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 2,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 3,
+     "tries": 5
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 3,
+     "tries": 6
+    }
+   }
+  },
+  "effect.opacity": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 4
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 3,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    }
+   }
+  },
+  "effect.shadow": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 1,
+     "gain_sum": 0.6664518955595415,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 4
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 3
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 2,
+     "gain_sum": 0.9842072632194874,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    }
+   }
+  },
+  "geometry.radius": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 2,
+     "gain_sum": 0.6748377437634684,
+     "n": 4,
+     "proposed": 3,
+     "tries": 3
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 3,
+     "gain_sum": 0.2360907229865699,
+     "n": 5,
+     "proposed": 4,
+     "tries": 5
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 3,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 1,
+     "gain_sum": 0.021686541940677765,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    }
+   }
+  },
+  "geometry.shift": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.9704048098203908,
+     "n": 4,
+     "proposed": 4,
+     "tries": 7
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.5042033902741879,
+     "n": 5,
+     "proposed": 4,
+     "tries": 7
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.37092778458785086,
+     "n": 4,
+     "proposed": 4,
+     "tries": 8
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 3
+    }
+   }
+  },
+  "geometry.size": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 4,
+     "tries": 6
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 3,
+     "tries": 4
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 5,
+     "tries": 6
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 1,
+     "gain_sum": 0.029294821420515142,
+     "n": 3,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 2
+    }
+   }
+  },
+  "icon.missing": {
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 2,
+     "gain_sum": 0.03175134520996703,
+     "n": 14,
+     "proposed": 8,
+     "tries": 8
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 2,
+     "tries": 4
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 14,
+     "proposed": 0,
+     "tries": 0
+    }
+   }
+  },
+  "layout.spacing": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 3,
+     "tries": 3
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 4,
+     "tries": 7
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 1,
+     "gain_sum": 0.06397640891680362,
+     "n": 5,
+     "proposed": 5,
+     "tries": 10
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 4,
+     "tries": 5
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 3,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 7,
+     "gain_sum": 0.957428443773632,
+     "n": 7,
+     "proposed": 7,
+     "tries": 14
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 3,
+     "tries": 4
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 1,
+     "tries": 2
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 2,
+     "tries": 4
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 2,
+     "proposed": 2,
+     "tries": 4
+    }
+   }
+  },
+  "structure.extra": {
+   "hi": {
+    "extra": {
+     "fixed": 4,
+     "gain_sum": 0.1699758776781511,
+     "n": 4,
+     "proposed": 4,
+     "tries": 4
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 6,
+     "gain_sum": 1.0442829325323548,
+     "n": 7,
+     "proposed": 6,
+     "tries": 6
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 1,
+     "gain_sum": 0.016083628979169977,
+     "n": 7,
+     "proposed": 1,
+     "tries": 1
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 1,
+     "gain_sum": 0.038019433973677394,
+     "n": 7,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 2,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 4,
+     "gain_sum": 1.1854615031092786,
+     "n": 4,
+     "proposed": 4,
+     "tries": 4
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    }
+   }
+  },
+  "structure.merge": {
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 2,
+     "tries": 3
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 7,
+     "proposed": 1,
+     "tries": 2
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 5,
+     "tries": 5
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 5,
+     "tries": 5
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 4
+    }
+   }
+  },
+  "structure.missing": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 1,
+     "gain_sum": 0.6128884371762591,
+     "n": 5,
+     "proposed": 4,
+     "tries": 7
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 1,
+     "gain_sum": 0.416063474065759,
+     "n": 5,
+     "proposed": 3,
+     "tries": 3
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    }
+   }
+  },
+  "structure.split": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 2
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.2615818180690115,
+     "n": 4,
+     "proposed": 4,
+     "tries": 4
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 4,
+     "tries": 8
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 2
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 6,
+     "gain_sum": 0.30779908987380744,
+     "n": 6,
+     "proposed": 6,
+     "tries": 8
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 5,
+     "tries": 6
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 2,
+     "gain_sum": 0.06126943722146454,
+     "n": 3,
+     "proposed": 3,
+     "tries": 5
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 2,
+     "tries": 4
+    }
+   }
+  },
+  "text.content": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 1,
+     "gain_sum": 0.09828576742681279,
+     "n": 6,
+     "proposed": 5,
+     "tries": 6
+    },
+    "text": {
+     "fixed": 6,
+     "gain_sum": 2.4761087593655646,
+     "n": 6,
+     "proposed": 6,
+     "tries": 11
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 5,
+     "tries": 7
+    },
+    "text": {
+     "fixed": 4,
+     "gain_sum": 1.305093443176287,
+     "n": 6,
+     "proposed": 6,
+     "tries": 10
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 4,
+     "tries": 5
+    },
+    "text": {
+     "fixed": 3,
+     "gain_sum": 0.9565163295672734,
+     "n": 6,
+     "proposed": 5,
+     "tries": 9
+    }
+   }
+  },
+  "text.position": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.5959331957776686,
+     "n": 5,
+     "proposed": 5,
+     "tries": 9
+    },
+    "text": {
+     "fixed": 1,
+     "gain_sum": 0.01834349487472694,
+     "n": 5,
+     "proposed": 4,
+     "tries": 7
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 3
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 0.7430118101913581,
+     "n": 6,
+     "proposed": 5,
+     "tries": 6
+    },
+    "text": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 6,
+     "proposed": 2,
+     "tries": 2
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 1,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 4,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 4,
+     "gain_sum": 1.107027518790268,
+     "n": 4,
+     "proposed": 4,
+     "tries": 6
+    },
+    "text": {
+     "fixed": 1,
+     "gain_sum": 0.012656834786279427,
+     "n": 4,
+     "proposed": 2,
+     "tries": 4
+    }
+   }
+  },
+  "text.style": {
+   "hi": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 1,
+     "tries": 1
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 2,
+     "tries": 2
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 5,
+     "proposed": 5,
+     "tries": 7
+    },
+    "text": {
+     "fixed": 3,
+     "gain_sum": 0.30090080832814786,
+     "n": 5,
+     "proposed": 4,
+     "tries": 8
+    }
+   },
+   "lo": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 2,
+     "tries": 2
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 3,
+     "tries": 4
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 8,
+     "proposed": 7,
+     "tries": 10
+    },
+    "text": {
+     "fixed": 6,
+     "gain_sum": 0.5878412100180672,
+     "n": 8,
+     "proposed": 8,
+     "tries": 16
+    }
+   },
+   "mid": {
+    "extra": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "missing": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "opacity": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "radius": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "raster": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "recolor": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "resize": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 1,
+     "tries": 1
+    },
+    "shadow": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 0,
+     "tries": 0
+    },
+    "shift": {
+     "fixed": 0,
+     "gain_sum": 0.0,
+     "n": 3,
+     "proposed": 3,
+     "tries": 5
+    },
+    "text": {
+     "fixed": 2,
+     "gain_sum": 0.41968015047225393,
+     "n": 3,
+     "proposed": 3,
+     "tries": 6
+    }
+   }
+  }
+ },
+ "mag_edges": {
+  "color.fill": [
+   9.98823156941835,
+   17.12914747132218
+  ],
+  "color.stroke": [
+   7.140504533642391,
+   11.661653379430646
+  ],
+  "color.tint_global": [
+   3.3093197600326487,
+   7.5570216826353365
+  ],
+  "effect.opacity": [
+   0.18799999999999994,
+   0.515
+  ],
+  "effect.shadow": [
+   10.0,
+   15.0
+  ],
+  "geometry.radius": [
+   6.0,
+   9.0
+  ],
+  "geometry.shift": [
+   2.8284271247461903,
+   8.0
+  ],
+  "geometry.size": [
+   2.0,
+   5.0
+  ],
+  "icon.missing": [
+   576.0,
+   576.0
+  ],
+  "layout.spacing": [
+   4.0,
+   7.333333333333332
+  ],
+  "structure.extra": [
+   576.0,
+   1200.0
+  ],
+  "structure.merge": [
+   8.0,
+   12.0
+  ],
+  "structure.missing": [
+   2244.16,
+   5160.0
+  ],
+  "structure.split": [
+   5.0,
+   9.0
+  ],
+  "text.content": [
+   0.2789115646258503,
+   0.34343434343434337
+  ],
+  "text.position": [
+   2.8284271247461903,
+   7.542472332656505
+  ],
+  "text.style": [
+   2.0,
+   4.0
+  ]
+ },
+ "meta": {
+  "cases": 117,
+  "finder": "decompose",
+  "findings": 256,
+  "fit_on": "fusion-calibration seeds 101,102,103",
+  "fixable": 123,
+  "records": 2560
+ }
+}

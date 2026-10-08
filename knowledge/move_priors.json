@@ -1,0 +1,711 @@
+{
+ "buckets": {
+  "missing|-|xs": {
+   "accept_rate": 0.039,
+   "accepted": 3,
+   "deprioritised": true,
+   "expected": 0.044672060076911164,
+   "gain": 0.000610497238331688,
+   "gain_per_try": 7.928535562749196e-06,
+   "prior": 0.1652,
+   "tried": 77
+  },
+  "opacity|frame|l": {
+   "accept_rate": 0.125,
+   "accepted": 2,
+   "deprioritised": false,
+   "expected": 0.5665911162797037,
+   "gain": 0.025921812139251016,
+   "gain_per_try": 0.0016201132587031885,
+   "prior": 0.6146,
+   "tried": 16
+  },
+  "opacity|frame|m": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.03285140612536442,
+   "gain": 0.010395394162875507,
+   "gain_per_try": 0.010395394162875507,
+   "prior": 1.106,
+   "tried": 1
+  },
+  "opacity|icon|s": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 0.0011301012459886037,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.6301,
+   "tried": 2
+  },
+  "radius|frame|l": {
+   "accept_rate": 0.1552,
+   "accepted": 9,
+   "deprioritised": false,
+   "expected": 1.4560792447010416,
+   "gain": 0.037294033940405404,
+   "gain_per_try": 0.0006430005851794035,
+   "prior": 0.3189,
+   "tried": 58
+  },
+  "radius|frame|m": {
+   "accept_rate": 0.0556,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.01850354741541193,
+   "gain": 0.0002462140100133667,
+   "gain_per_try": 1.3678556111853704e-05,
+   "prior": 0.2562,
+   "tried": 18
+  },
+  "radius|frame|s": {
+   "accept_rate": 0.4667,
+   "accepted": 14,
+   "deprioritised": false,
+   "expected": 0.0355803862688902,
+   "gain": 0.020744828635219814,
+   "gain_per_try": 0.0006914942878406604,
+   "prior": 5.4165,
+   "tried": 30
+  },
+  "radius|frame|xs": {
+   "accept_rate": 1.0,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 0.003342781111215616,
+   "gain": 0.0009471677059621113,
+   "gain_per_try": 9.471677059621113e-05,
+   "prior": 2.0338,
+   "tried": 10
+  },
+  "radius|image|s": {
+   "accept_rate": 0.5,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.0010290023580409055,
+   "gain": 0.00017910766601561545,
+   "gain_per_try": 8.955383300780773e-05,
+   "prior": 0.7916,
+   "tried": 2
+  },
+  "radius|image|xs": {
+   "accept_rate": 1.0,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.0002684543857429209,
+   "gain": 5.170011520383433e-05,
+   "gain_per_try": 1.7233371734611442e-05,
+   "prior": 0.9606,
+   "tried": 3
+  },
+  "raster|-|s": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 0.00967431513268177,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 4.7554,
+   "tried": 9
+  },
+  "raster|ellipse|s": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.0013867725356578465,
+   "gain": 0.0014597639922937777,
+   "gain_per_try": 0.0014597639922937777,
+   "prior": 10.3327,
+   "tried": 1
+  },
+  "raster|frame|m": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 0.06246041316826834,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 6.7368,
+   "tried": 4
+  },
+  "raster|frame|s": {
+   "accept_rate": 0.4444,
+   "accepted": 4,
+   "deprioritised": false,
+   "expected": 0.00838207947852305,
+   "gain": 0.0037784754621691024,
+   "gain_per_try": 0.00041983060690767803,
+   "prior": 7.5105,
+   "tried": 9
+  },
+  "raster|icon|s": {
+   "accept_rate": 1.0,
+   "accepted": 12,
+   "deprioritised": false,
+   "expected": 0.03154831896782408,
+   "gain": 0.11840216859371305,
+   "gain_per_try": 0.009866847382809421,
+   "prior": 30.0387,
+   "tried": 12
+  },
+  "raster|image|s": {
+   "accept_rate": 1.0,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.007036493734208965,
+   "gain": 0.008121726976550175,
+   "gain_per_try": 0.002707242325516725,
+   "prior": 10.9834,
+   "tried": 3
+  },
+  "raster|rect|m": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.006819515420811483,
+   "gain": 0.0016537113189697306,
+   "gain_per_try": 0.0016537113189697306,
+   "prior": 9.2935,
+   "tried": 1
+  },
+  "raster|text|m": {
+   "accept_rate": 1.0,
+   "accepted": 2,
+   "deprioritised": false,
+   "expected": 0.006555555024192668,
+   "gain": 0.004357409153184872,
+   "gain_per_try": 0.002178704576592436,
+   "prior": 9.6189,
+   "tried": 2
+  },
+  "recolor|frame|l": {
+   "accept_rate": 0.3226,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 2.115564312527867,
+   "gain": 0.49500059484921566,
+   "gain_per_try": 0.015967761124168246,
+   "prior": 2.7308,
+   "tried": 31
+  },
+  "recolor|frame|m": {
+   "accept_rate": 0.6667,
+   "accepted": 2,
+   "deprioritised": false,
+   "expected": 0.059913178106613875,
+   "gain": 0.008663052983129672,
+   "gain_per_try": 0.0028876843277098906,
+   "prior": 2.5246,
+   "tried": 3
+  },
+  "recolor|frame|s": {
+   "accept_rate": 0.175,
+   "accepted": 7,
+   "deprioritised": false,
+   "expected": 0.025097444289107214,
+   "gain": 0.07057138816399483,
+   "gain_per_try": 0.0017642847040998707,
+   "prior": 27.5263,
+   "tried": 40
+  },
+  "recolor|frame|xs": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.001086748530850356,
+   "gain": 0.0004853994120295607,
+   "gain_per_try": 0.0004853994120295607,
+   "prior": 3.1021,
+   "tried": 1
+  },
+  "recolor|icon|s": {
+   "accept_rate": 0.6,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.0028410930506933088,
+   "gain": 0.0006530570144844792,
+   "gain_per_try": 0.00013061140289689585,
+   "prior": 2.7716,
+   "tried": 5
+  },
+  "recolor|image|s": {
+   "accept_rate": 0.375,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.002883440409393045,
+   "gain": 0.0029785048832494526,
+   "gain_per_try": 0.0003723131104061816,
+   "prior": 7.3853,
+   "tried": 8
+  },
+  "recolor|image|xs": {
+   "accept_rate": 0.25,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.0004949378521799251,
+   "gain": 4.025173187255371e-05,
+   "gain_per_try": 1.0062932968138427e-05,
+   "prior": 2.2099,
+   "tried": 4
+  },
+  "recolor|rect|m": {
+   "accept_rate": 0.75,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.007102827981258062,
+   "gain": 0.003305340766906753,
+   "gain_per_try": 0.0008263351917266882,
+   "prior": 3.6877,
+   "tried": 4
+  },
+  "recolor|text|l": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.024913437415630728,
+   "gain": 0.0036553611755370807,
+   "gain_per_try": 0.0036553611755370807,
+   "prior": 2.7174,
+   "tried": 1
+  },
+  "recolor|text|m": {
+   "accept_rate": 0.4667,
+   "accepted": 7,
+   "deprioritised": false,
+   "expected": 0.05294647503947458,
+   "gain": 0.004278956956398959,
+   "gain_per_try": 0.0002852637970932639,
+   "prior": 1.5982,
+   "tried": 15
+  },
+  "recolor|text|s": {
+   "accept_rate": 0.2542,
+   "accepted": 15,
+   "deprioritised": false,
+   "expected": 0.035310388942303615,
+   "gain": 0.0014653426941933305,
+   "gain_per_try": 2.4836316850734415e-05,
+   "prior": 0.7616,
+   "tried": 59
+  },
+  "recolor|text|xs": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 6.829576012439779e-05,
+   "gain": 3.1495645562376724e-05,
+   "gain_per_try": 3.1495645562376724e-05,
+   "prior": 3.1207,
+   "tried": 1
+  },
+  "resize|frame|l": {
+   "accept_rate": 0.4478,
+   "accepted": 30,
+   "deprioritised": false,
+   "expected": 5.8596761786101155,
+   "gain": 0.02716422157753702,
+   "gain_per_try": 0.00040543614294831373,
+   "prior": 0.0747,
+   "tried": 67
+  },
+  "resize|frame|m": {
+   "accept_rate": 0.5106,
+   "accepted": 24,
+   "deprioritised": false,
+   "expected": 0.3336821403312596,
+   "gain": 0.08139767327478667,
+   "gain_per_try": 0.0017318653888252482,
+   "prior": 2.4432,
+   "tried": 47
+  },
+  "resize|frame|s": {
+   "accept_rate": 0.4348,
+   "accepted": 20,
+   "deprioritised": false,
+   "expected": 0.10302341491284404,
+   "gain": 0.008809738074632728,
+   "gain_per_try": 0.00019151604510071147,
+   "prior": 0.8783,
+   "tried": 46
+  },
+  "resize|frame|xs": {
+   "accept_rate": 0.5556,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 0.014888584713830685,
+   "gain": 0.0011671147141837813,
+   "gain_per_try": 6.483970634354341e-05,
+   "prior": 0.7041,
+   "tried": 18
+  },
+  "resize|image|s": {
+   "accept_rate": 0.4615,
+   "accepted": 6,
+   "deprioritised": false,
+   "expected": 0.030716892787755568,
+   "gain": 0.0037402485717897005,
+   "gain_per_try": 0.00028771142859920773,
+   "prior": 0.9662,
+   "tried": 13
+  },
+  "resize|image|xs": {
+   "accept_rate": 0.75,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.0014896686696166288,
+   "gain": 0.0004801650047302486,
+   "gain_per_try": 0.00012004125118256215,
+   "prior": 1.4084,
+   "tried": 4
+  },
+  "resize|rect|l": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 0.06486063166194694,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.1833,
+   "tried": 3
+  },
+  "resize|rect|m": {
+   "accept_rate": 0.8333,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 0.050586461832482485,
+   "gain": 0.0022675752639770425,
+   "gain_per_try": 0.0001889646053314202,
+   "prior": 0.4113,
+   "tried": 12
+  },
+  "shadow|frame|l": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 1.035888553834731,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.1089,
+   "tried": 6
+  },
+  "shadow|frame|m": {
+   "accept_rate": 0.1667,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.05704791726951762,
+   "gain": 0.00176878530653507,
+   "gain_per_try": 0.0002947975510891783,
+   "prior": 0.2623,
+   "tried": 6
+  },
+  "shadow|frame|s": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": false,
+   "expected": 0.011469645325442868,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.1271,
+   "tried": 4
+  },
+  "shadow|frame|xs": {
+   "accept_rate": 0.5556,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 0.005446407821782229,
+   "gain": 0.000438725977805611,
+   "gain_per_try": 2.4373665433645054e-05,
+   "prior": 0.7025,
+   "tried": 18
+  },
+  "shadow|image|s": {
+   "accept_rate": 0.1429,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.01802607399830768,
+   "gain": 4.920959472659581e-05,
+   "gain_per_try": 7.029942103799401e-06,
+   "prior": 0.1164,
+   "tried": 7
+  },
+  "shadow|image|xs": {
+   "accept_rate": 1.0,
+   "accepted": 2,
+   "deprioritised": false,
+   "expected": 0.0014803610865003428,
+   "gain": 0.0016611948013305511,
+   "gain_per_try": 0.0008305974006652756,
+   "prior": 2.7435,
+   "tried": 2
+  },
+  "shift|frame|l": {
+   "accept_rate": 0.3077,
+   "accepted": 8,
+   "deprioritised": false,
+   "expected": 0.2028891059489437,
+   "gain": 0.005206015196290409,
+   "gain_per_try": 0.00020023135370347727,
+   "prior": 0.7704,
+   "tried": 26
+  },
+  "shift|frame|m": {
+   "accept_rate": 0.0606,
+   "accepted": 4,
+   "deprioritised": false,
+   "expected": 0.05706924085594798,
+   "gain": 0.0026764559075611507,
+   "gain_per_try": 4.055236223577501e-05,
+   "prior": 0.7328,
+   "tried": 66
+  },
+  "shift|frame|s": {
+   "accept_rate": 0.0288,
+   "accepted": 3,
+   "deprioritised": true,
+   "expected": 0.036897960078380136,
+   "gain": 0.000296146371508918,
+   "gain_per_try": 2.847561264508827e-06,
+   "prior": 0.2511,
+   "tried": 104
+  },
+  "shift|frame|xs": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": true,
+   "expected": 0.018043879994849975,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.6604,
+   "tried": 20
+  },
+  "shift|icon|s": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": true,
+   "expected": 0.0028279313915637225,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.804,
+   "tried": 15
+  },
+  "shift|icon|xs": {
+   "accept_rate": 0.0122,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.01699169066104437,
+   "gain": 0.010395394162875507,
+   "gain_per_try": 0.00012677309954726228,
+   "prior": 6.6406,
+   "tried": 82
+  },
+  "shift|image|s": {
+   "accept_rate": 0.125,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.00783540737818923,
+   "gain": 4.703140258789651e-05,
+   "gain_per_try": 5.878925323487064e-06,
+   "prior": 1.1904,
+   "tried": 8
+  },
+  "shift|rect|m": {
+   "accept_rate": 1.0,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.001643262095100106,
+   "gain": 0.0012258598497196654,
+   "gain_per_try": 0.0012258598497196654,
+   "prior": 3.0115,
+   "tried": 1
+  },
+  "shift|text|l": {
+   "accept_rate": 0.0588,
+   "accepted": 1,
+   "deprioritised": false,
+   "expected": 0.33226854251200705,
+   "gain": 0.005723633089373186,
+   "gain_per_try": 0.0003366842993748933,
+   "prior": 0.8749,
+   "tried": 17
+  },
+  "shift|text|m": {
+   "accept_rate": 0.5672,
+   "accepted": 38,
+   "deprioritised": false,
+   "expected": 0.4193368189411483,
+   "gain": 0.11366507817556133,
+   "gain_per_try": 0.0016964937041128558,
+   "prior": 3.0421,
+   "tried": 67
+  },
+  "shift|text|s": {
+   "accept_rate": 0.4876,
+   "accepted": 98,
+   "deprioritised": false,
+   "expected": 0.3302713957624547,
+   "gain": 0.15017264489183704,
+   "gain_per_try": 0.0007471275865265525,
+   "prior": 5.1369,
+   "tried": 201
+  },
+  "shift|text|xs": {
+   "accept_rate": 0.5294,
+   "accepted": 9,
+   "deprioritised": false,
+   "expected": 0.012633808144282537,
+   "gain": 0.0007415943398982328,
+   "gain_per_try": 4.3623196464601924e-05,
+   "prior": 1.2005,
+   "tried": 17
+  },
+  "text|text|l": {
+   "accept_rate": 0.0164,
+   "accepted": 1,
+   "deprioritised": true,
+   "expected": 1.4531346034613162,
+   "gain": 4.3607123104129807e-05,
+   "gain_per_try": 7.14870870559505e-07,
+   "prior": 0.0996,
+   "tried": 61
+  },
+  "text|text|m": {
+   "accept_rate": 0.023,
+   "accepted": 10,
+   "deprioritised": false,
+   "expected": 1.9503905572873097,
+   "gain": 0.1794653962055748,
+   "gain_per_try": 0.0004135147378008636,
+   "prior": 1.0586,
+   "tried": 434
+  },
+  "text|text|s": {
+   "accept_rate": 0.0456,
+   "accepted": 44,
+   "deprioritised": false,
+   "expected": 1.3669601498573878,
+   "gain": 0.18860262835788957,
+   "gain_per_try": 0.00019564588003930455,
+   "prior": 1.5868,
+   "tried": 964
+  },
+  "text|text|xs": {
+   "accept_rate": 0.0,
+   "accepted": 0,
+   "deprioritised": true,
+   "expected": 0.1962033959357722,
+   "gain": 0.0,
+   "gain_per_try": 0.0,
+   "prior": 0.0357,
+   "tried": 184
+  }
+ },
+ "doc": "learned refine move priors (dt.selftest.move_stats --priors); prior = smoothed realised/expected gain relative to the global rate; deprioritised = near-zero gain per try (ordered last, never removed)",
+ "global": {
+  "expected": 18.615814826497793,
+  "gain": 1.6124988946225542,
+  "gain_per_try": 0.0005466097947873065,
+  "rate": 0.08661983961762015,
+  "tried": 2950
+ },
+ "kinds": {
+  "missing": {
+   "accept_rate": 0.039,
+   "accepted": 3,
+   "deprioritised": true,
+   "expected": 0.044672060076911164,
+   "gain": 0.000610497238331688,
+   "gain_per_try": 7.928535562749196e-06,
+   "prior": 0.237,
+   "tried": 77
+  },
+  "opacity": {
+   "accept_rate": 0.1579,
+   "accepted": 3,
+   "deprioritised": false,
+   "expected": 0.6005726236510567,
+   "gain": 0.03631720630212652,
+   "gain_per_try": 0.001911431910638238,
+   "prior": 0.7876,
+   "tried": 19
+  },
+  "radius": {
+   "accept_rate": 0.314,
+   "accepted": 38,
+   "deprioritised": false,
+   "expected": 1.5148034162403443,
+   "gain": 0.05946305207282011,
+   "gain_per_try": 0.0004914301824200009,
+   "prior": 0.4871,
+   "tried": 121
+  },
+  "raster": {
+   "accept_rate": 0.561,
+   "accepted": 23,
+   "deprioritised": false,
+   "expected": 0.13386346346216818,
+   "gain": 0.1377732554968807,
+   "gain_per_try": 0.003360323304801968,
+   "prior": 10.1053,
+   "tried": 41
+  },
+  "recolor": {
+   "accept_rate": 0.314,
+   "accepted": 54,
+   "deprioritised": false,
+   "expected": 2.3282225799054976,
+   "gain": 0.5911287462765747,
+   "gain_per_try": 0.0034367950364917136,
+   "prior": 2.8453,
+   "tried": 172
+  },
+  "resize": {
+   "accept_rate": 0.4905,
+   "accepted": 103,
+   "deprioritised": false,
+   "expected": 6.458923973519852,
+   "gain": 0.12502673648163717,
+   "gain_per_try": 0.0005953654118173199,
+   "prior": 0.252,
+   "tried": 210
+  },
+  "shadow": {
+   "accept_rate": 0.3256,
+   "accepted": 14,
+   "deprioritised": false,
+   "expected": 1.129358959336282,
+   "gain": 0.003917915680397828,
+   "gain_per_try": 9.111431814878669e-05,
+   "prior": 0.1906,
+   "tried": 43
+  },
+  "shift": {
+   "accept_rate": 0.2628,
+   "accepted": 164,
+   "deprioritised": false,
+   "expected": 1.4387090437639116,
+   "gain": 0.2901498533872134,
+   "gain_per_try": 0.0004649837394025856,
+   "prior": 2.3114,
+   "tried": 624
+  },
+  "text": {
+   "accept_rate": 0.0335,
+   "accepted": 55,
+   "deprioritised": false,
+   "expected": 4.966688706541795,
+   "gain": 0.3681116316865686,
+   "gain_per_try": 0.00022404846724684635,
+   "prior": 0.8563,
+   "tried": 1643
+  }
+ },
+ "moves": 2950,
+ "params": {
+  "dead_gpt": 0.02,
+  "min_tries": 12,
+  "smooth": 8.0
+ },
+ "runs": 27
+}

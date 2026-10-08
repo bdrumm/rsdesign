@@ -48,7 +48,7 @@ def test_every_third_party_import_is_declared():
 
     declared = {"numpy", "cv2", "PIL", "skimage", "scipy", "playwright", "requests", "pytest"}
     optional = {"Vision", "Quartz", "Foundation", "rapidocr_onnxruntime", "pytesseract",
-                "mcp"}  # mcp: the [mcp] extra (dt/mcp_server.py only); pyproject declares it under optional-dependencies
+                "mcp", "mlx"}  # mcp: the [mcp] extra; mlx: Apple-Silicon-only dependency (dt.accel falls back to numpy) (dt/mcp_server.py only); pyproject declares it under optional-dependencies
     found: set[str] = set()
     for dp, _, fs in os.walk(os.path.join(ROOT, "dt")):
         for fn in fs:
@@ -85,9 +85,10 @@ def test_setup_script_is_valid_bash():
 
 
 # --------------------------------------------------------------------------- browser launch
-def test_launch_falls_back_past_a_missing_browser():
+def test_launch_falls_back_past_a_missing_browser(monkeypatch):
     from dt.render import screenshot as s
 
+    monkeypatch.delenv("DT_EVAL_SERVICE", raising=False)  # this test inspects the in-process driver
     s.html_to_png("<b>ok</b>", 20, 10)  # make sure the shared driver is up
     b, used = s.launch_browser(s._st()["pw"], ["/nonexistent/chrome-for-dt-test"] + s.browser_candidates("auto"))
     try:

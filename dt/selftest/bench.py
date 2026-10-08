@@ -740,6 +740,18 @@ def draft_failures(report: dict, k: Optional[int] = None) -> list[dict]:
     return out
 
 
+# ----------------------------------------------------------------------------- scenario gate
+def scenario_gate(workers: int = 1, families: Optional[Iterable[str]] = None, overrides: Optional[dict[str, Any]] = None,
+                  verbose: bool = False) -> dict:
+    """Run the active failure-scenario suite (``knowledge/scenarios.json``, :mod:`dt.scenarios`) on
+    its HOLDOUT seeds: ``{pass, families: {name: {baseline, current, delta, status}}, failures, text}``.
+    A family fails when its pass rate drops below its baseline - ``scenarios.gate.eps``."""
+    from dt.scenarios import suite
+    g = suite.gate(families, workers=workers, overrides=overrides, verbose=verbose)
+    g["text"] = suite.format_gate(g)
+    return g
+
+
 # ----------------------------------------------------------------------------- CLI
 def main(argv: Optional[Sequence[str]] = None) -> int:
     ap = argparse.ArgumentParser(prog="dt.selftest.bench", description=__doc__.split("\n\n")[0])
@@ -754,6 +766,7 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     ap.add_argument("--set-baseline", "--write-baseline", dest="set_baseline", nargs="?", const=BASELINE_PATH,
                     default=None, help=f"write this run as the baseline (default {os.path.relpath(BASELINE_PATH, ROOT)})")
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--scenarios", action="store_true", help="also gate the active scenario suite on its holdout seeds")
     a = ap.parse_args(argv)
     report = run(a.corpus, stages=tuple(s.strip() for s in a.stages.split(",") if s.strip()), limit=a.limit,
                  workers=a.workers, run_id=a.run_id, out_root=(a.out or None), verbose=not a.quiet)
@@ -771,7 +784,12 @@ def main(argv: Optional[Sequence[str]] = None) -> int:
     gate, msg = gate_and_baseline(report, a.gate, a.set_baseline)
     if msg:
         print(msg)
-    return 1 if (gate is not None and not gate["pass"]) else 0
+    rc = 1 if (gate is not None and not gate["pass"]) else 0
+    if a.scenarios:
+        sg = scenario_gate(workers=a.workers, verbose=not a.quiet)
+        print(sg["text"])
+        rc = rc or (0 if sg["pass"] else 1)
+    return rc
 
 
 def gate_and_baseline(report: dict, gate_path: Optional[str] = None,

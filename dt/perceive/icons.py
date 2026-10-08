@@ -368,8 +368,6 @@ def render_poses(queries: list[IconQuery], poses: list[list[Pose]], weight: int 
     """Render every pose of every query on ONE page (each cell = the query's crop size, filled with its
     background) and set pose.de = mean ΔE2000 between the cell and the crop. The renderer is the judge."""
     from dt.render.screenshot import render_url
-    from skimage import color as skcolor
-
     cells = []  # (qi, pi, x, y, w, h)
     cur_y, max_w = 0, 0
     for qi, q in enumerate(queries):
@@ -406,23 +404,32 @@ html,body{{margin:0;background:#fff;width:{max_w}px;height:{cur_y}px}}
         f.write(html)
     try:
         img, _ = render_url("file://" + tmp, max(1, max_w), max(1, cur_y), wait_ms=0, wait_until="load",
-                            script="document.fonts.load(\"24px 'MSOV'\", 'home').then(() => document.fonts.ready)"
-                                   ".then(() => new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))))")
+                            script="Promise.race([document.fonts.load(\"24px 'MSOV'\", 'home'), new Promise(r => setTimeout(r, 5000))])"
+                                   ".then(() => Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 5000))]))"
+                                   ".then(() => Promise.race([new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))), new Promise(r => setTimeout(r, 2000))]))")
     finally:
         try:
             os.remove(tmp)
         except OSError:
             pass
-    labs = [skcolor.rgb2lab(q.crop[..., :3].astype(np.float32) / 255.0) for q in queries]
+    from dt import accel  # one batched CIEDE2000 call for every cell (GPU via MLX on Apple Silicon)
     covs = [_coverage(q.crop, q.bg, q.fg) for q in queries]
-    page_lab = skcolor.rgb2lab(img[..., :3].astype(np.float32) / 255.0)
+    tgt, ren, owners = [], [], []
     for (qi, pi, x, y, w, h) in cells:
-        lb = page_lab[y:y + h, x:x + w]
-        if lb.shape[:2] != queries[qi].crop.shape[:2]:
+        reg = img[y:y + h, x:x + w, :3]
+        if reg.shape[:2] != queries[qi].crop.shape[:2]:
             continue
-        dmap = skcolor.deltaE_ciede2000(labs[qi], lb)
-        poses[qi][pi].de = float(dmap.mean())
-        poses[qi][pi].mis, poses[qi][pi].mis_e = glyph_mismatch(covs[qi], _coverage(img[y:y + h, x:x + w], queries[qi].bg, queries[qi].fg))
+        tgt.append(queries[qi].crop[..., :3].reshape(-1, 3))
+        ren.append(reg.reshape(-1, 3))
+        owners.append((qi, pi, x, y, w, h))
+        poses[qi][pi].mis, poses[qi][pi].mis_e = glyph_mismatch(covs[qi], _coverage(reg, queries[qi].bg, queries[qi].fg))
+    if owners:
+        de = accel.delta_e2000(np.concatenate(tgt)[None], np.concatenate(ren)[None])[0].astype(np.float64)
+        off = 0
+        for (qi, pi, x, y, w, h), t in zip(owners, tgt):
+            n = len(t)
+            poses[qi][pi].de = float(de[off:off + n].mean())
+            off += n
 
 
 def _coverage(rgb: np.ndarray, bg: Color, fg: Color) -> np.ndarray:

@@ -235,11 +235,14 @@ def test_critique_shift_hypothesis_is_exact(case):
     _, rep = loss_of(doc, target, rendered, lines)
     hyps = critique(doc, target, rendered, rep)
     assert hyps and all(isinstance(h, Hypothesis) for h in hyps)
-    assert all(hyps[i].expected_gain >= hyps[i + 1].expected_gain for i in range(len(hyps) - 1))
+    # ordered by expected_gain x learned prior, deprioritised moves last (dt.refine.priors)
+    keys = [(h.deprioritised, -h.expected_gain * h.prior) for h in hyps]
+    assert keys == sorted(keys)
     shifts = [h for h in hyps if h.kind == "shift" and h.node_id == nid]
     assert shifts and shifts[0].params["dx"] == -5 and shifts[0].params["dy"] == -3
-    # the container move ranks above its children's individual moves
-    first_shift = next(h for h in hyps if h.kind == "shift")
+    # the critic expects more from the container move than from its children's individual moves (the learned
+    # prior may still order a child first; tile scoring then measures every one of them exactly)
+    first_shift = max((h for h in hyps if h.kind == "shift"), key=lambda h: h.expected_gain)
     assert first_shift.node_id == nid
 
 

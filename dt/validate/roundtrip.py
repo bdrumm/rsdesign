@@ -239,7 +239,7 @@ def measure_text_nodes(fnodes: list[dict]) -> dict[int, tuple[float, float]]:
         el.style.width = 'max-content'; el.style.height = 'auto';
         const r = el.getBoundingClientRect(); return [el.id, r.width, r.height]; })"""
     _, res = render_url("file://" + path, 10, 10, wait_ms=0, script="""async () => {
-        await document.fonts.ready;
+        await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 5000))]);
         const used = new Set();
         for (const el of document.querySelectorAll('body *')) { const cs = getComputedStyle(el); used.add(cs.fontWeight + ' 16px ' + cs.fontFamily.split(',')[0]); }
         await Promise.all([...used].map(f => document.fonts.load(f).catch(() => null)));

@@ -9,6 +9,7 @@ dependencies = [
   # macOS Vision OCR; pyobjc has no wheels (and does not build) anywhere else
   "pyobjc-framework-Vision; sys_platform == 'darwin'", "pyobjc-framework-Quartz; sys_platform == 'darwin'",
   "playwright", "requests", "pytest",
+  "mlx; sys_platform == 'darwin' and platform_machine == 'arm64'",  # GPU per-pixel maths (dt.accel)
 ]
 
 [project.optional-dependencies]

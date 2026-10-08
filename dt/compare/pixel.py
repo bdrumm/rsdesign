@@ -42,12 +42,18 @@ def to_lab(rgb: np.ndarray) -> np.ndarray:
     return rgb2lab(arr.astype(np.float32) / 255.0).astype(np.float32)
 
 
-def diff_map(a: np.ndarray, b: np.ndarray) -> np.ndarray:
+def diff_map(a: np.ndarray, b: np.ndarray, fast: bool | None = None) -> np.ndarray:
     """Per-pixel CIE76 ΔE between two RGB images, as float32 (H, W).
 
     Images of different size are cropped to the common size (top-left aligned).
+    ``fast`` (default: inside ``dt.accel.search()``) computes it on the GPU (MLX) for search loops such
+    as refine trials: ~13x faster on a 1280x800 frame, within 0.05 ΔE. Outside search the float32 CPU
+    path below is used so benchmark baselines do not move.
     """
     a, b = same_size(a, b)
+    from dt import accel
+    if fast if fast is not None else accel.search_active():
+        return accel.delta_e76(a, b)
     la, lb = to_lab(a), to_lab(b)
     d = la - lb
     return np.sqrt(np.einsum("ijk,ijk->ij", d, d)).astype(np.float32)

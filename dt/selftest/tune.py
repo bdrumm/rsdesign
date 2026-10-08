@@ -17,7 +17,9 @@ Algorithm (budget = ``iters`` bench evaluations on the train split):
 3. coordinate refinement (rest of the budget): cycle the keys in seeded order and try
    incumbent +/- ``tune.coord_step`` x range, accepting any train improvement.
 
-The objective is the bench composite on the train split (``bench.run`` with ``out_root=None``).
+The search machinery is generic (:func:`optimize` takes any objective over a space; :func:`check_guards`
+runs acceptance guards) and is shared with the scenario trainer (``dt train``, dt/scenarios/train.py).
+For ``dt tune`` the objective is the bench composite on the train split (``bench.run`` with ``out_root=None``).
 The incumbent is then scored on the holdout split; ``dt/params.json`` (or ``params_path``) is
 written only when the holdout composite beats the baseline holdout by more than
 ``tune.min_improve`` (train is used when there is no holdout case). Every evaluation is
@@ -33,7 +35,7 @@ import os
 import random
 import sys
 import time
-from typing import Any, Iterable, Optional, Sequence
+from typing import Any, Callable, Iterable, Optional, Sequence
 
 from dt.params import P, PARAMS_PATH, register
 from dt.selftest import bench
@@ -146,8 +148,11 @@ def _diff(space: dict, cand: dict) -> dict:
     return {k: v for k, v in cand.items() if v != space[k]["current"]}
 
 
-def write_params(best: dict[str, Any], path: str = PARAMS_PATH) -> str:
-    """Merge ``best`` into the params file at ``path`` (keeps unrelated overrides)."""
+def write_params(best: dict[str, Any], path: Optional[str] = None) -> str:
+    """Merge ``best`` into the params file at ``path`` (default ``dt/params.json``; keeps unrelated
+    overrides). Learned changes that must be auditable go through ``dt.learn.state.write_layer``
+    + the ledger instead (``dt train``)."""
+    path = path or PARAMS_PATH
     data: dict[str, Any] = {}
     if os.path.exists(path):
         try:
@@ -163,56 +168,42 @@ def write_params(best: dict[str, Any], path: str = PARAMS_PATH) -> str:
 
 
 # ----------------------------------------------------------------------------- search
-def search(iters: int, corpus_dirs: Iterable[str] = bench.DEFAULT_CORPORA, holdout_frac: float = 0.25, seed: int = 0,
-           limit: Optional[int] = None, stages: Sequence[str] = bench.ALL_STAGES, workers: int = 1,
-           include: Optional[Iterable[str]] = None, params_path: str = PARAMS_PATH,
-           history_path: Optional[str] = HISTORY_PATH, cases: Optional[Sequence[bench.Case]] = None,
-           uniform_first: bool = False, verbose: bool = True) -> dict:
-    """Random search + coordinate refinement over the tunable params (see module docstring).
+Objective = Callable[[dict[str, Any]], float]
+"""Maps a full candidate (every key of the space) to a score; higher is better."""
+Guard = tuple[str, Callable[[dict[str, Any]], tuple[bool, dict]]]
+"""``(name, fn)``: ``fn(changed_params) -> (ok, evidence)``; a change is kept only when every guard passes."""
 
-    ``uniform_first=True`` makes the first random candidate a uniform draw over the whole space
-    (a global probe); by default every candidate is a local perturbation of the incumbent,
-    which suits a pipeline whose params are already calibrated.
 
-    Returns ``{space_size, n_train, n_holdout, baseline: {train, holdout}, best: {train, holdout,
-    params (only changed keys)}, evaluations, written (bool), params_path, history_path,
-    elapsed_s}``.
-    """
-    t0 = time.perf_counter()
-    space = search_space(include)
+def optimize(space: dict[str, dict], objective: Objective, iters: int, seed: int = 0,
+             history_path: Optional[str] = None, run_tag: Optional[str] = None, uniform_first: bool = False,
+             log: Optional[Callable[..., None]] = None, subset_frac: Optional[float] = None) -> dict:
+    """Random search + coordinate refinement of ``objective`` over ``space`` (``iters`` evaluations
+    after the baseline; see the module docstring). Pure search: nothing is written except the
+    history lines. ``subset_frac`` overrides ``tune.subset_frac`` (fraction of keys perturbed per
+    random candidate). Returns ``{base, base_score, best, best_score, changed, evaluations, run}``."""
+    log = log or (lambda *a: None)
     keys = list(space)
-    all_cases = list(cases) if cases is not None else bench.find_cases(corpus_dirs, limit)
-    train, hold = split_cases(all_cases, holdout_frac, seed)
     rng = random.Random(seed)
-    run_tag = time.strftime("%Y%m%d-%H%M%S") + f"-s{seed}"
-    log = (lambda *a: print(*a, file=sys.stderr, flush=True)) if verbose else (lambda *a: None)
-
-    def score_holdout(cand: dict) -> Optional[float]:
-        return objective(hold, cand, stages, workers) if hold else None
-
+    run_tag = run_tag or (time.strftime("%Y%m%d-%H%M%S") + f"-s{seed}")
     evaluations = 0
 
     def evaluate(cand: dict, phase: str, i: int) -> float:
         nonlocal evaluations
-        s = objective(train, cand, stages, workers)
+        s = float(objective(cand))
         evaluations += 1
         _append_history(history_path, {"run": run_tag, "phase": phase, "iter": i, "train": s,
                                        "params": _diff(space, cand), "ts": time.time()})
         return s
 
     base = {k: space[k]["current"] for k in keys}
-    base_train = evaluate(base, "baseline", 0)
-    base_hold = score_holdout(base)
-    log(f"[tune] {len(keys)} keys, train={len(train)} holdout={len(hold)}  baseline train={base_train:.4f} "
-        f"holdout={'-' if base_hold is None else f'{base_hold:.4f}'}")
-    best, best_train = dict(base), base_train
-
-    n_random = int(round(float(P["tune.random_frac"]) * iters))
+    base_score = evaluate(base, "baseline", 0)
+    best, best_score = dict(base), base_score
+    n_random = int(round(float(P["tune.random_frac"]) * iters)) if keys else 0
     for i in range(n_random):
-        cand = sample_uniform(space, rng) if (i == 0 and uniform_first) else perturb(space, best, rng)
+        cand = sample_uniform(space, rng) if (i == 0 and uniform_first) else perturb(space, best, rng, subset_frac)
         s = evaluate(cand, "random", i)
-        if s > best_train + 1e-9:
-            best, best_train = cand, s
+        if s > best_score + 1e-9:
+            best, best_score = cand, s
             log(f"[tune] random {i}: train {s:.4f} (new best)")
     n_coord = iters - n_random
     order = list(keys)
@@ -227,23 +218,81 @@ def search(iters: int, corpus_dirs: Iterable[str] = bench.DEFAULT_CORPORA, holdo
         cand[key] = _cast(s_, float(best[key]) + delta)
         if cand[key] != best[key]:
             s = evaluate(cand, "coord", i)
-            if s > best_train + 1e-9:
-                best, best_train = cand, s
+            if s > best_score + 1e-9:
+                best, best_score = cand, s
                 log(f"[tune] coord {i} {key}={cand[key]}: train {s:.4f} (new best)")
         i += 1
-
     changed = {k: v for k, v in best.items() if v != base[k]}
-    best_hold = base_hold if not changed else score_holdout(best)
-    ref_base = base_hold if base_hold is not None else base_train
-    ref_best = best_hold if best_hold is not None else best_train
-    written = bool(changed) and (ref_best > ref_base + float(P["tune.min_improve"]))
+    return {"run": run_tag, "base": base, "base_score": base_score, "best": best, "best_score": best_score,
+            "changed": changed, "evaluations": evaluations}
+
+
+def check_guards(changed: dict[str, Any], guards: Sequence[Guard], short_circuit: bool = True) -> tuple[bool, dict]:
+    """Run ``guards`` on ``changed`` (in order; stop at the first failure unless ``short_circuit``
+    is False). Returns ``(all_ok, {name: {"pass": bool, **evidence}})``; skipped guards are absent."""
+    out: dict[str, dict] = {}
+    ok_all = True
+    for name, fn in guards:
+        ok, ev = fn(changed)
+        out[name] = {"pass": bool(ok), **(ev or {})}
+        ok_all = ok_all and bool(ok)
+        if not ok and short_circuit:
+            break
+    return ok_all, out
+
+
+def search(iters: int, corpus_dirs: Iterable[str] = bench.DEFAULT_CORPORA, holdout_frac: float = 0.25, seed: int = 0,
+           limit: Optional[int] = None, stages: Sequence[str] = bench.ALL_STAGES, workers: int = 1,
+           include: Optional[Iterable[str]] = None, params_path: Optional[str] = None,
+           history_path: Optional[str] = HISTORY_PATH, cases: Optional[Sequence[bench.Case]] = None,
+           uniform_first: bool = False, verbose: bool = True) -> dict:
+    """Random search + coordinate refinement over the tunable params (see module docstring):
+    :func:`optimize` with the bench composite on the train split as the objective, then one
+    guard -- the holdout composite must beat the baseline holdout by ``tune.min_improve``.
+
+    ``uniform_first=True`` makes the first random candidate a uniform draw over the whole space
+    (a global probe); by default every candidate is a local perturbation of the incumbent,
+    which suits a pipeline whose params are already calibrated.
+
+    Returns ``{space_size, n_train, n_holdout, baseline: {train, holdout}, best: {train, holdout,
+    params (only changed keys)}, evaluations, written (bool), params_path, history_path,
+    elapsed_s}``.
+    """
+    t0 = time.perf_counter()
+    params_path = params_path or PARAMS_PATH
+    space = search_space(include)
+    all_cases = list(cases) if cases is not None else bench.find_cases(corpus_dirs, limit)
+    train, hold = split_cases(all_cases, holdout_frac, seed)
+    run_tag = time.strftime("%Y%m%d-%H%M%S") + f"-s{seed}"
+    log = (lambda *a: print(*a, file=sys.stderr, flush=True)) if verbose else (lambda *a: None)
+    log(f"[tune] {len(space)} keys, train={len(train)} holdout={len(hold)}")
+
+    def score_holdout(cand: dict) -> Optional[float]:
+        return objective(hold, cand, stages, workers) if hold else None
+
+    res = optimize(space, lambda cand: objective(train, cand, stages, workers), iters, seed,
+                   history_path=history_path, run_tag=run_tag, uniform_first=uniform_first, log=log)
+    base, changed = res["base"], res["changed"]
+    base_train, best_train = res["base_score"], res["best_score"]
+    base_hold = score_holdout(base)
+    log(f"[tune] baseline train={base_train:.4f} holdout={'-' if base_hold is None else f'{base_hold:.4f}'}")
+    best_hold = base_hold if not changed else score_holdout(res["best"])
+
+    def holdout_guard(_changed: dict) -> tuple[bool, dict]:
+        ref_base = base_hold if base_hold is not None else base_train
+        ref_best = best_hold if best_hold is not None else best_train
+        return ref_best > ref_base + float(P["tune.min_improve"]), {"before": ref_base, "after": ref_best}
+
+    written = False
+    if changed:
+        written, _ev = check_guards(changed, [("holdout", holdout_guard)])
     if written:
         write_params(changed, params_path)
         log(f"[tune] wrote {len(changed)} params to {params_path}")
-    summary = {"run": run_tag, "phase": "summary", "space_size": len(keys), "n_train": len(train), "n_holdout": len(hold),
+    summary = {"run": run_tag, "phase": "summary", "space_size": len(space), "n_train": len(train), "n_holdout": len(hold),
                "baseline": {"train": base_train, "holdout": base_hold},
                "best": {"train": best_train, "holdout": best_hold, "params": changed},
-               "evaluations": evaluations, "written": written, "params_path": params_path if written else None,
+               "evaluations": res["evaluations"], "written": written, "params_path": params_path if written else None,
                "history_path": history_path, "elapsed_s": round(time.perf_counter() - t0, 2), "ts": time.time()}
     _append_history(history_path, summary)
     log(f"[tune] best train={best_train:.4f} holdout={'-' if best_hold is None else f'{best_hold:.4f}'} "

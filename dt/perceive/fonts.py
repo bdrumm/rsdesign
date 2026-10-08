@@ -124,8 +124,6 @@ def _score(queries: list[_Query], cells: list[_Cell], pages: list[np.ndarray], m
     """c.de = mean ΔE2000 of the cell vs the query crop. Only pixels whose RGB differs are converted and
     compared (ΔE of identical colours is 0, so the mean is exact), in one batch for all cells: converting
     whole pages and every background pixel cell by cell dominated the run time (60 texts: ~45 s of ~75 s)."""
-    from skimage import color as skcolor
-
     tgt, ren, owners, sizes = [], [], [], []
     for ci, c in enumerate(cells):
         q = queries[c.qi]
@@ -145,9 +143,8 @@ def _score(queries: list[_Query], cells: list[_Cell], pages: list[np.ndarray], m
     total = int(sum(sizes))
     if total == 0:
         return
-    la = skcolor.rgb2lab(np.concatenate(tgt)[None].astype(np.float32) / 255.0)
-    lb = skcolor.rgb2lab(np.concatenate(ren)[None].astype(np.float32) / 255.0)
-    de = skcolor.deltaE_ciede2000(la, lb)[0]
+    from dt import accel  # GPU (MLX) on Apple Silicon, NumPy elsewhere; cell means average out float32 rounding
+    de = accel.delta_e2000(np.concatenate(tgt)[None], np.concatenate(ren)[None])[0].astype(np.float64)
     csum = np.concatenate([[0.0], np.cumsum(de, dtype=np.float64)])
     off = 0
     for ci, n in zip(owners, sizes):

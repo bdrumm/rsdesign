@@ -24,7 +24,10 @@ Everything numeric is a registered parameter (`dt.params`, prefix `map.`).
 """
 from __future__ import annotations
 
+import hashlib
+import json
 import math
+import os
 from dataclasses import dataclass, field
 from typing import Any, Optional
 
@@ -799,6 +802,244 @@ def snap_node_tokens(node: Node, ds: DesignSystem) -> None:
         node.meta["tokens_evidence"] = ev
 
 
+# --------------------------------------------------------------------------- learned rules (user-informed tuning)
+# A learned rule records that nodes with a given *signature* (categorical features + an observed size
+# range) were corrected to a component by people using the engine (dt/feedback, docs/FEEDBACK.md).
+# Rules are data, not code: map_document consults them as one more piece of evidence, never as an
+# unconditional override (see `_apply_learned_rule`).
+register("map.learned_rules", "global,local",
+         "comma list of learned matcher-rule files map_document applies: 'global' = knowledge/learned_rules.json "
+         "(shipped; promoted from contributed feedback through the bench gate), 'local' = $DT_HOME/learned_rules.json "
+         "(this user's `dt feedback learn`), or explicit paths; '' disables learned rules", None)
+register("map.learned.h_tol", 6.0, "px a node's height may lie outside a learned rule's observed height range and still match it",
+         (0.0, 16.0))
+register("map.learned.aspect_tol", 0.35, "relative slack on a learned rule's observed aspect (w/h) range", (0.0, 1.0))
+register("map.learned.boost", 0.25,
+         "score added to the rule's component candidate, times the rule confidence (boost mode: the engine still decides)",
+         (0.0, 1.0))
+register("map.learned.override_conf", 0.75,
+         "rule confidence at or above which the rule's component is assigned even below map.min_conf (override mode)",
+         (0.5, 1.0))
+register("map.learned.veto_margin", 0.4,
+         "evidence against a rule = best score of a *different* component minus the rule component's own signature "
+         "score; above this margin the rule is vetoed and the engine's match stands", (0.0, 1.0))
+register("map.learned.veto_score", 0.85,
+         "a 'not a component' rule is vetoed when the engine's calibrated confidence in its best match (score, margin "
+         "to the runner-up and observed rather than imposed evidence, see calibrate) is at least this", (0.6, 1.0))
+register("map.learned.conf_cap", 0.9, "highest ComponentRef.confidence a learned rule can grant", (0.5, 1.0))
+
+LEARNED_RULES_SCHEMA = "rsdesign.learned-rules/1"
+_RULES_CACHE: dict[tuple, dict[str, list[dict]]] = {}
+
+
+def _repo_root() -> str:
+    return os.path.abspath(os.path.join(os.path.dirname(__file__), "..", ".."))
+
+
+def learned_rule_paths(spec: Optional[str] = None) -> list[str]:
+    """Rule files named by ``P['map.learned_rules']`` (or ``spec``), in priority order."""
+    spec = str(P["map.learned_rules"] if spec is None else spec)
+    out: list[str] = []
+    for tok in (t.strip() for t in spec.split(",")):
+        if not tok:
+            continue
+        if tok == "global":
+            out.append(os.path.join(_repo_root(), "knowledge", "learned_rules.json"))
+        elif tok == "local":
+            home = os.environ.get("DT_HOME") or os.path.join(os.path.expanduser("~"), ".rsdesign")
+            out.append(os.path.join(home, "learned_rules.json"))
+        else:
+            out.append(os.path.abspath(os.path.expanduser(tok)))
+    return out
+
+
+def load_learned_rules(spec: Optional[str] = None) -> dict[str, list[dict]]:
+    """Active rules indexed by signature hash (cached per file mtime). Missing / unreadable files are skipped."""
+    stamp = []
+    for p in learned_rule_paths(spec):
+        try:
+            stamp.append((p, os.path.getmtime(p), os.path.getsize(p)))
+        except OSError:
+            stamp.append((p, None, None))
+    key = tuple(stamp)
+    if key in _RULES_CACHE:
+        return _RULES_CACHE[key]
+    glob_path = os.path.join(_repo_root(), "knowledge", "learned_rules.json")
+    index: dict[str, list[dict]] = {}
+    for p, mt, _sz in stamp:
+        if mt is None:
+            continue
+        try:
+            with open(p) as f:
+                data = json.load(f)
+        except (OSError, ValueError):
+            continue
+        for r in data.get("rules", []) if isinstance(data, dict) else []:
+            if isinstance(r, dict) and r.get("active") and r.get("signature_hash"):
+                r = dict(r)
+                r.setdefault("scope", "global" if os.path.abspath(p) == glob_path else "local")
+                index.setdefault(r["signature_hash"], []).append(r)
+    if len(_RULES_CACHE) > 32:
+        _RULES_CACHE.clear()
+    _RULES_CACHE[key] = index
+    return index
+
+
+register("map.learned.neutral_chroma", 12.0,
+         "Lab chroma below which a colour counts as neutral in a learned signature (colour classes, not roles: the "
+         "same outline is read as `outline` on one screen and `on-surface-variant` on another)", (4.0, 30.0))
+register("map.learned.light_l", 75.0, "Lab L at or above which a fill counts as light in a learned signature", (50.0, 95.0))
+register("map.learned.dark_l", 35.0, "Lab L below which a neutral fill counts as dark in a learned signature", (10.0, 50.0))
+
+
+def _color_class(c: Optional[Color], fine: bool = True) -> str:
+    """Coarse, perception-robust colour class: none | neutral[-light|-mid|-dark] | accent[-light]. Strokes use
+    ``fine=False`` (thin anti-aliased lines: only none / neutral / accent survive re-perception)."""
+    if c is None or c.a <= 0.01:
+        return "none"
+    L, a, b = c.lab()
+    if math.hypot(a, b) < float(P["map.learned.neutral_chroma"]):
+        if not fine:
+            return "neutral"
+        return "neutral-light" if L >= float(P["map.learned.light_l"]) else ("neutral-dark" if L < float(P["map.learned.dark_l"]) else "neutral-mid")
+    if not fine:
+        return "accent"
+    return "accent-light" if L >= float(P["map.learned.light_l"]) else "accent"
+
+
+def _atom_kind(a: Node) -> str:
+    if a.component is not None:
+        return "instance:" + a.component.name
+    return a.meta.get("orig_type", a.type) if a.type == "instance" else a.type
+
+
+def learned_signature(node: Node, ds: DesignSystem) -> tuple[str, dict]:
+    """``(signature_hash, features)`` of a container node for learned rules.
+
+    The hash covers only categorical features that survive re-perception of the same design (IR type,
+    corner class, coarse fill / stroke / label-ink colour classes, shadow, the ordered kinds of its content atoms
+    with repeated runs collapsed). Size stays out of the hash and is matched with a tolerance (``map.learned.h_tol``,
+    ``map.learned.aspect_tol``), so a rule learned on an "Undo" button also covers a "Calendar" button
+    of another width, and not a 72 px list row with the same content kinds."""
+    f = features(node, "row")
+    kinds: list[str] = []
+    for a in f.atoms:
+        k = _atom_kind(a)
+        if kinds and kinds[-1].rstrip("+") == k:
+            kinds[-1] = k + "+"
+        else:
+            kinds.append(k)
+    cat = {
+        "type": node.meta.get("orig_type", node.type) if node.type == "instance" else node.type,
+        "radius": "pill" if f.is_pill else ("none" if f.radius <= P["map.radius_tol"] else "rounded"),
+        "fill": _color_class(f.fill),
+        "stroke": _color_class(f.stroke_color, fine=False) if f.stroke_width > 0 else "none",
+        "shadow": bool(f.has_shadow),
+        "atoms": kinds,
+        # label ink: what tells a text button (accent label) from a navigation link (neutral label)
+        "ink": _color_class(f.primary_text.text_style.color, fine=False)
+        if f.primary_text is not None and f.primary_text.text_style is not None else "none",
+    }
+    h = hashlib.sha1(json.dumps(cat, sort_keys=True).encode()).hexdigest()[:16]
+    return h, {**cat, "h": round(f.h, 1), "w": round(f.w, 1), "aspect": round(f.aspect, 3)}
+
+
+def find_learned_rule(node: Node, ds: DesignSystem, index: dict[str, list[dict]]) -> Optional[dict]:
+    """The best active rule for ``node``: same signature hash, height and aspect within tolerance of the
+    range the rule was learned on; ties go to higher confidence, then support, then local scope."""
+    if not index:
+        return None
+    h, feat = learned_signature(node, ds)
+    rules = index.get(h)
+    if not rules:
+        return None
+    htol, atol = float(P["map.learned.h_tol"]), float(P["map.learned.aspect_tol"])
+    best, best_key = None, None
+    for r in rules:
+        rf = r.get("features") or {}
+        lo, hi = rf.get("h_range") or [rf.get("h", feat["h"])] * 2
+        if not (float(lo) - htol <= feat["h"] <= float(hi) + htol):
+            continue
+        alo, ahi = rf.get("aspect_range") or [rf.get("aspect", feat["aspect"])] * 2
+        if not (float(alo) * (1 - atol) <= feat["aspect"] <= float(ahi) * (1 + atol)):
+            continue
+        key = (float(r.get("confidence", 0)), int(r.get("support", 0)), r.get("scope") == "local")
+        if best_key is None or key > best_key:
+            best, best_key = r, key
+    return best
+
+
+def _rule_candidate(node: Node, rule: dict, ds: DesignSystem) -> Optional[Candidate]:
+    """The rule's component as a Candidate scored by its own signature (the rule's variant when the
+    catalog has it, else the best-scoring variant); None when the catalog does not know the component."""
+    name = str(rule.get("component") or "")
+    spec = next((s for s in ds.components if s.name.lower() == name.lower()), None)
+    if spec is None:
+        return None
+    want = ds.normalize_variant(spec.name, dict(rule.get("variant") or {})) if rule.get("variant") else None
+    best: Optional[Candidate] = None
+    for variant, sig in spec.effective_signatures():
+        s, det = score_signature(features(node, sig.order or "row"), sig, ds)
+        c = Candidate(spec, variant, s, det)
+        if want is not None and ds.normalize_variant(spec.name, dict(variant.props) if variant else {}) == want:
+            return c
+        if best is None or c.score > best.score:
+            best = c
+    return best
+
+
+def _apply_learned_rule(node: Node, rule: dict, cands: list[Candidate], ds: DesignSystem) -> tuple[list[Candidate], dict]:
+    """Fold a learned rule into the candidate list. Returns ``(cands, info)``; ``info['mode']`` is one of
+
+    * ``override`` -- rule confidence >= ``map.learned.override_conf``: the rule's component is assigned;
+    * ``boost``    -- its candidate gains ``map.learned.boost`` x confidence; the usual threshold decides;
+    * ``reject``   -- the rule says "not a component": no match, no decision question;
+    * ``vetoed``   -- the engine's evidence against the rule (best *other* component's score minus the
+      rule component's own score) exceeds ``map.learned.veto_margin`` (for "not a component": the best
+      match's calibrated confidence is at least ``map.learned.veto_score``), or the component cannot have this node type:
+      the engine's own match stands;
+    * ``unknown_component`` -- the design system has no such component (rule ignored).
+    """
+    conf = float(rule.get("confidence", 0.0))
+    info: dict[str, Any] = {"rule": rule.get("id"), "scope": rule.get("scope"), "support": rule.get("support"),
+                            "confidence": round(conf, 3), "component": rule.get("component")}
+    veto = float(P["map.learned.veto_margin"])
+    if not rule.get("component"):  # "this is not a component"
+        against = calibrate(node, cands[0], cands)[0] if cands else 0.0
+        info["against"] = round(against, 3)
+        if against >= float(P["map.learned.veto_score"]):
+            info["mode"] = "vetoed"
+            return cands, info
+        info["mode"] = "reject"
+        return [], info
+    rc = _rule_candidate(node, rule, ds)
+    if rc is None:
+        info["mode"] = "unknown_component"
+        return cands, info
+    if rc.details.get("types", {}).get("score") == 0.0:  # the component can never be this IR type
+        info["mode"], info["against"] = "vetoed", 1.0
+        return cands, info
+    others = [c for c in cands if c.spec.key != rc.spec.key]
+    against = (others[0].score - rc.score) if others else 0.0
+    info["against"] = round(against, 3)
+    info["signature_score"] = round(rc.score, 3)
+    if against > veto:
+        info["mode"] = "vetoed"
+        return cands, info
+    override = conf >= float(P["map.learned.override_conf"])
+    score = min(1.0, rc.score + float(P["map.learned.boost"]) * conf)
+    if override:  # rank first and clear the assignment threshold
+        score = max(score, float(P["map.min_conf"]), (others[0].score + 1e-6) if others else 0.0)
+    rc.score = score
+    rc.details = {**rc.details, "_learned": dict(info)}
+    # runner-up for calibration / the decision queue: the engine's own pick when the rule changed only the variant
+    orig = next((c for c in cands if c.spec.key == rc.spec.key), None)
+    if orig is not None:
+        rc.alt = orig.alt if _variant_key(orig, ds) == _variant_key(rc, ds) else orig
+    info["mode"] = "override" if override else "boost"
+    return sorted([rc] + others, key=lambda c: -c.score), info
+
+
 # --------------------------------------------------------------------------- document mapping
 def _assign(node: Node, cand: Candidate, cands: list[Candidate], ds: DesignSystem) -> None:
     f = features(node, (cand.variant.signature.order if cand.variant and cand.variant.signature and cand.variant.signature.order else cand.spec.signature.order) or "row")
@@ -848,9 +1089,15 @@ def _is_background(node: Node, doc: Document) -> bool:
     return node.box.w >= doc.width * 0.98 and node.box.h >= doc.height * 0.98
 
 
-def map_document(doc: Document, ds: DesignSystem, collapse: bool = False, remap: bool = False) -> Document:
-    """Match components bottom-up and snap tokens for every node. Mutates and returns `doc`."""
+def map_document(doc: Document, ds: DesignSystem, collapse: bool = False, remap: bool = False,
+                 learned: Optional[dict[str, list[dict]]] = None) -> Document:
+    """Match components bottom-up and snap tokens for every node. Mutates and returns `doc`.
+
+    ``learned``: learned-rule index (:func:`load_learned_rules`); default = the files named by
+    ``P['map.learned_rules']`` (none exist in a fresh checkout, so mapping is then unchanged)."""
     min_conf, cand_conf = P["map.min_conf"], P["map.candidate_conf"]
+    rules = load_learned_rules() if learned is None else learned
+    stats = {"matched": 0, "applied": 0, "vetoed": 0}
     for n in doc.walk():
         snap_node_tokens(n, ds)
 
@@ -862,8 +1109,26 @@ def map_document(doc: Document, ds: DesignSystem, collapse: bool = False, remap:
         if is_root or node.type in ("text", "icon", "image") or _is_background(node, doc):
             return
         cands = match_node(node, ds)
-        if cands and cands[0].score >= min_conf:
+        info: Optional[dict] = None
+        rule = find_learned_rule(node, ds, rules) if rules else None
+        if rule is not None:
+            cands, info = _apply_learned_rule(node, rule, cands, ds)
+            node.meta["learned_rule"] = info
+            stats["matched"] += 1
+            if info["mode"] == "vetoed":
+                stats["vetoed"] += 1
+            elif info["mode"] != "unknown_component":
+                stats["applied"] += 1
+        if info is not None and info["mode"] == "reject":
+            return
+        forced = info is not None and info["mode"] == "override"
+        if cands and (cands[0].score >= min_conf or forced):
             _assign(node, cands[0], cands, ds)
+            if info is not None and info["mode"] in ("override", "boost") and node.component is not None \
+                    and node.component.name.lower() == str(info.get("component", "")).lower():
+                cap = min(float(info["confidence"]), float(P["map.learned.conf_cap"]))
+                node.component.confidence = round(max(node.component.confidence, cap), 3)
+                node.component.evidence["learned_rule"] = info
         elif cands and cands[0].score >= cand_conf:
             node.meta["component_candidates"] = [c.summary() for c in cands]
 
@@ -872,6 +1137,8 @@ def map_document(doc: Document, ds: DesignSystem, collapse: bool = False, remap:
         collapse_instances(doc)
     doc.design_system = ds.name
     doc.meta.setdefault("mapping", {})["components"] = sum(1 for n in doc.walk() if n.component is not None)
+    if stats["matched"]:
+        doc.meta["mapping"]["learned_rules"] = stats
     return doc
 
 

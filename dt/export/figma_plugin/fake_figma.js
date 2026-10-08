@@ -9,9 +9,12 @@
  *   - layoutSizing FILL requires an auto-layout parent; HUG only on auto-layout frames / text
  *   - per-side stroke weights exist only on FRAME / RECTANGLE / INSTANCE / COMPONENT
  *
- * createFakeFigma({fonts, components, variables, noVariables}) -> figma
+ *   - with documentAccess "dynamic-page", instance.mainComponent is read via getMainComponentAsync()
+ *
+ * createFakeFigma({fonts, components, componentNames, variables, noVariables}) -> figma
  *   fonts:      [{family, style}]  available fonts (default: Roboto family, Inter Regular, Material Symbols)
  *   components: [key]              keys importComponentByKeyAsync resolves (a button-like component)
+ *   componentNames: {key: name}    display names of those components (default "Component <key>")
  *   variables:  [name]             local COLOR variables
  *   noVariables: true              remove figma.variables entirely (older editors)
  * serialize(node) -> plain JSON tree.
@@ -142,6 +145,7 @@ function createFakeFigma(opts) {
     node.findOne = function (fn) { return this.findAll(fn)[0] || null; };
     node.setPluginData = function (key, value) { this.pluginData[String(key)] = String(value); };
     node.getPluginData = function (key) { return this.pluginData[String(key)] || ''; };
+    node.getPluginDataKeys = function () { return Object.keys(this.pluginData); };
     node.setBoundVariable = function (field, variable) {
       var v = typeof variable === 'string' ? variables.filter(function (x) { return x.id === variable; })[0] : variable;
       if (!v || !v.id) throw new Error('setBoundVariable: unknown variable');
@@ -171,12 +175,17 @@ function createFakeFigma(opts) {
   function makeComponent(key) {
     var comp = makeNode('COMPONENT');
     comp.key = key;
-    comp.name = 'Component ' + key;
+    comp.name = (opts.componentNames && opts.componentNames[key]) || ('Component ' + key);
     comp.createInstance = function () {
       var inst = makeNode('INSTANCE');
       inst.name = comp.name;
       inst.componentKey = key;
       inst.mainComponent = comp;
+      inst.getMainComponentAsync = function () { return Promise.resolve(this.mainComponent); };
+      inst.swapComponent = function (other) {  // real API: keeps the instance (and its plugin data), swaps the main
+        if (!other || other.type !== 'COMPONENT') throw new Error('swapComponent expects a COMPONENT');
+        this.mainComponent = other; this.componentKey = other.key;
+      };
       inst.componentProperties = {
         'Style': { type: 'VARIANT', value: 'Filled' },
         'Size': { type: 'VARIANT', value: 'md' },

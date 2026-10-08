@@ -157,13 +157,13 @@ def component_for(tag: str, attrs: dict[str, str], info: dict[str, Any]) -> Opti
 EXTRACT_JS = r"""
 (async () => {
   // settle: fonts + every Lit element's pending update (also inside shadow roots), a few frames
-  await document.fonts.ready;
+  await Promise.race([document.fonts.ready, new Promise(r => setTimeout(r, 5000))]);
   for (let round = 0; round < __SETTLE_ROUNDS__; round++) {
     const pending = [];
     const collect = root => { for (const e of root.querySelectorAll('*')) { if (e.updateComplete) pending.push(e.updateComplete); if (e.shadowRoot) collect(e.shadowRoot); } };
     collect(document);
     await Promise.all(pending);
-    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+    await Promise.race([new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r))), new Promise(r => setTimeout(r, 2000))]);
   }
   const MIN = __MIN_SIZE__, MIN_ALPHA = __MIN_ALPHA__, BACKDROP_DE = __BACKDROP_DE__;
   const VW = window.innerWidth, VH = window.innerHeight;

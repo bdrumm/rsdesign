@@ -1,0 +1,1254 @@
+{
+  "crops": [
+    {
+      "box": {
+        "h": 96.0,
+        "w": 118.0,
+        "x": 870.0,
+        "y": 182.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 5.0,
+        "w": 70.0,
+        "x": 894.0,
+        "y": 227.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_calendar_region_276475f6",
+      "index": 0,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#e6f5fc",
+        "target": "#3f51b5",
+        "value": 52.102
+      },
+      "source": {
+        "file": "gws_calendar.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_calendar",
+        "url": "https://workspace.google.com/products/calendar/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 118.0,
+        "x": 792.0,
+        "y": 266.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 5.0,
+        "w": 70.0,
+        "x": 816.0,
+        "y": 312.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_calendar_region_31c4ac0d",
+      "index": 1,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#ffffff",
+        "target": "#3e50b5",
+        "value": 54.935
+      },
+      "source": {
+        "file": "gws_calendar.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_calendar",
+        "url": "https://workspace.google.com/products/calendar/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 768.0,
+        "y": 0.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 800.0,
+        "y": 0.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_calendar_tile_56e75938",
+      "index": 2,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 42.325
+      },
+      "source": {
+        "file": "gws_calendar.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_calendar",
+        "url": "https://workspace.google.com/products/calendar/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 140.0,
+        "y": 139.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 18.0,
+        "w": 17.0,
+        "x": 179.0,
+        "y": 178.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_gmail_mobile_region_57d355c0",
+      "index": 3,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#d9d9da",
+        "target": "#202124",
+        "value": 67.495
+      },
+      "source": {
+        "file": "gws_gmail_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "gws_gmail_mobile",
+        "url": "https://workspace.google.com/products/gmail/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 192.0,
+        "y": 139.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 18.0,
+        "w": 16.0,
+        "x": 232.0,
+        "y": 178.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_gmail_mobile_region_f50113a4",
+      "index": 4,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#d8d9d9",
+        "target": "#202124",
+        "value": 67.054
+      },
+      "source": {
+        "file": "gws_gmail_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "gws_gmail_mobile",
+        "url": "https://workspace.google.com/products/gmail/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 64.0,
+        "y": 608.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 96.0,
+        "y": 640.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_gmail_mobile_tile_6adafd6a",
+      "index": 5,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 91.645
+      },
+      "source": {
+        "file": "gws_gmail_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "gws_gmail_mobile",
+        "url": "https://workspace.google.com/products/gmail/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 903.0,
+        "y": 704.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 8.0,
+        "w": 10.0,
+        "x": 946.0,
+        "y": 792.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_keep_region_743e650f",
+      "index": 6,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#6b6b6d",
+        "target": "#ffffff",
+        "value": 51.535
+      },
+      "source": {
+        "file": "gws_keep.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_keep",
+        "url": "https://workspace.google.com/products/keep/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 748.0,
+        "y": 704.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 16.0,
+        "w": 11.0,
+        "x": 790.0,
+        "y": 784.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_keep_region_eb0790b2",
+      "index": 7,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#a1a1a3",
+        "target": "#202124",
+        "value": 46.614
+      },
+      "source": {
+        "file": "gws_keep.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_keep",
+        "url": "https://workspace.google.com/products/keep/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 992.0,
+        "y": 288.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 1024.0,
+        "y": 320.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "gws_keep_tile_76d60b1b",
+      "index": 8,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 58.035
+      },
+      "source": {
+        "file": "gws_keep.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "gws_keep",
+        "url": "https://workspace.google.com/products/keep/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 29.0,
+        "y": 0.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 16.0,
+        "w": 16.0,
+        "x": 69.0,
+        "y": 24.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_buttons_overview_types_mobile_region_fdd952b2",
+      "index": 9,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#8c8a8d",
+        "target": "#1d1c1e",
+        "value": 41.325
+      },
+      "source": {
+        "file": "m3_buttons_overview_types_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "m3_buttons_overview_types_mobile",
+        "url": "https://m3.material.io/components/buttons/overview"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 64.0,
+        "y": 480.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 96.0,
+        "y": 512.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_buttons_overview_types_mobile_tile_085b575e",
+      "index": 10,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 26.79
+      },
+      "source": {
+        "file": "m3_buttons_overview_types_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "m3_buttons_overview_types_mobile",
+        "url": "https://m3.material.io/components/buttons/overview"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 716.0,
+        "y": 1.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 18.0,
+        "w": 18.0,
+        "x": 755.0,
+        "y": 40.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_cards_specs_region_929ec38e",
+      "index": 11,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#f8f1f6",
+        "target": "#4e4357",
+        "value": 55.981
+      },
+      "source": {
+        "file": "m3_cards_specs.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "m3_cards_specs",
+        "url": "https://m3.material.io/components/cards/specs"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 1017.0,
+        "y": 4.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 15.0,
+        "w": 16.0,
+        "x": 1057.0,
+        "y": 44.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_cards_specs_region_a000d420",
+      "index": 12,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#f8f1f6",
+        "target": "#4d4256",
+        "value": 56.52
+      },
+      "source": {
+        "file": "m3_cards_specs.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "m3_cards_specs",
+        "url": "https://m3.material.io/components/cards/specs"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 512.0,
+        "y": 704.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 544.0,
+        "y": 768.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_cards_specs_tile_e60eef17",
+      "index": 13,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 127.027
+      },
+      "source": {
+        "file": "m3_cards_specs.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "m3_cards_specs",
+        "url": "https://m3.material.io/components/cards/specs"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 243.0,
+        "y": 410.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 35.0,
+        "w": 22.0,
+        "x": 280.0,
+        "y": 441.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_lists_overview_mobile_region_51d861f3",
+      "index": 14,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#86f8ff",
+        "target": "#675496",
+        "value": 52.97
+      },
+      "source": {
+        "file": "m3_lists_overview_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "m3_lists_overview_mobile",
+        "url": "https://m3.material.io/components/lists/overview"
+      }
+    },
+    {
+      "box": {
+        "h": 232.0,
+        "w": 146.0,
+        "x": 266.0,
+        "y": 303.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 184.0,
+        "w": 98.0,
+        "x": 305.0,
+        "y": 327.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_lists_overview_mobile_region_f1d6e6d7",
+      "index": 15,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#95f8ff",
+        "target": "#ff8c19",
+        "value": 48.474
+      },
+      "source": {
+        "file": "m3_lists_overview_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "m3_lists_overview_mobile",
+        "url": "https://m3.material.io/components/lists/overview"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 0.0,
+        "y": 320.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 32.0,
+        "y": 352.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "m3_lists_overview_mobile_tile_1146c494",
+      "index": 16,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 38.7
+      },
+      "source": {
+        "file": "m3_lists_overview_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "m3_lists_overview_mobile",
+        "url": "https://m3.material.io/components/lists/overview"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 134.0,
+        "x": 143.0,
+        "y": 146.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 1.0,
+        "w": 86.0,
+        "x": 167.0,
+        "y": 193.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_button_types_mobile_region_814c6fe6",
+      "index": 17,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#c7c1bd",
+        "target": "#afaaa7",
+        "value": 6.292
+      },
+      "source": {
+        "file": "mw_button_types_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "mw_button_types_mobile",
+        "url": "https://material-web.dev/components/button/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 110.0,
+        "y": 0.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 16.0,
+        "w": 19.0,
+        "x": 149.0,
+        "y": 28.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_button_types_mobile_region_f093343d",
+      "index": 18,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#9a7831",
+        "target": "#7f5701",
+        "value": 11.256
+      },
+      "source": {
+        "file": "mw_button_types_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "mw_button_types_mobile",
+        "url": "https://material-web.dev/components/button/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 288.0,
+        "y": 800.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 320.0,
+        "y": 832.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_button_types_mobile_tile_7e8e8767",
+      "index": 19,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 7.24
+      },
+      "source": {
+        "file": "mw_button_types_mobile.png",
+        "frame": [
+          412,
+          915
+        ],
+        "run": "mw_button_types_mobile",
+        "url": "https://material-web.dev/components/button/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 253.0,
+        "y": 224.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 17.0,
+        "w": 16.0,
+        "x": 293.0,
+        "y": 263.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_chip_types_region_95a3191e",
+      "index": 20,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#969089",
+        "target": "#201b12",
+        "value": 44.523
+      },
+      "source": {
+        "file": "mw_chip_types.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "mw_chip_types",
+        "url": "https://material-web.dev/components/chip/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 360.0,
+        "x": 360.0,
+        "y": 618.0
+      },
+      "criteria": [
+        {
+          "doc": "worst flat region of the crop under the visually-identical gate",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 1.0,
+        "w": 919.0,
+        "x": 80.0,
+        "y": 666.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_chip_types_region_f37dd0af",
+      "index": 21,
+      "kind": "region",
+      "measure": {
+        "name": "region_de_worst",
+        "render": "#fff8f3",
+        "target": "#837562",
+        "value": 36.095
+      },
+      "source": {
+        "file": "mw_chip_types.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "mw_chip_types",
+        "url": "https://material-web.dev/components/chip/"
+      }
+    },
+    {
+      "box": {
+        "h": 96.0,
+        "w": 96.0,
+        "x": 608.0,
+        "y": 32.0
+      },
+      "criteria": [
+        {
+          "doc": "worst edge tile of the crop under the visually-identical gate",
+          "metric": "chamfer_tile_max",
+          "op": "<",
+          "roi": null,
+          "scale": 8.0,
+          "threshold": "param:validate.gate.ident.chamfer_tile"
+        },
+        {
+          "doc": "editability: no pasting the target back",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "failure_box": {
+        "h": 32.0,
+        "w": 32.0,
+        "x": 640.0,
+        "y": 64.0
+      },
+      "gates_failed": [
+        "pixel-exact",
+        "structurally-faithful",
+        "visually-identical"
+      ],
+      "id": "mw_chip_types_tile_59b92f87",
+      "index": 22,
+      "kind": "tile",
+      "measure": {
+        "name": "chamfer_tile_max",
+        "value": 398.883
+      },
+      "source": {
+        "file": "mw_chip_types.png",
+        "frame": [
+          1280,
+          800
+        ],
+        "run": "mw_chip_types",
+        "url": "https://material-web.dev/components/chip/"
+      }
+    }
+  ],
+  "version": 1
+}

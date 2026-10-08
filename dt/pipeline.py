@@ -7,7 +7,7 @@ Stage order (every stage is wrapped; a failure is logged under ``metrics["errors
 pipeline continues with the best document it has):
 
     load -> perceive -> map -> render/evaluate (before) -> refine -> re-map -> render/evaluate
-    (after) -> export (Figma build plan) -> decisions -> validate -> report
+    (after) -> export (Figma build plan) -> decisions -> validate -> review -> report
 
 Outputs written to ``out_dir`` (all best-effort, see :data:`OUTPUT_FILES`):
 
@@ -20,6 +20,8 @@ Outputs written to ``out_dir`` (all best-effort, see :data:`OUTPUT_FILES`):
 * ``metrics.json``       loss before/after, refine stats, components, timings, errors
 * ``report.md``          human-readable summary linking everything above
 * ``validation/``        independent fidelity gates (``dt.validate``), when enabled
+* ``review.html``        local correction page (target | render, IR boxes; downloads corrections.json for
+                         ``dt feedback add``, see docs/FEEDBACK.md)
 
 Design-system specs accepted by :func:`resolve_design_system`: ``"material3"`` (or any name in
 ``fixtures/design_systems``), ``"figma:<file_key>"`` (needs ``FIGMA_TOKEN``), ``"screens:<dir>"``
@@ -53,13 +55,16 @@ register("pipeline.decisions.component_conf", 0.8,
 register("pipeline.decisions.ocr_conf", 0.6, "Text nodes whose OCR confidence is below this are queued as decisions.", (0.0, 1.0))
 register("pipeline.decisions.max_items", 200, "Cap on the number of entries written to decisions.json.", (10, 2000))
 register("pipeline.report.max_components", 40, "Max component rows listed in report.md.", (5, 500))
+register("pipeline.review_html", True,
+         "write review.html (local correction page: target | render, click a node to correct it, download "
+         "corrections.json for `dt feedback add`) at the end of every translate run")
 
 OUTPUT_FILES = ("ir.json", "ir.mapped.json", "render.png", "diff.png", "figma_plan.json",
-                "decisions.json", "metrics.json", "report.md")
+                "decisions.json", "metrics.json", "report.md", "review.html")
 """Files a successful run writes to ``out_dir`` (``validation/`` is a directory, written when enabled)."""
 
 STAGES = ("load", "perceive", "map", "evaluate_before", "refine", "remap", "evaluate_after",
-          "export", "decisions", "validate", "report")
+          "export", "decisions", "validate", "review", "report")
 
 
 # --------------------------------------------------------------------------- design systems
@@ -200,6 +205,11 @@ def apply_decisions(run_dir: str, answers: dict[str, Any], ds_spec: Optional[str
     doc = Document.load(ir_path)
     by_id = {d["id"]: d for d in decisions}
     res: dict[str, Any] = {"applied": [], "unknown": [], "skipped": [], "errors": []}
+    # user-informed tuning: every answer is also a feedback item (dt/feedback, docs/FEEDBACK.md); the IR the
+    # answers refer to is kept as the model produced it
+    import dt.feedback.store  # noqa: F401 - registers feedback.* params
+    log_feedback = bool(P["feedback.log_decisions"])
+    base_doc = Document.from_dict(doc.to_dict()) if log_feedback else None
     ds = None
     if ds_spec or doc.design_system:
         try:
@@ -224,6 +234,13 @@ def apply_decisions(run_dir: str, answers: dict[str, Any], ds_spec: Optional[str
     doc.save(ir_path)
     with open(dec_path, "w") as f:
         json.dump(decisions, f, indent=2)
+    if log_feedback and res["applied"]:
+        try:
+            from dt.feedback.capture import log_decisions
+            b = log_decisions(run_dir, [by_id[did] for did in res["applied"]], base_doc)
+            res["feedback_bundle"] = b["id"] if b else None
+        except Exception as e:  # noqa: BLE001 - feedback logging must never break applying answers
+            res["errors"].append(f"feedback log: {type(e).__name__}: {e}")
     try:
         from dt.export import save_plan, to_build_plan
         save_plan(to_build_plan(doc), os.path.join(run_dir, "figma_plan.json"))
@@ -526,6 +543,14 @@ def translate(image_path: str, ds: Optional[str] = "material3", out_dir: str = "
     # ---- report + metrics
     run.metrics["ok"] = run.doc is not None and "perceive" in run.metrics["stages_completed"]
     run.metrics["timings"]["total"] = round(time.perf_counter() - t_start, 3)
+    def review_stage() -> None:
+        if not bool(P["pipeline.review_html"]) or run.doc is None:
+            return
+        from dt.feedback.review import write_review
+        write_review(out_dir, doc=run.doc, target=run.target, ds=run.ds, source=image_path, dpr=run.metrics.get("dpr"))
+        run.metrics["files"]["review"] = "review.html"
+
+    run.stage("review", review_stage)
     run.stage("report", lambda: _write_report(run))
     _write_metrics(run, t_start)
     say(f"[done] {out_dir} in {run.metrics['timings']['total']:.1f}s, {len(run.metrics['errors'])} errors")

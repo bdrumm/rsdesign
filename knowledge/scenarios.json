@@ -1,0 +1,400 @@
+{
+  "families": {
+    "custom_glyph": {
+      "baseline": {
+        "created": "2026-10-07T15:53:40",
+        "fingerprints": {
+          "0": "48a4fd20f48dd06e",
+          "1": "a97024df7c9bef95",
+          "100000": "13fa976855f76c9d",
+          "100001": "2fce4576f9fd8593",
+          "100002": "bfa8387209cfeac2",
+          "100003": "3caaea3f03353980",
+          "100004": "5ae37fc9db00ceba",
+          "100005": "3592794a2516dcfe",
+          "100006": "9775e07259b38f79",
+          "100007": "03ed21fab5774be6",
+          "100008": "1901c69cd1163793",
+          "100009": "32ae85b26a195793",
+          "2": "41b6d050f4b7444c",
+          "3": "d699e003eedc86f2",
+          "4": "65abce27855e2e7b",
+          "5": "e656ea8958acc9e3",
+          "6": "852809be9bc3acfc",
+          "7": "76f836a7809d3ac6"
+        },
+        "holdout_objective": -0.483333,
+        "holdout_pass_rate": 0.1,
+        "n_errors": 0,
+        "reports": [
+          "out/scenarios/promote-20261007-155247-train/custom_glyph",
+          "out/scenarios/promote-20261007-155247-holdout/custom_glyph"
+        ],
+        "train_objective": -0.535417,
+        "train_pass_rate": 0.0
+      },
+      "criteria": [
+        {
+          "doc": "every glyph re-rendered within scenarios.glyph.max_de",
+          "metric": "glyph_reproduced",
+          "op": ">=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "doc": "no glyph named as a Material Symbol",
+          "metric": "glyph_misnamed",
+          "op": "<=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 0
+        }
+      ],
+      "family_version": 1,
+      "holdout_seeds": [
+        100000,
+        100001,
+        100002,
+        100003,
+        100004,
+        100005,
+        100006,
+        100007,
+        100008,
+        100009
+      ],
+      "refine_iters": 4,
+      "stage": "translate",
+      "train_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "desktop_list": {
+      "baseline": {
+        "created": "2026-10-07T15:55:00",
+        "fingerprints": {
+          "0": "047befb18426ea5e",
+          "1": "f16810e811447c3b",
+          "100000": "4708fab23f88e55a",
+          "100001": "8ce26ae2d386869e",
+          "100002": "6ffc1a9307df4920",
+          "100003": "e5d9969fd2df43fe",
+          "100004": "b4f5b9db2db05574",
+          "100005": "e3ac76f550fbc48b",
+          "100006": "991de7cf2d632451",
+          "100007": "1493ecd062ba8a52",
+          "100008": "60bbbed181fe3f7b",
+          "100009": "f1618f5e30aba84a",
+          "2": "4bb30873fbe755ef",
+          "3": "ebfb1e3df76adf27",
+          "4": "a0e9d2e09b38b0f5",
+          "5": "39c74c719367ef6a",
+          "6": "07656c5ce9719b5f",
+          "7": "3bf88f3ba4d7d5b6"
+        },
+        "holdout_objective": -0.178675,
+        "holdout_pass_rate": 0.0,
+        "n_errors": 0,
+        "reports": [
+          "out/scenarios/promote-20261007-155340-train/desktop_list",
+          "out/scenarios/promote-20261007-155340-holdout/desktop_list"
+        ],
+        "train_objective": -0.166931,
+        "train_pass_rate": 0.0
+      },
+      "criteria": [
+        {
+          "doc": "segments recovered (line-fair)",
+          "metric": "text_line_recall",
+          "op": ">=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 0.95
+        },
+        {
+          "doc": "no predicted text node spans two segments",
+          "metric": "merged_lines",
+          "op": "<=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 0
+        },
+        {
+          "doc": "row containers found",
+          "metric": "row_recall",
+          "op": ">=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 0.9
+        }
+      ],
+      "family_version": 1,
+      "holdout_seeds": [
+        100000,
+        100001,
+        100002,
+        100003,
+        100004,
+        100005,
+        100006,
+        100007,
+        100008,
+        100009
+      ],
+      "refine_iters": 0,
+      "stage": "perceive",
+      "train_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "page_tint": {
+      "baseline": {
+        "created": "2026-10-07T15:52:47",
+        "fingerprints": {
+          "0": "a4b8de6c0d83eff6",
+          "1": "612112470c6cabdb",
+          "100000": "d24d7dacf0deb1b2",
+          "100001": "bbdaf4822715ce19",
+          "100002": "35adfdc218a1bd64",
+          "100003": "b9a36cdb234ed0f1",
+          "100004": "8ec3a3279fe8df85",
+          "100005": "a9eb97fa1f05ccdd",
+          "100006": "8691b4a0af017782",
+          "100007": "23d35de99bac46ca",
+          "100008": "ae2ba4c0c77b9214",
+          "100009": "1f54bdcde31c1976",
+          "2": "b2d1ceaaacd8fca9",
+          "3": "9eb6988e81240eac",
+          "4": "689fb2555af51907",
+          "5": "5e481d18da32a37d",
+          "6": "be443e421e7b3582",
+          "7": "0e720d63fd60e746"
+        },
+        "holdout_objective": -0.125,
+        "holdout_pass_rate": 0.7,
+        "n_errors": 0,
+        "reports": [
+          "out/scenarios/promote-20261007-155219-train/page_tint",
+          "out/scenarios/promote-20261007-155219-holdout/page_tint"
+        ],
+        "train_objective": -0.0625,
+        "train_pass_rate": 0.75
+      },
+      "criteria": [
+        {
+          "doc": "whole page under the visually-identical JND gate",
+          "metric": "jnd_frac_nontext",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.05,
+          "threshold": "param:validate.gate.ident.jnd_frac"
+        }
+      ],
+      "family_version": 1,
+      "holdout_seeds": [
+        100000,
+        100001,
+        100002,
+        100003,
+        100004,
+        100005,
+        100006,
+        100007,
+        100008,
+        100009
+      ],
+      "refine_iters": 4,
+      "stage": "translate",
+      "train_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "pale_surface": {
+      "baseline": {
+        "created": "2026-10-07T15:52:18",
+        "fingerprints": {
+          "0": "f852f55797377a4e",
+          "1": "ddda78e3fdc661f6",
+          "100000": "e0eaba12f3e1ec22",
+          "100001": "7bde977292fa687d",
+          "100002": "5a3a92786a682ae3",
+          "100003": "df345f1148aaa514",
+          "100004": "b277d030c1666d86",
+          "100005": "b57115675c7195e9",
+          "100006": "97a5ed29f5449396",
+          "100007": "685e6cc487ad9958",
+          "100008": "4c44782000f6cee1",
+          "100009": "dec93b5234e7ea2c",
+          "2": "b7d52de11baa8794",
+          "3": "e2935fef584b0205",
+          "4": "086f3d4e6c467f26",
+          "5": "e046c97ed4ca77bc",
+          "6": "8e0276e5bfb3887f",
+          "7": "d6235a3b6e14e52e"
+        },
+        "holdout_objective": -0.334619,
+        "holdout_pass_rate": 0.4,
+        "n_errors": 0,
+        "reports": [
+          "out/scenarios/promote-20261007-155156-train/pale_surface",
+          "out/scenarios/promote-20261007-155156-holdout/pale_surface"
+        ],
+        "train_objective": -0.242927,
+        "train_pass_rate": 0.375
+      },
+      "criteria": [
+        {
+          "doc": "every surface found as a filled node with the right fill",
+          "metric": "surface_recall",
+          "op": ">=",
+          "roi": null,
+          "scale": 1.0,
+          "threshold": 1.0
+        },
+        {
+          "doc": "surfaces re-render under the visually-identical JND gate",
+          "metric": "jnd_frac_nontext",
+          "op": "<=",
+          "roi": "roi",
+          "scale": 0.05,
+          "threshold": "param:validate.gate.ident.jnd_frac"
+        }
+      ],
+      "family_version": 1,
+      "holdout_seeds": [
+        100000,
+        100001,
+        100002,
+        100003,
+        100004,
+        100005,
+        100006,
+        100007,
+        100008,
+        100009
+      ],
+      "refine_iters": 0,
+      "stage": "perceive",
+      "train_seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "real_crops": {
+      "baseline": {
+        "created": "2026-10-07T15:55:37",
+        "fingerprints": {
+          "0": "de4512acf3478d02",
+          "1": "d3b2adc66fe155e9",
+          "10": "ab62109b3cfe6c7b",
+          "11": "a9c92ea4efd235cb",
+          "12": "6a130e307995041a",
+          "13": "9bf678538c3f85f0",
+          "14": "cde088132f3af613",
+          "15": "cdc5e3e4349b1e6a",
+          "16": "7e0ee09da18be33c",
+          "17": "c1702f1c7d224115",
+          "18": "be8c22f1b21491e7",
+          "19": "72fcb116212e0d78",
+          "2": "60c305ae6d3490ad",
+          "20": "d6f7d12ea141238e",
+          "21": "10fe4d6199e5b2be",
+          "22": "9e874ead4fb47fe9",
+          "3": "a57818c1b66991ad",
+          "4": "df0fcfd94abb3b35",
+          "5": "27ca8ecdfec6e06d",
+          "6": "6af2f14bf32127e9",
+          "7": "2871959b612f20b0",
+          "8": "54df3640d1711948",
+          "9": "80093a0d420ce2d5"
+        },
+        "holdout_objective": -0.294927,
+        "holdout_pass_rate": 0.0,
+        "n_errors": 0,
+        "reports": [
+          "out/scenarios/promote-20261007-155500-train/real_crops",
+          "out/scenarios/promote-20261007-155500-holdout/real_crops"
+        ],
+        "train_objective": -0.267826,
+        "train_pass_rate": 0.16666666666666666
+      },
+      "criteria": [
+        {
+          "doc": "",
+          "metric": "region_de_worst",
+          "op": "<",
+          "roi": null,
+          "scale": 10.0,
+          "threshold": "param:validate.gate.ident.worst_region_de"
+        },
+        {
+          "doc": "",
+          "metric": "raster_frac",
+          "op": "<=",
+          "roi": null,
+          "scale": 0.35,
+          "threshold": "param:validate.gate.raster_frac"
+        }
+      ],
+      "family_version": 1,
+      "holdout_seeds": [
+        1,
+        3,
+        5,
+        7,
+        9,
+        11,
+        13,
+        15,
+        17,
+        19,
+        21
+      ],
+      "refine_iters": 3,
+      "stage": "translate",
+      "train_seeds": [
+        0,
+        2,
+        4,
+        6,
+        8,
+        10,
+        12,
+        14,
+        16,
+        18,
+        20,
+        22
+      ]
+    }
+  },
+  "version": 1
+}

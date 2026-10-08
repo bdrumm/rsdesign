@@ -22,6 +22,10 @@
   <label><input type="checkbox" id="close"> close when done</label>
   <button id="build">Build</button>
 </div>
+<div class="row">
+  <button id="export" title="Select a frame built by this plugin (after your edits), then export what you changed">Export corrections</button>
+  <span>for <code>dt feedback from-figma &lt;run_dir&gt; export.json</code></span>
+</div>
 <div id="status"></div>
 <script>
   var status = document.getElementById('status');
@@ -48,6 +52,21 @@
     parent.postMessage({ pluginMessage: { type: 'build', plan: plan, options: { closeWhenDone: document.getElementById('close').checked } } }, '*');
   });
 
+  document.getElementById('export').addEventListener('click', function () {
+    show('Exporting corrections...');
+    parent.postMessage({ pluginMessage: { type: 'export-corrections' } }, '*');
+  });
+
+  function downloadJson(data, name) {
+    var text = JSON.stringify(data, null, 2);
+    document.getElementById('plan').value = text;  // also visible for copy/paste when downloads are blocked
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([text], { type: 'application/json' }));
+    a.download = name;
+    document.body.appendChild(a); a.click();
+    setTimeout(function () { URL.revokeObjectURL(a.href); a.remove(); }, 1000);
+  }
+
   window.onmessage = function (ev) {
     var msg = ev.data && ev.data.pluginMessage;
     if (!msg) return;
@@ -56,6 +75,10 @@
       show('Created ' + s.created + ' nodes (' + s.texts + ' text, ' + s.instances + ' instances, ' + s.fallbacks +
         ' fallbacks)\nFonts loaded: ' + s.fontsLoaded.join(', ') + '\nFonts missing: ' + s.fontsMissing.join(', ') +
         (s.warnings.length ? '\nWarnings:\n- ' + s.warnings.join('\n- ') : ''), 'ok');
+    } else if (msg.type === 'corrections') {
+      downloadJson(msg.data, 'figma_corrections.json');
+      show('Exported ' + msg.summary.nodes + ' nodes from ' + msg.summary.frames + ' frame(s): figma_corrections.json ' +
+        '(also in the text box above).', 'ok');
     } else if (msg.type === 'error') {
       show('Error: ' + msg.message, 'err');
     }

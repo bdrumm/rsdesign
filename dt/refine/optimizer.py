@@ -22,8 +22,10 @@ from typing import Callable, Optional
 import numpy as np
 
 from dt.compare.loss import LossReport, evaluate, text_term_from_lines
-from dt.ir import Document, Node
+from dt.ir import Box, Document, Node
 from dt.params import P, register
+from dt.refine import priors as _priors  # noqa: F401  (registers refine.policy / refine.prior.*)
+from dt.refine import tiles as _tiles  # noqa: F401  (registers refine.tile.*)
 from dt.refine.critic import Hypothesis, critique
 
 register("refine.opt.max_iters", 8, "Maximum critique/accept iterations.", (1, 50))
@@ -149,7 +151,9 @@ class _State:
         self.loss, self.report = loss_of(doc, target, self.rendered, lines)
         self.history: list[dict] = []
         self.iter = 0
-        self.n_renders = 1
+        self.n_renders = 1  # page loads: full renders + tile pages
+        self.n_full = 1  # full renders of a candidate document
+        self.n_tile_pages = self.n_tile_layers = self.n_tile_evals = self.n_tile_leaky = 0
         self._partial: set[int] = set()
 
     def score(self, cand: Document, rendered: np.ndarray) -> tuple[float, LossReport]:
@@ -203,6 +207,11 @@ class _State:
         self._partial.clear()  # reports of rejected trials are never read again
         self.doc, self.rendered, self.loss, self.report = cand, rendered, loss, report
 
+    def full_render(self, cand: Document) -> np.ndarray:
+        self.n_renders += 1
+        self.n_full += 1
+        return _render(cand)
+
     def out_of_time(self) -> bool:
         return self.deadline is not None and time.monotonic() > self.deadline
 
@@ -210,13 +219,22 @@ class _State:
         if self.log:
             self.log(msg)
 
-    def record(self, h: Hypothesis, before: float, after: float, accepted: bool, batch: int) -> None:
-        self.history.append({
+    def record(self, h: Hypothesis, before: float, after: float, accepted: bool, batch: int,
+               evaluated: str = "full", gain_est: Optional[float] = None) -> None:
+        """One history record. ``eval`` says how the trial was scored ('full' render or 'tile'); ``gain_est`` is
+        the loss drop of this move alone when known (tile scoring measures it per move, see move_stats)."""
+        from dt.refine.priors import describe_node
+        ntype, area = describe_node(h, self.doc)
+        rec = {
             "iter": self.iter, "kind": h.kind, "node_id": h.node_id,
             "params": {k: v for k, v in h.params.items() if not k.startswith("_")},
             "expected_gain": float(h.expected_gain), "before": float(before), "after": float(after),
             "accepted": bool(accepted), "batch": int(batch),
-        })
+            "node_type": ntype, "node_area": float(area), "prior": float(getattr(h, "prior", 1.0)), "eval": evaluated,
+        }
+        if gain_est is not None:
+            rec["gain_est"] = float(gain_est)
+        self.history.append(rec)
 
     def _helpful(self, batch: list[Hypothesis], rep: LossReport) -> list[Hypothesis]:
         """Members whose own region lost error (regions are disjoint, so the change is theirs)."""
@@ -239,8 +257,7 @@ class _State:
         scored = []
         for opt in [h] + list(h.alternatives):
             cand = opt.apply(self.doc)
-            rendered = _render(cand)
-            self.n_renders += 1
+            rendered = self.full_render(cand)
             new, rep = self.score(cand, rendered)
             scored.append((new, opt, cand, rendered, rep))
         scored.sort(key=lambda t: t[0])
@@ -262,8 +279,7 @@ class _State:
         cand = self.doc
         for h in batch:
             cand = h.apply(cand)
-        rendered = _render(cand)
-        self.n_renders += 1
+        rendered = self.full_render(cand)
         new, rep = self.score(cand, rendered)
         if new < self.loss - float(P["refine.opt.eps"]):
             if len(batch) > 1:
@@ -272,8 +288,7 @@ class _State:
                     cand2 = self.doc
                     for h in helpful:
                         cand2 = h.apply(cand2)
-                    rendered2 = _render(cand2)
-                    self.n_renders += 1
+                    rendered2 = self.full_render(cand2)
                     new2, rep2 = self.score(cand2, rendered2)
                     if new2 <= new + float(P["refine.opt.eps"]):
                         for h in batch:
@@ -291,6 +306,134 @@ class _State:
         mid = len(batch) // 2
         a = self.try_batch(batch[:mid])
         b = self.try_batch(batch[mid:])
+        return a or b
+
+    # ----------------------------------------------------------------------- tile-batched trials
+    def tiles_ok(self) -> bool:
+        return bool(P["refine.tile.enabled"]) and self.rendered.shape == self.target.shape \
+            and self.rendered.shape[:2] == (int(self.doc.height), int(self.doc.width)) and self.report.diff_map is not None
+
+    def tile_rounds(self, hyps: list[Hypothesis]) -> tuple[bool, list[Hypothesis]]:
+        """Score ``hyps`` (each with its alternatives) by tile renders and accept the best non-overlapping winners.
+
+        Per round: every option is applied to the current document; local ones get a tile (see
+        ``dt.refine.tiles``), all tiles are rendered with one page load, and each option's loss is predicted
+        exactly from its tile. The best option per hypothesis is a winner if it lowers the loss; winners are
+        taken greedily by gain among those whose changed pixels do not overlap, and the set is confirmed by
+        ONE full render (bisected when the confirmed loss misses the prediction). Winners that overlapped an
+        accepted one are re-scored in the next round. Returns ``(accepted_any, hyps_for_the_full_path)``:
+        options that are not local, whose tile leaked, or that could not be tiled."""
+        from dt.refine import tiles as T
+        W, H = int(self.doc.width), int(self.doc.height)
+        eps = float(P["refine.opt.eps"])
+        max_px = float(P["refine.tile.max_frac"]) * W * H
+        raster_px = float(P["refine.tile.raster_max_frac"]) * W * H
+        margin = float(P["refine.opt.batch_margin"])
+        full: list[Hypothesis] = []
+        accepted_any = False
+        pending = list(hyps)
+        for _ in range(int(P["refine.tile.max_rounds"])):
+            if not pending or self.out_of_time():
+                break
+            if sum(1 + len(h.alternatives) for h in pending) < int(P["refine.tile.min_options"]):
+                break  # a tile page + a confirming render cost more than full renders of so few options
+            base_index = T._index(self.doc)
+            # (hyp, [(opt, cand, tile or None)]) ; a group with any non-local option goes to the full path whole
+            groups: list[tuple[Hypothesis, list]] = []
+            tiles: list = []
+            for h in pending:
+                opts, local = [], True
+                for opt in [h] + list(h.alternatives):
+                    cand = opt.apply(self.doc)
+                    ext = T.changed_extent(self.doc, cand, base_index)
+                    if ext is None or ext.area > max_px or (opt.kind == "raster" and opt.region.area > raster_px):
+                        local = False
+                        break
+                    tr = T.tile_rect(ext, W, H, cand)
+                    tile = None
+                    if tr is not None:
+                        tile = T.Tile(len(tiles), cand, tr[0], tr[1])
+                        tiles.append(tile)
+                    opts.append((opt, cand, tile))
+                if local:
+                    groups.append((h, opts))
+                else:
+                    full.append(h)
+            live = {id(t) for _, opts in groups for _, _, t in opts if t is not None}
+            tiles = [t for t in tiles if id(t) in live]
+            try:
+                pages, layers = T.render_tiles(tiles, self.rendered)
+            except Exception as e:  # the tile page failed: everything takes the full path
+                self.say(f"  tile render failed ({type(e).__name__}: {e}); full renders instead")
+                full.extend(h for h, _ in groups)
+                break
+            self.n_renders += pages
+            self.n_tile_pages += pages
+            self.n_tile_layers += layers
+            self.n_tile_evals += len(tiles)
+            winners = []
+            for order, (h, opts) in enumerate(groups):
+                if any(t is not None and t.leaky for _, _, t in opts):
+                    self.n_tile_leaky += 1
+                    full.append(h)
+                    continue
+                scored = []
+                for opt, cand, tile in opts:
+                    rendered = T.paste(self.rendered, tile) if tile is not None else self.rendered
+                    new, _ = self.score(cand, rendered)
+                    scored.append((new, len(scored), opt, cand, tile))
+                scored.sort(key=lambda s: (s[0], s[1]))
+                best = scored[0]
+                for new, _, opt, _, _ in scored[1:]:
+                    self.record(opt, self.loss, new, False, 1, "tile", gain_est=self.loss - new)
+                if best[0] < self.loss - eps and best[4] is not None:
+                    winners.append({"h": h, "opt": best[2], "pred": best[0], "gain": self.loss - best[0], "tile": best[4], "order": order})
+                else:
+                    self.record(best[2], self.loss, best[0], False, 1, "tile", gain_est=self.loss - best[0])
+            self._partial.clear()
+            winners.sort(key=lambda w: (-w["gain"], w["order"]))
+            chosen, deferred = [], []
+            for w in winners:
+                core = w["tile"].core
+                box = Box(core[0], core[1], core[2] - core[0], core[3] - core[1]).expand(margin)
+                clash = False
+                for o in chosen:
+                    oc = o["tile"].core
+                    if box.intersect(Box(oc[0], oc[1], oc[2] - oc[0], oc[3] - oc[1])).area > 0 or \
+                            (w["opt"].node_id is not None and w["opt"].node_id == o["opt"].node_id):
+                        clash = True
+                        break
+                (deferred if clash else chosen).append(w)
+            if chosen and self.confirm(chosen):
+                accepted_any = True
+            pending = [w["h"] for w in sorted(deferred, key=lambda w: w["order"])]
+        return accepted_any, full + pending
+
+    def confirm(self, chosen: list[dict]) -> bool:
+        """Apply tile-scored winners together and verify with ONE full render; bisect when the loss misses the
+        prediction (a single winner is kept whenever the full render shows it lowers the loss)."""
+        if not chosen or self.out_of_time():
+            return False
+        eps = float(P["refine.opt.eps"])
+        cand = self.doc
+        for w in chosen:
+            cand = w["opt"].apply(cand)
+        rendered = self.full_render(cand)
+        new, rep = self.score(cand, rendered)
+        predicted = self.loss - sum(w["gain"] for w in chosen)
+        if new < self.loss - eps and (new <= predicted + float(P["refine.tile.confirm_tol"]) or len(chosen) == 1):
+            for w in chosen:
+                self.record(w["opt"], self.loss, new, True, len(chosen), "tile", gain_est=w["gain"])
+                self.say(f"  accept {w['opt'].describe()}  loss {self.loss:.5f} -> {new:.5f} (tile-scored, {len(chosen)} together)")
+            self.accept(cand, rendered, new, rep)
+            return True
+        if len(chosen) == 1:
+            self.record(chosen[0]["opt"], self.loss, new, False, 1, "tile")
+            return False
+        self.say(f"  confirm missed the prediction ({new:.6f} vs {predicted:.6f}): bisecting {len(chosen)} moves")
+        mid = len(chosen) // 2
+        a = self.confirm(chosen[:mid])
+        b = self.confirm(chosen[mid:])
         return a or b
 
 
@@ -327,6 +470,12 @@ def refine(doc: Document, target_rgb: np.ndarray, max_iters: Optional[int] = Non
             reason = "no_hypotheses"
             break
         accepted_any = False
+        if st.tiles_ok():
+            accepted_any, hyps = st.tile_rounds(hyps)
+        # the full-render path: non-local edits, leaky tiles (and everything when tiles are off). Moves the
+        # priors deprioritise run only when nothing better was accepted in this iteration
+        if accepted_any:
+            hyps = [h for h in hyps if not getattr(h, "deprioritised", False)]
         multi = [h for h in hyps if h.alternatives]
         hyps = [h for h in hyps if not h.alternatives]
         for h in multi:  # exclusive alternatives first: they are the most specific edits
@@ -346,9 +495,12 @@ def refine(doc: Document, target_rgb: np.ndarray, max_iters: Optional[int] = Non
         if stale >= patience:
             reason = "patience"
             break
-    st.history.append({"iter": st.iter, "kind": "stop", "node_id": None, "params": {"reason": reason, "renders": st.n_renders},
+    st.history.append({"iter": st.iter, "kind": "stop", "node_id": None,
+                       "params": {"reason": reason, "renders": st.n_renders, "full_renders": st.n_full, "tile_pages": st.n_tile_pages,
+                                  "tile_layers": st.n_tile_layers, "tile_evals": st.n_tile_evals, "tile_leaky": st.n_tile_leaky},
                        "before": float(start_loss), "after": float(st.loss), "accepted": st.loss < start_loss, "batch": 0})
-    st.say(f"refine: stop ({reason}) loss {start_loss:.5f} -> {st.loss:.5f} after {st.n_renders} renders")
+    st.say(f"refine: stop ({reason}) loss {start_loss:.5f} -> {st.loss:.5f} after {st.n_renders} renders "
+           f"({st.n_full} full, {st.n_tile_pages} tile pages / {st.n_tile_layers} layers / {st.n_tile_evals} tiles)")
     return st.doc, st.history
 
 

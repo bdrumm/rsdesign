@@ -48,6 +48,11 @@ Loop for improving the harness:
 1. bench(gate=True) -> composite and per-metric deltas vs knowledge/baseline.json.
 2. improve_brief(top) -> worst cases with suspected stage; attribution() -> which stage costs most.
 3. Edit ONE stage, run tests, bench(gate=True) must pass, record a knowledge/failures.jsonl entry.
+
+Loop for learning from the user (user-informed tuning, local and private by default):
+1. When the user corrects a run (or answers decisions), submit_feedback(run_dir, items, rating).
+2. feedback_status() -> bundles, learned rules, accuracy on the user's own cases; the user runs
+   `dt feedback learn` / `dt feedback eval` (or exports with consent for the shared model).
 Never judge output by eye: every question has a measured answer."""
 
 server = MCPServer(name="rsdesign", title="rsdesign screenshot-to-design harness", instructions=INSTRUCTIONS,
@@ -212,6 +217,27 @@ def move_stats(roots: Optional[list[str]] = None) -> dict:
     from dt.selftest import move_stats as M
     s = M.summarise(M.collect([_abs(r) for r in (roots or ["out"])]))
     return {"summary": s, "markdown": M.markdown(s)}
+
+
+@server.tool(description="Record corrections to a translate run as local feedback (user-informed tuning; nothing "
+                         "leaves the machine). items: [{kind, node_id, box, value, note}] with kind in component | text | "
+                         "icon | geometry | color | missing | extra | should_be_image | should_be_editable | ok (see "
+                         "docs/FEEDBACK.md); rating 1-5; consent {store_screenshot, share_screenshot, share_text}.")
+@_on_worker
+def submit_feedback(run_dir: str, items: list[dict], rating: Optional[int] = None, consent: Optional[dict] = None) -> dict:
+    from dt.feedback.capture import add_corrections
+    b = add_corrections(_abs(run_dir), {"items": items}, rating=rating, consent=consent or {}, channel="mcp")
+    return {"bundle": b["id"], "items": len(b["items"]), "applied": len((b.get("apply_report") or {}).get("applied", [])),
+            "skipped": (b.get("apply_report") or {}).get("skipped", []), "consent": b["consent"],
+            "next": "dt feedback learn (local rules, gated) / dt feedback eval (accuracy on your cases)"}
+
+
+@server.tool(description="Local feedback state: bundles and items by kind, learned rules (active), user-corpus size, "
+                         "the last accuracy evaluation on the user's own cases, recent ledger entries.")
+@_on_worker
+def feedback_status() -> dict:
+    from dt.feedback import status
+    return status()
 
 
 def main() -> None:  # pragma: no cover - transport entry point

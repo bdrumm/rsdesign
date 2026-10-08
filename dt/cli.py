@@ -516,7 +516,7 @@ def build_parser() -> argparse.ArgumentParser:
     p.add_argument("--prefix", default="")
     # Subsystems register their own subcommands (keeps this file merge-free when several are built in parallel):
     # each module exposes register(add, sub) where add() is the helper above.
-    for mod in ("dt.scenarios.cli", "dt.feedback.cli"):
+    for mod in ("dt.scenarios.cli", "dt.feedback.cli", "dt.service.cli"):
         try:
             import importlib
             importlib.import_module(mod).register(add, sub)

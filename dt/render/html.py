@@ -222,7 +222,7 @@ def render_html(doc: Document, mode: str = "absolute", extra_css: str = "", font
     _node_html(doc.root, None, mode, body)
     font_css = _font_face_css() if fonts else ""
     return f"""<!doctype html>
-<html><head><meta charset="utf-8">
+<html><head><meta charset="utf-8"><meta name="dt-render" content="1">
 <style>
 {font_css}
 html, body {{ margin: 0; padding: 0; width: {doc.width}px; height: {doc.height}px; overflow: hidden; background: #fff; }}
